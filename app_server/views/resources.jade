@@ -1,0 +1,159 @@
+doctype html
+
+html
+  head
+    title Tutorials4U
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='bootstrap2/css/main.css')
+    link(rel='stylesheet', href='bootstrap2/css/ie9.css')
+    link(rel='stylesheet', href='bootstrap2/css/ie8.css')
+    link(rel='stylesheet', href='bootstrap2/css/font-awesome.min.css')
+    
+  body
+    // Page Wrapper
+    #page-wrapper
+      // Header
+      header#header
+        h1
+          a(href='/') Tutorials4U
+        nav
+          a(href='#menu') Menu
+      // Menu
+      nav#menu
+        .inner
+          h2 Menu
+          ul.links
+            li
+              a(href='/') Home
+            li
+              a(href='tutorials') Tutorials
+            li
+              a(href='resources') Resources
+            li
+              a(href='about') About
+            li
+              a(href='/') Log In
+            li
+              a(href='/') Sign Up
+          a.close(href='#') Close
+      // Wrapper
+      section#wrapper
+        header
+          .inner
+            h2 Resources
+            p This page is currently being worked on. Come back in 3 months. :D
+        // Content
+        .wrapper
+          .inner
+            section
+              h3.major Text
+              p
+                | This is 
+                b bold
+                |  and this is 
+                strong strong
+                | . This is 
+                i italic
+                |  and this is 
+                em emphasized
+                | .
+                | 										This is 
+                sup superscript
+                |  text and this is 
+                sub subscript
+                |  text.
+                | 										This is 
+                u underlined
+                |  and this is code: 
+                code for (;;) { ... }
+                | . Finally, 
+                a(href='/') this is a link
+                | .
+              h4 Blockquote
+              blockquote
+                |Resource
+              h4 Preformatted
+            section
+              h3.major Table
+              h4 Default
+              .table-wrapper
+                table
+                  thead
+                    tr
+                      th Name
+                      th Description
+                      th Where
+                  tbody
+                    tr
+                      td Item One
+                      td Test 1
+                      td Unity
+                    tr
+                      td Item Two
+                      td Test 2
+                      td Unity
+                    tr
+                      td Item Three
+                      td Test 3
+                      td Unity
+                    tr
+                      td Item Four
+                      td Test 4
+                      td Unity
+                    tr
+                      td Item Five
+                      td Test 5
+                      td Unity
+                  tfoot
+                    tr
+                      td(colspan='2')
+                      td Unity
+              h4 Alternate
+              .table-wrapper
+                table.alt
+                  thead
+                    tr
+                      th Name
+                      th Description
+                      th Where
+                  tbody
+                    tr
+                      td Item One
+                      td Test 1
+                      td Unity
+                    tr
+                      td Item Two
+                      td Test 2
+                      td Unity
+                    tr
+                      td Item Three
+                      td Test 3
+                      td Unity
+                    tr
+                      td Item Four
+                      td Test 4
+                      td Unity
+                    tr
+                      td Item Five
+                      td Test 5
+                      td Unity
+                  tfoot
+                    tr
+                      td(colspan='2')
+      // Footer
+      section#footer
+
+          ul.copyright
+            li © Untitled Inc. All rights reserved.
+            li
+              | Design: 
+              a(href='http://html5up.net') HTML5 UP
+    // Scripts
+    script(src='bootstrap2/js/skel.min.js')
+    script(src='bootstrap2/js/jquery.min.js')
+    script(src='bootstrap2/js/jquery.scrollex.min.js')
+    script(src='bootstrap2/js/util.js')
+    //if lte IE 8
+      script(src='bootstrap2/js/ie/respond.min.js')
+    script(src='bootstrap2/js/main.js')
