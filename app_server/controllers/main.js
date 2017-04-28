@@ -14,3 +14,11 @@ exports.resources = function(req, res){
 exports.about = function(req, res){
   res.render('about', { title: 'about' });
 };
+
+exports.login = function(req, res){
+  res.render('login', { title: 'login' });
+};
+
+exports.signup = function(req, res){
+  res.render('signup', { title: 'signup' });
+};
