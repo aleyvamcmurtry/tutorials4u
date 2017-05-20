@@ -3,9 +3,18 @@ exports.index = function(req, res){
   res.render('index', { title: 'Tutorials4U' });
 };
 
-exports.tutorials = function(req, res){
-  res.render('tutorials', { title: 'tutorials' });
+exports.tutorialshome = function(req, res){
+  res.render('tutorialshome', { title: 'tutorials' });
 };
+
+exports.tutorials1 = function(req, res){
+  res.render('tutorials1', { title: 'tutorials' });
+};
+
+exports.tutorials1section1 = function(req, res){
+  res.render('tutorials1section1', { title: 'tutorials' });
+};
+
 
 exports.resources = function(req, res){
   res.render('resources', { title: 'resources' });
