@@ -3,6 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+	//For the button that takes one to the top.
 	function topFunction() {
 		document.body.scrollTop = 0; // For Chrome, Safari and Opera 
 		document.documentElement.scrollTop = 0; // For IE and Firefox
@@ -17,6 +18,36 @@
 	        document.getElementById("myBtn").style.display = "none";
 	    }
 	}
+	
+	//trying to get it so that way when a person presses a button, it shows 
+	//them all of the pc or mac info. when they click it again, it closes
+
+	//var showInfo = false;
+	// button.onclick = function() {showAll()};
+
+	// function showAll(){
+	// 	document.getElementById("demo").innerHTML = "Hello World";
+	// 	// if(showInfo === false){
+	// 	// 	showInfo = true;
+			
+	// 	// 	//document.getElementById("more").innerHTML = document.getElementById("allInfo").innerHTML;
+	// 	//  //$(this).text("less..").siblings(".allInfo").show();
+	// 	//  }else if(showInfo === true){
+	// 	//  	showInfo === false;
+	// 	//  //	document.getElementById("more").innerHTML = "";
+	// 	// // 	 $(this).text("more..").siblings(".allInfo").hide();   
+	// 	//  }
+	// }
+
+ 
+
+		// $(".more").toggle(function(){
+		       
+		// }, function(){
+		//     $(this).text("more..").siblings(".allInfo").hide();    
+		// });
+
+
 
 
 (function($) {
@@ -31,19 +62,6 @@
 		xsmall:	'(max-width: 480px)'
 	});
 	
-	// function topFunction() {
-	// 	document.body.scrollTop = 0; // For Chrome, Safari and Opera 
-	// 	document.documentElement.scrollTop = 0; // For IE and Firefox
-	// }
-	// window.onscroll = function() {scrollFunction()};
-	
-	// function scrollFunction() {
-	//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-	//         document.getElementById("myBtn").style.display = "block";
-	//     } else {
-	//         document.getElementById("myBtn").style.display = "none";
-	//     }
-	// }
 
 	$(function() {
 
@@ -198,7 +216,6 @@
     					}
 					};
 					
-			
 // 	// When the user scrolls down 20px from the top of the document, show the button
 // window.onscroll = function() {scrollFunction()};
 
