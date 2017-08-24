@@ -8,7 +8,11 @@ exports.tutorialshome = function(req, res){
 };
 
 exports.tutorials1 = function(req, res){
-  res.render('tutorials1', { title: 'tutorials' });
+  res.render('tutorials1', { title: 'First Tutorial' });
+};
+
+exports.tutorials2 = function(req, res){
+  res.render('tutorials2', { title: 'Second Tutorial' });
 };
 
 exports.tutorials1section1 = function(req, res){
