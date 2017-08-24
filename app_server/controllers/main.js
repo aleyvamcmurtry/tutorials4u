@@ -35,3 +35,8 @@ exports.login = function(req, res){
 exports.signup = function(req, res){
   res.render('signup', { title: 'signup' });
 };
+
+/*In progress*/
+exports.comingsoon = function(req, res){
+  res.render('comingsoon', { title: 'Coming Soon' });
+};

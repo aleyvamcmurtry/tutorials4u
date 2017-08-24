@@ -14,6 +14,9 @@ router.get('/about', ctrlMain.about);
 router.get('/login', ctrlMain.login);
 router.get('/signup', ctrlMain.signup);
 
+/*For Inprogress pages*/
+router.get('/comingsoon', ctrlMain.comingsoon);
+
 /* Tutorials routes. */
 router.get('/tutorials1', ctrlTutorial.tutorials1);
 router.get('/tutorials1section1', ctrlTutorial.tutorials1section1);

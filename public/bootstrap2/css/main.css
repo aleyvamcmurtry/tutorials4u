@@ -3721,3 +3721,35 @@
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
+
+#nextBtn {
+   	text-align:center;
+    display:inline-block; /* change this from inline-block */
+    width:20%; /* setting the width */
+    margin:0 auto; 
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    
+}
+
+#nextBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#prevBtn {
+   	text-align:center;
+   	display:inline-block;
+    
+    width:20%; /* setting the width */
+    margin:0 auto; 
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+}
+
+#prevBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#container{
+    text-align: center;
+}
