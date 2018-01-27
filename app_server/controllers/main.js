@@ -15,13 +15,25 @@ exports.tutorials2 = function(req, res){
   res.render('tutorials2', { title: 'Second Tutorial' });
 };
 
+exports.tutorials3 = function(req, res){
+  res.render('tutorials3', { title: 'Third Tutorial' });
+};
+
 exports.tutorials1section1 = function(req, res){
   res.render('tutorials1section1', { title: 'tutorials' });
+};
+
+exports.tutorials1section2 = function(req, res){
+  res.render('tutorials1section2', { title: 'tutorials' });
 };
 
 
 exports.resources = function(req, res){
   res.render('resources', { title: 'resources' });
+};
+
+exports.help = function(req, res){
+  res.render('help', { title: 'tutorials' });
 };
 
 exports.about = function(req, res){
