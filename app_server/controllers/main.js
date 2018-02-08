@@ -20,13 +20,20 @@ exports.tutorials3 = function(req, res){
 };
 
 exports.tutorials1section1 = function(req, res){
-  res.render('tutorials1section1', { title: 'tutorials' });
+  res.render('tutorials1section1', { title: 'Tutorial 1' });
 };
 
 exports.tutorials1section2 = function(req, res){
-  res.render('tutorials1section2', { title: 'tutorials' });
+  res.render('tutorials1section2', { title: 'Tutorial 1' });
 };
 
+exports.tutorials1section3 = function(req, res){
+  res.render('tutorials1section3', { title: 'Tutorial 1' });
+};
+
+exports.tutorials1section4 = function(req, res){
+  res.render('tutorials1section4', { title: 'Tutorial 1' });
+};
 
 exports.resources = function(req, res){
   res.render('resources', { title: 'resources' });
