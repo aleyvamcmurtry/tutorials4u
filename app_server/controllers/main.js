@@ -21,7 +21,7 @@ exports.tutorials3 = function(req, res){
 };
 
 exports.tutorials4 = function(req, res){
-  res.render('tutorials3', { title: 'Third Tutorial' });
+  res.render('tutorials4', { title: 'Fourth Tutorial' });
 };
 
 /* Tutorial 1 Section 1-4 */
