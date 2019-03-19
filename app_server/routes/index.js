@@ -27,10 +27,16 @@ router.get('/tutorials4section2', ctrlMain.tutorials4section2);
 router.get('/tutorials4section3', ctrlMain.tutorials4section3);
 router.get('/tutorials4section4', ctrlMain.tutorials4section4);
 router.get('/resources', ctrlMain.resources);
-router.get('/help', ctrlMain.help);
 router.get('/about', ctrlMain.about);
 router.get('/login', ctrlMain.login);
 router.get('/signup', ctrlMain.signup);
+router.get('/help', ctrlMain.help);
+router.get('/help1', ctrlMain.help1);
+router.get('/help2', ctrlMain.help2);
+router.get('/help3', ctrlMain.help3);
+router.get('/help4', ctrlMain.help4);
+router.get('/help5', ctrlMain.help5);
+
 
 /*For Inprogress pages*/
 router.get('/comingsoon', ctrlMain.comingsoon);
