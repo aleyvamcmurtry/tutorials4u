@@ -101,13 +101,44 @@ exports.resources = function(req, res){
   res.render('resources', { title: 'resources' });
 };
 
+exports.about = function(req, res){
+  res.render('about', { title: 'about' });
+};
+
+
+/*Help Pages*/
 exports.help = function(req, res){
   res.render('help', { title: 'tutorials' });
 };
 
-exports.about = function(req, res){
-  res.render('about', { title: 'about' });
+exports.help1 = function(req, res){
+  res.render('help1', { title: 'tutorials' });
 };
+
+exports.help2 = function(req, res){
+  res.render('help2', { title: 'tutorials' });
+};
+
+exports.help3 = function(req, res){
+  res.render('help3', { title: 'tutorials' });
+};
+
+exports.help4 = function(req, res){
+  res.render('help4', { title: 'tutorials' });
+};
+
+exports.help5 = function(req, res){
+  res.render('help5', { title: 'tutorials' });
+};
+
+
+/*In progress*/
+exports.comingsoon = function(req, res){
+  res.render('comingsoon', { title: 'Coming Soon' });
+};
+
+
+/*Not using at moment HIATUS */
 
 exports.login = function(req, res){
   res.render('login', { title: 'login' });
@@ -115,9 +146,4 @@ exports.login = function(req, res){
 
 exports.signup = function(req, res){
   res.render('signup', { title: 'signup' });
-};
-
-/*In progress*/
-exports.comingsoon = function(req, res){
-  res.render('comingsoon', { title: 'Coming Soon' });
 };
