@@ -3725,6 +3725,9 @@
     background-color: #555; /* Add a dark-grey background on hover */
 }
 
+
+
+
 #nextBtn {
    	text-align:center;
     display:inline-block; /* change this from inline-block */
@@ -3742,7 +3745,6 @@
 #prevBtn {
    	text-align:center;
    	display:inline-block;
-    
     width:20%; /* setting the width */
     margin:0 auto; 
     color: white; /* Text color */
@@ -3756,3 +3758,52 @@
 #container{
     text-align: center;
 }
+
+/*To change the Symbol to a backwards symbol for Previous*/
+a.special2:not(.button) {
+			text-decoration: none;
+			border-bottom: 0;
+			display: block;
+			font-family: Raleway, Helvetica, sans-serif;
+			font-size: 0.8em;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+			margin: 0 0 2em 0;
+			text-transform: uppercase;
+		}
+
+			a.special2:not(.button):before {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				font-family: FontAwesome;
+				font-style: normal;
+				font-weight: normal;
+				text-transform: none !important;
+			}
+
+			a.special2:not(.button):before {
+				-moz-transition: background-color 0.2s ease-in-out;
+				-webkit-transition: background-color 0.2s ease-in-out;
+				-ms-transition: background-color 0.2s ease-in-out;
+				transition: background-color 0.2s ease-in-out;
+				border-radius: 100%;
+				border: solid 2px rgba(255, 255, 255, 0.125);
+				content: '\f104';
+				display: inline-block;
+				font-size: 1.25em;
+				height: 2em;
+				line-height: 1.65em;
+				margin-right: 0.85em;
+				text-align: center;
+				text-indent: 0.15em;
+				vertical-align: middle;
+				width: 2em;
+			}
+
+			a.special2:not(.button):hover:before {
+				background-color: rgba(255, 255, 255, 0.025);
+			}
+
+			a.special2:not(.button):active:before {
+				background-color: rgba(255, 255, 255, 0.075);
+			}

@@ -43,7 +43,7 @@ exports.tutorials1section4 = function(req, res){
 
 
 
-/* Tutorial 2 Section 1-4 */
+/* Tutorial 2 Section 1-6 */
 exports.tutorials2section1 = function(req, res){
   res.render('tutorials2section1', { title: 'Tutorial 2-1' });
 };
@@ -59,6 +59,15 @@ exports.tutorials2section3 = function(req, res){
 exports.tutorials2section4 = function(req, res){
   res.render('tutorials2section4', { title: 'Tutorial 2-4' });
 };
+
+exports.tutorials2section5 = function(req, res){
+  res.render('tutorials2section5', { title: 'Tutorial 2-4' });
+};
+
+exports.tutorials2section6 = function(req, res){
+  res.render('tutorials2section6', { title: 'Tutorial 2-4' });
+};
+
 
 
 /* Tutorial 3 Section 1-4 */
@@ -77,6 +86,7 @@ exports.tutorials3section3 = function(req, res){
 exports.tutorials3section4 = function(req, res){
   res.render('tutorials3section4', { title: 'Tutorial 3-4' });
 };
+
 
 /* Tutorial 4 Section 1-4 */
 exports.tutorials4section1 = function(req, res){
@@ -109,7 +119,7 @@ exports.about = function(req, res){
 /*Help Pages*/
 exports.help = function(req, res){
   res.render('help', { title: 'tutorials' });
-};
+}; 
 
 exports.help1 = function(req, res){
   res.render('help1', { title: 'tutorials' });
