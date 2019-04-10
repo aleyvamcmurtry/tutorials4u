@@ -21,22 +21,6 @@
 	
 	
 	
-	// 	function bottomFunction() {
-	// 	document.body.scrollTop2 = 0; // For Chrome, Safari and Opera 
-	// 	document.documentElement.scrollTop2 = 0; // For IE and Firefox
-	// }
-	
-	// 	window.onscroll = function() {scrollFunction2()};
-	
-	// function scrollFunction2() {
-	//     if (document.body.scrollTop2 < 20 || document.documentElement.scrollTop2 < 20) {
-	//         document.getElementById("myBtn2").style.display = "block";
-	//     } else {
-	//         document.getElementById("myBtn2").style.display = "none";
-	//     }
-	// }
-	
-	
 	//trying to get it so that way when a person presses a button, it shows 
 	//them all of the pc or mac info. when they click it again, it closes
 
