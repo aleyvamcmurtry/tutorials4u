@@ -38,9 +38,11 @@
     <section id="wrapper">
       <header>
         <div class="inner">
-          <h2>Basic Framework</h2>
           
-             <p>Ready to get Started?</p>
+          <h2>Google Cardboard Part 1</h2>
+          
+             <p>Let's begin adding in Google Cardboard.</p>
+         
              <iframe width="420" height="315"
           src="">
           </iframe>
@@ -50,36 +52,83 @@
       <!-- Content-->
       <div class="wrapper">
         <div class="inner">
-          
-          <p>We are finally going to be making our first VR game. Now before we can make the game "Virtual Reality", we first
-          need to make a game. </p>
-          
-          <p>Let's start off by opening up Unity. Then click on 'New' over by 'Open' and 'My Account'. 
-          Name your project, make sure the Template is in 3D, and then click on 'Create Project'. A new window should appear with a blank
-          interface. </p>
-          <p>From there we are going to go to GameObject, go down to 3D object, and click on Plane. This can also
-          be done by going to the Hierarchy, clicking on Create, going down to 3D object, and clicking on Plnane. 
-          For the most part in this section, we will be going back to one of these two places to get the 3D objects that
-          we will need. </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          
+      
+          <p>Now we are at the fun part. Building our first game! </p>
+              
+              <p>The game I will be showing you how to build here is going to be very simple and basic.
+              The reason why is so you can get a hang of building something in Unity, adding to it, and 
+              in the end, being able to view it on your phone. </p>
+              
+             <p> You can follow along here or with the Youtube videos above. </p>
+              
+              <p>If you run into any problems, please check at this link first (help link for tutorial 3 section 1). </p>
+              
+              <p>Also for your understanding, we will being using Google Cardboard for our game. Each device,
+              like Occulus Rift or Samsung VR, has its own way of being added to Unity and the way it wants
+              to work with Unity. The reason why we are using Google Cardboard, unlike the stuff I just
+              mentioned, is because of a two reasons. 1. If you want to buy a premade Google Cardboard Viewer,
+              it is the cheapest out of all of the options to buy (for the one I have and use, it’s only $15). 
+              2. If you can’t afford it, you can make your own. Or you can just look at your phone to play 
+              around with it. All of the other VR devices require that you have the actual device itself.</p>
+              
+              <p>If you would like to make your own, here is a link to the Google Website where you can both buy 
+              premade ones and see how to make your own.</p>
+              
+             <p> Since we are using Google Cardboard, I do suggest that you have some sort of Android based device.
+              In other words, you can’t use your IPhone or IPad with this.  </p>
+              
+              <p>With some of that out of the way, lets go ahead and create a new project or use our existing one.</p>
+              
+              <p>When you open your project, you should have a Main Camera and a Directional light in your hierarchy. </p>
+              
+              <p>In this part, we will be installing the Google VR SDK. SDK stands for Software Development Kit. 
+              It is essentially a group of software that has been collected that exists for the purpose of 
+              creating an app or a product, specifically for something. That something can be a phone, a tablet,
+              a computer, or anything physically technical. </p>
+              
+             <p> You will need to go to the <a href="https://github.com/googlevr/gvr-unity-sdk/releases">Google VR website</a> 
+             https://github.com/googlevr/gvr-unity-sdk/releases 
+              and download the unity package file. It usually will start off with GoogleVRForUnity and have 
+              .unitypackage at the end of it. Also always download the most recent version of this sdk, which 
+              will always be the first version of this link. </p>
+              
+              <p>Click on it once and it should automatically start downloading. If it doesn’t, double click it 
+              or refresh the page and try again. </p>
+              
+              <p>Once it downloads, it should appear in the Download folder of your computer. Go the folder 
+              and click and drag the sdk onto your Desktop. Normally, we would want something like this in
+              a project folder, but for the sake of this project, we will just have it on our Desktop since
+              it is an easy place to get to. </p>
+              
+              <p>Now go back to Unity. We will now begin to Import, or bring in, our sdk into our project. 
+              Without our sdk, we wouldn’t be able to do anything in VR.</p>
+              
+             <p> We are going to click on Assets in our<a href="tutorials2section2"> <b>'Menu Bar'</b></a>, 
+             go down to <b>‘Import Package’</b>, slide 
+              over a little bit, and click on <b>‘Custom Package...’</b>.</p>
+
+              
+              <p>A pop up should appear, where it is going to ask you what is the package you want to import. 
+              Go to your Desktop, look for GoogleVRForUnity_ and click on that. Make sure that it is a unity 
+              package file. You can check this by making sure the Unity logo is right next to the package name. </p>
+              
+              <p>Once you click on that, click on Open and another pop up should appear with a lot of different 
+              items inside. Click on <b>‘All’</b> and then <b>‘Import’</b>. Even if we decide not to use everything, it 
+              also just makes things easier in the long run. </p>
+              <p>Wait until Unity is done downloading the information in the package. When it is done, you 
+              should see a folder called <b>GoogleVR</b> in your <a href="tutorials2section6"> <b>Project folder </b></a>
+              at the bottom of your screen. If you 
+              don’t see it, click on the <b>‘Assets’</b> tab and it should be in there.  </p>
+              <p>Good job! You have downloaded the GoogleVR sdk into your project. In the next chapter, we will
+              be using the stuff in this folder and putting it into our project. </p>
+   
      <div class="wrapper">
         <div class="inner">
            <p>Click on the Previous button if you think you missed something in the 
             last part or click the Next button to .</p>
           <div id="container">
-            <button id="prevBtn" title="prev"><a href="tutorials1">Previous</a></button>
-            <button id="nextBtn" title="next"><a href="tutorials1section2">Next</a></button>
+            <button id="prevBtn" title="prev"><a href="tutorials3">Previous</a></button>
+            <button id="nextBtn" title="next"><a href="tutorials3section2">Next</a></button>
           </div>
     
         </div>
