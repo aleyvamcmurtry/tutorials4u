@@ -41,10 +41,8 @@
           
           <h2>Google Cardboard Part 2</h2>
           
-             <p>Let's begin adding in Google Cardboard.</p>
-          <h2>Player</h2>
-          
-             <p>Let's create the player!</p>
+             <p>Let's finish adding in Google Cardboard.</p>
+         
              <iframe width="420" height="315"
           src="">
           </iframe>
@@ -54,32 +52,83 @@
       <!-- Content-->
       <div class="wrapper">
         <div class="inner">
-          <p>Let's start off by opening up Unity. Then click on 'New' over by 'Open' and 'My Account'. 
-          Name your project, make sure the Template is in 3D, and then click on 'Create Project'. A new window should appear with a blank
-          interface. </p>
-          <p>From there we are going to go to GameObject, go down to 3D object, and click on Plane. This can also
-          be done by going to the Hierarchy, clicking on Create, going down to 3D object, and clicking on Plnane. 
-          For the most part in this section, we will be going back to one of these two places to get the 3D objects that
-          we will need. </p>
             
-          <p> </p>
-          
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          
+          <p>Welcome back! Up until this point, you have imported the Google VR 
+          sdk into your project. In this chapter we will be finishing incoporating
+          all of the Google VR stuff into our project. </p>
+
+              <p>First, let’s open up Unity and open up our project (see the last*
+              section for how to do this). </p>
+              
+              <p>Next, go to ‘File’ in the ‘Menu Bar’, go down, and click on 
+              ‘Build Settings’. A pop up should appear. </p>
+              
+              <p>In Build Settings, we are going to tell Unity what platform, or 
+              hardware, we are going to make this game for. Since we are going to
+              use Google Cardboard and Google Cardboard can only be used on Android
+              products, we are going to look under ‘Platform’, click on Android, 
+              and then click on ‘Switch Platform’ on the bottom of the ‘Build Settings’
+              pop up. </p>
+              
+              <p>Give Unity a moment to change things around. You should see on the 
+              right side of Build Settings, the block of text and information 
+              should have changed from PC, Mac, & Linux Standalone to say Android. </p>
+              
+              <p>Now click on ‘Player Settings...’. It is located right next to 
+               ‘Switch Platform’.</p>
+              
+              <p>Now it may look like nothing has happened. Nothing popped up, there
+              are no changes and everything looks the same on your screen. But if
+              we click out of ‘Build Settings’, you should see a bunch of new
+              information inside your ‘Inspector’. </p>
+              
+             <p>All of this exists so we could tell Unity specific information about
+              what we plan to do, what kind of software it expects from us, and
+              what we need for Unity to prepare. </p>
+              
+              <p>Now ‘Player Settings’ should look very similar for everyone, but 
+              sometimes when Unity has a new update, the placement or where things
+              are change. If you don’t immediately see something that this 
+              tutorial is asking for you to find, take an extra minute to double 
+              check. </p>
+              
+              <p>We are going to click on ‘Other Settings’. Scroll down and under 
+              ‘Idenfitication’ you should see the following. 
+              
+              <li>Package Name</li>
+              <li>Minimum API Level</li></p>
+              
+              <p>For Package Name, change ‘Company’ to a nickname or a shortened
+              version of you name and change ‘ProductName’ to the name of this 
+              project. The reason why we need to change this is so that way this
+              project is unique to us and Unity knows that we created this game.</p> 
+              
+              <p>For the mimimum api level, we are going to choose API level 21,
+              or Android 5.0 ‘Lollipop’. </p>
+              
+              <p>The best thing to do is to actually go on whatever Android device 
+              you will be using to show off your game,  click on ‘Settings’ or 
+              the gear icon, click on ‘About Phone’, click on ‘Software Information’,
+              and look for ‘Android Version’. If your version number is less than
+              Android 5.0 (‘Lollipop’), but is at or above Android 4.4 (‘Kitkat’),
+              please choose that version. If it is bigger than Android 5.0, you 
+              don’t have to do anything. If it is less than 4.4, you may need 
+              find a different Android device to use. The reason why is because
+              over time, Android stops creating updates for older versions of
+              their software and some of the older software can’t handle the 
+              newer or better stuff. </p>
+              
+              
+              <p>Once you are done changing this information, we are going to go 
+              down all of the way ‘XR Settings’. Click on that and click on the
+              checkbox next to ‘Virtual Reality Supported’. Under 
+              ‘Virtual Reality SDKs’, click on the + plus sign. We are then 
+              going to click on ‘Cardboard’ to add that to the Virtual Reality
+              SDKs that we are going to use. Basically, we are just telling 
+              Unity that we are making this game to be used with Google Cardboard.</p> 
+              
+              <p>Great! We are almost there. </p>
         
-          
      <div class="wrapper">
         <div class="inner">
            <p>Click on the Previous button if you think you missed something in the 
