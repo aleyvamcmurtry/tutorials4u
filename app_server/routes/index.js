@@ -27,11 +27,18 @@ router.get('/tutorials3section1', ctrlMain.tutorials3section1);
 router.get('/tutorials3section2', ctrlMain.tutorials3section2);
 router.get('/tutorials3section3', ctrlMain.tutorials3section3);
 router.get('/tutorials3section4', ctrlMain.tutorials3section4);
+router.get('/tutorials3section5', ctrlMain.tutorials3section4);
+router.get('/tutorials3section6', ctrlMain.tutorials3section4);
+router.get('/tutorials3section7', ctrlMain.tutorials3section4);
+router.get('/tutorials3section8', ctrlMain.tutorials3section4);
+
 router.get('/tutorials4', ctrlMain.tutorials4);
 router.get('/tutorials4section1', ctrlMain.tutorials4section1);
 router.get('/tutorials4section2', ctrlMain.tutorials4section2);
 router.get('/tutorials4section3', ctrlMain.tutorials4section3);
 router.get('/tutorials4section4', ctrlMain.tutorials4section4);
+
+
 router.get('/resources', ctrlMain.resources);
 router.get('/about', ctrlMain.about);
 router.get('/login', ctrlMain.login);
