@@ -38,9 +38,9 @@
     <section id="wrapper">
       <header>
         <div class="inner">
-           <h2>Basic Framework</h2>
+           <h2>Player Part 1</h2>
           
-             <p>Ready to get Started?</p>
+             <p>Are you ready to create our player?</p>
           
              <iframe width="420" height="315"
           src="">
@@ -52,30 +52,109 @@
       <div class="wrapper">
         <div class="inner">
       
+          <p>So far all we have done for our game is get everything ready and
+          set. Now, we are going to actually add in our player.</p>
+              
+             <p>But wait...aren’t we supposed to be the player?</p>
+              
+             <p>Yes, we are. And while playing a virtual reality video
+             game we don’t see our actual character, it does not mean that 
+             our character does not exist.</p> 
+              
+              <p>In this chapter, we will be adding in our Player character,
+              or Player object, into our game. 
+              
+              <p>First things first please open Unity and your project up.</p> 
+              
+              <p>To help test that our Player will work, we are first going
+              to create our floor. </p>
+              
+              <p>Now there is always more than one way to create an object
+              in Unity. We are going to be using the long way for the moment,
+              but feel free to use any short cuts you discover along the way. </p>
+              
+              <p>Go to <b>GameObject’</b> in our <b>‘Menu Bar’</b>. Click on it and then
+              go down to <b>‘3D Object’</b>. Slowly slide over, go down, and click on
+              <b>‘Plane’</b>. A plane is an object that is thin and flat, perfect for
+              creating our first floor.  </p>
+              
+              <p>In our <b>‘Hierarchy’</b>, right click or double click on plane, click
+              <b>‘Rename’</b> , and then change the name of our plane to <b>‘Floor’</b>. You
+              can also look at our <b>‘Inspector’</b> and change the name there. The
+              reason why we are doing this is so that way we can always know
+              and remember what one of our object is. </p>
+              
+              <p>Now go back up to <b>‘GameObject’</b> and click on <b>‘Create Empty’</b>.
+              An empty object is an object that doesn’t really have anything
+              to it, but allows for us to add things to it. These things may
+              not physically appear in the game, but they exist. One example 
+              of this is if we decide to create invisible walls that keeps our
+              player on our floor and not accidently hopping off of it. </p>
+              
+              <p>Like what with did with our floor, rename the <b>‘GameObject’</b> to
+              <b>‘Player’</b>. </p>
+              
+              <p>Click on <b>‘Player’</b> and then look at our <b>‘Inspector’</b>. In order
+              to imitate the height of humans in virtual reality, we will be
+              changing the position of our player. </p>
+              
+              <p>Under <b>‘Transform’</b>, change the position of our <b>‘Player’</b> by
+              setting X to 0, Y to 1.6, and Z to 0. Do the same thing to our
+              <b>‘Floor’</b>, but change all of the numbers in the position to 0.</p> 
+              
+              <p>By doing this, we can guarantee that whenever our game starts,
+              our floor will be in the middle of the game and our player will
+              be in the middle, but slightly above, our floor. </p>
           
-          <p> </p>
-          
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          <p> </p>
+            <p>Before we begin adding any of the Google VR sdk directly into our
+            project, we need to do one more thing first.</p>
+            
+            <p>In our <b>‘Hierarchy’</b>, you should have the following:
+            <li><b>Main Camera</b></li>
+            <li><b>Directional Light</b></li>
+            <li><b>Floor</b></li>
+            <li><b>Player</b></li></p>
+            
+            <p>As of right now, all of these items or objects exist by themselves.
+            They exist in the game, but they exist individually. </p>
+            
+            <p>Now, what we are going to do is click on <b>‘Main Camera’</b> and drag it
+            on to our <b>‘Player’</b> object. When you are dragging the camera, the
+            <b>‘Player’</b> object should be highlighted. When the <b>Player</b>’ object is
+            highlighted, let go of the camera. Our <b>‘Player’</b> object should have
+            a triangle right next to it and if it is pointed downward, you should
+            see <b>‘Main Camera’</b> underneath. If you click on the triangle and it
+            points towards our <b>‘Player’</b> object, <b>‘Main Camera’</b> should be hidden.</p> 
+            
+            <p>What just happened? </p>
+            
+            <p>We just made our <b>‘Main Camera’</b> a “child” of our <b>‘Player’</b> object.
+            This is called a “Parent/Child” relationship in programming. What
+            this essentially means is that our <b>‘Player’</b> object is the boss of
+            our <b>‘Main Camera'</b> and anything that we want to happen to our <b>‘Player’</b>
+            will also affect our <b>‘Main Camera’</b>, but if we do something to our 
+            <b>‘Main Camera’</b>, it won’t affect our </b>‘Player’</b>. </p>
+            
+            <p>Think of this as a person adopting a dog or a cat. The person may 
+            call this pet their son, daughter, baby, child, even though the
+            person did not give birth to it. Same thing here. The parent object
+            is the leader and the children objects follow it. </p>
+            
+            <p>Click on our <b>‘Main Camera'</b> and in our <b>‘Inspector Window’</b>, change
+            the values of the camera’s position to X=0, Y=0, and Z=0. Perfect.</p>
+            
+            <p>Now we have our basic player set up. In the next chapter, we will
+            be finishing creating our player. 
+            </p>
+   
           
      <div class="wrapper">
         <div class="inner">
            <p>Click on the Previous button if you think you missed something in the 
             last part or click the Next button to .</p>
           <div id="container">
-            <button id="prevBtn" title="prev"><a href="tutorials1">Previous</a></button>
-            <button id="nextBtn" title="next"><a href="tutorials1section2">Next</a></button>
+            <button id="prevBtn" title="prev"><a href="tutorials3section2">Previous</a></button>
+            <button id="nextBtn" title="next"><a href="tutorials3section4">Next</a></button>
           </div>
     
         </div>
