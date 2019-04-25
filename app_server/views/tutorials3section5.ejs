@@ -39,9 +39,9 @@
       <header>
         <div class="inner">
           
-          <h2>Player Part 2</h2>
+          <h2>Adding Objects</h2>
           
-             <p>Let's add the Virtual Reality components to our Player.</p>
+             <p>It's time to add in our items.</p>
              
           <h2>Items</h2>
           
@@ -59,121 +59,71 @@
       
           <p>Welcome back! </p>
             
-            <p>We have our ‘Player’ object, our ‘Main Camera’ as a child of it,
-            and a ‘Floor’ to look at. </p>
-            
-            <p>In this chapter we will be adding our Google VR sdk to our 
-            ‘Player’ object. </p>
-            
-            <p>As usual, first open up your project in Unity. Then click on
-            ‘Main Camera’ that is underneath our ‘Player’ object. </p>
-            
-            <p>Now there are two ways we can do this next part. Path 1 is
-            the path that we will be using a lot more in the future,
-            especially when we don’t have something that is pre-made for
-            us. We cannot use Path 1 to add on prefabs (more on this in 
-            a second). Path 2 is used more when we have something that
-            has already been created for us to use. </p>
-            
-            <p>Below are both paths that you can choose to use right now.
-            It doesn’t matter which one at the moment and in future
-            chapters, the tutorial will state which path you will need to use.</p> 
-            
-            <p>Path 1:
-            Click on ‘Main Camera’. Look at our Inspector and it should
-            have all of the current information and values for our camera.
-            At the bottom of the information, there should be a button that
-            says ‘Add Component’. Click on it. A bunch of different items
-            will appear, but for the moment, in the search bar, type in:
-            *GvrPointerPhysicsRaycaster*. When it comes up, make sure it
-            is highlighted and click on it. After that, the Gvr Pointer
-            Physics Raycaster Script should appear and become a part of
-            the information for our ‘Main Camera’. </p>
-            
-            <p>Path 2:
-            Go down and look at our ‘Project Window’ below. You will see
-            a search bar. Type in: *GvrPointerPhysicsRaycaster*. Make
-            sure to double check your spelling. You should see a piece
-            of paper with the label C# on it. Click and drag it onto our
-            ‘Main Camera’. Look at your ‘Inspector Window’ and double
-            check that Gvr Pointer Physics Raycaster Script appears there. </p>
-            
-            <p>What is a raycaster?</p>
-            
-            <p>A raycaster gets all of the information from one specific
-            location and checks whether or not the player or the object
-            can do something. This something is usually an event, an event
-            for example being an object disappearing or changing colors.
-            The raycaster tells us whether or not if we click on a specific
-            object whether an event can happen or not. Think of it being
-            like the moon. You can see the moon, but you can’t really touch
-            it, so by the raycaster’s understanding no event can take place
-            between you and the moon. On the other hand, you can see your
-            phone and you can pick it up. To the raycaster, it sees a phone
-            and tell us that multiple events can happen, like picking it up,
-            dropping it, turning it on. </p>
-            
-            <p>The specific raycaster we are using (physics raycaster) exists
-            for the purpose of looking for 3D objects that we can touch. </p>
-            
-            <p>In future chapters, we will be going over in detail what a script
-            is, as we will be creating our own and adding it to our game.
-            For the moment, understand it as the code or instructions needed
-            for our objects to do specific tasks. Also, the C# is pronounced
-            as “C Sharp” and is the language that Unity understands to
-            perform our tasks. </p>
-            
-            
-            <p>Now we are going to go to our ‘Project Window’ and, like with
-            our Path 2, we are going to type in and search for:
-            *GvrEditorEmulator*. When it come up, you should see a blue
-            box. Click and drag that to our ‘Hierarchy’. It should not
-            be a child of any of our current objects. This Emulator is
-            going to help our project act as a human head and move as a
-            person’s head would, like moving up and down or side to side. </p>
-            
-            <p>Also, whenever you see a blue box like this, it means that
-            this object is a prefab, or a basic copy of its original
-            self that we can add into our project and make changes to as
-            we see fit. Think of it as a coloring book. You can draw and
-            color all of the art in the pages however you want, but the
-            original artwork and drawings haven’t been changed. </p> 
-            
-            <p>Now we are going to look for another prefab. Go to our
-            ‘Project Window’ and type in and search for: *GvrEventSystem*.
-            When it come up, click and drag that to our ‘Hierarchy’. This
-            prefab will allow for us to see where we are going to click in
-            our game. </p>
-            
-            <p>Next we are look for the: *GvrReticlePointer*. Go to our
-            ‘Project Window’ and type in and search for: *GvrReticlePointer*.
-            Unlike the last two prefabs, we are actually going to drag and
-            drop this object onto our ‘Main Camera’, The reason why we are
-            doing this is because we want our ‘GvrReticlePointer’ to be a
-            child of our ‘Main Camera’*(link to help)*. </p>
-            
-            <p>What the GvrReticlePointer is going to do is let us interact
-            with the objects and items in the world we are creating for our
-            game. By attaching this to our camera, whenever our player moves
-            to look at something, we can look and click on whatever we are
-            looking at. Remember, in virtual reality, our camera is like
-            our eyes and everything is in first person. </p>
-            
-           <p>Wohoo! We have added all of the things we needed to do to our
-            ‘Player’ so we can do things in virtual reality. Now we can
-            actually test and double check that everything works. </p>
-            
-            <p>Click on the ‘Play’ button in our ‘Tool Bar’. The ‘Game View’
-            should appear and we can look around our screen. </p>
-            
-            <p>In PC, hold down your ‘Alt’ button to look around everywhere.
-            Hold down your ‘Ctrl’ button to replicate tilting. While you
-            are doing this, you should see a small dot in the center of
-            your screen. This is our GvrReticlePointer. Since there is
-            nothing for us to interact with at the moment, the dot shouldn’t
-            change. When you are done, press on the space button and you
-            should see mouse again. Click again on the ‘Play’ button to stop.</p>
-          
+            <p>We have our Player, we have our floor, but now...what is our game supposed to do anyways?
+
+                Well, now we find out.
+                
+                Our game is going to be a very simple, but fun game. Basically we are going to have
+                a bunch of different balls surround the player and when you click on them, they
+                change color. The end goal will be click on all of the balls before the time runs
+                out. You can then test your time against your friends and see who can do it the fastest. 
+                
+                In this chapter, we will be creating these balls and allow them to change color when
+                we click on them.
+                
+                So, how do we do this?
+                
+                First make sure to have Unity and your project open. 
+                
+                Next, in our ‘Menu Bar’, we are going to click on ‘GameObject’. Go down to 3D object,
+                slide over and click on ‘Sphere’. After clicking on sphere, you should see a ball
+                appear in your ‘Hierarchy’ and in your Scene. 
+                
+                Click on your ‘Sphere’ in your hierarchy and let us look at our ‘Inspector Window’.
+                First off we want to see what position our ‘Sphere’ is at. If it is not at position
+                X=0, Y=0, Z=0, please fix this now. After fixing it, go into your ‘Scene View’,
+                click on the green arrow pointing up, and drag it a little bit up. You want our 
+                ‘Sphere’ object to be a little bit above our ‘Floor’ object, but not higher than
+                what our ‘Player’ object can see. If you want the exact number, have your Y
+                position be anywhere between Y=0.1 to Y= 5. We want our ‘Player’ to still see
+                the ‘Sphere’ when we’re playing the game. 
+                
+                If you don’t see any arrows, then in our ‘Tool Bar’, click on the four arrows
+                crossing each other (or the ‘Move Tool’). After you click on this, you should
+                see arrows pointing out from our ‘Sphere’ object.
+                
+                Now so far you have seen one way to rename an object. Here is another way to
+                rename an object. If you look at our ‘Inspector Window’ (after making sure
+                that we still have our ‘Sphere’ object clicked), you will see the name of the
+                current object that we are working on. If you click on it, you can actually
+                change the name of our object. We are going to click and rename our ‘Sphere’
+                object to become ‘Ball’. 
+                
+                Underneath where we changed the name, there is a label called ‘Tag’. A ‘Tag’
+                in Unity is a way for us to keep track, label, and be able to identify what
+                our objects are. By default, the ‘Tag’ for our ‘Ball’ is ‘Untagged’. For
+                future chapters (and for reasons that you will understand later on), we
+                are going to give a ‘Tag’, or label, to our ‘Ball’. 
+                
+                Click on where it says ‘Untagged’. The box should open up and you should
+                see a lot of different choices. What we are going to do is create a custom
+                tag, so go all of the way to the bottom of this and click on ‘Add Tag...’.
+                The ‘Inspector’ should change to show you some of the custom tags you have
+                already made for this game. Since this is the first one we have made, click
+                on the ‘plus +’ sign. 
+                
+                A pop up should appear and it should ask you for the new tag name. Type in
+                ‘BallObject’ and then click on ‘Save’. You should see ‘BallObject’ appear
+                in your tags. Reclick on our ‘Ball’, reclick on ‘Untagged’, and then click
+                on ‘BallObject’. This will officially give our ‘Ball’ a tag.   
+                
+                The next thing we are going to do is give a color to our ‘Ball’. After
+                we give our ‘Ball’ some color, feel free to do the same to our ‘Floor’
+                object. Just make sure that our ‘Floor’ is not the same color as our ‘Ball’. 
+
+                </p>
+                
+
           
      <div class="wrapper">
         <div class="inner">
