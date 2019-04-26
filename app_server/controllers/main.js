@@ -88,19 +88,19 @@ exports.tutorials3section4 = function(req, res){
 };
 
 exports.tutorials3section5 = function(req, res){
-  res.render('tutorials3section4', { title: 'Tutorial 3-4' });
+  res.render('tutorials3section5', { title: 'Tutorial 3-5' });
 };
 
 exports.tutorials3section6 = function(req, res){
-  res.render('tutorials3section4', { title: 'Tutorial 3-4' });
+  res.render('tutorials3section6', { title: 'Tutorial 3-6' });
 };
 
 exports.tutorials3section7 = function(req, res){
-  res.render('tutorials3section4', { title: 'Tutorial 3-4' });
+  res.render('tutorials3section7', { title: 'Tutorial 3-7' });
 };
 
 exports.tutorials3section8 = function(req, res){
-  res.render('tutorials3section4', { title: 'Tutorial 3-4' });
+  res.render('tutorials3section8', { title: 'Tutorial 3-8' });
 };
 
 
