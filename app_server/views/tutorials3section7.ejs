@@ -41,12 +41,9 @@
           
           <h2>Time is on our side to Count Scripts!</h2>
           
-             <p>Let's add the Virtual Reality components to our Player.</p>
+             <p>It's time to add our second script to our game.</p>
              
-          <h2>Items</h2>
-          
-             <p>Let's create some items to collect!</p>
-             
+         
              <iframe width="420" height="315"
           src="">
           </iframe>
@@ -57,131 +54,315 @@
       <div class="wrapper">
         <div class="inner">
       
-          <p>Welcome back! </p>
+         <p>
+           Welcome back to our second script! Make sure to have Unity and your
+           project open because we are starting right off.</p>
             
-            <p>We have our ‘Player’ object, our ‘Main Camera’ as a child of it,
-            and a ‘Floor’ to look at. </p>
+            <p>Like what we did with ‘ColorChange’, click on your ‘Ball’, look at
+            your ‘Inspector Window’, click on ‘Add Component’, type in
+            ‘New Script’ to the search bar, select it, type in the name
+            of our second script which is ‘CountWinOrLose’, and then
+            click on ‘Create and Add’.</p>
             
-            <p>In this chapter we will be adding our Google VR sdk to our 
-            ‘Player’ object. </p>
+            <p>Our second script, ‘CountWinOrLose’, should appear in the
+            ‘Inspector’. Like before, click on the gear to the right hand
+            side of ‘CountWinOrLose (Script)’ and click on ‘Edit Script’.
+            ‘Visual Studios’ should then open up (if it is not already opened)
+            and you should see the class for ‘CountWinOrLose’.</p>
             
-            <p>As usual, first open up your project in Unity. Then click on
-            ‘Main Camera’ that is underneath our ‘Player’ object. </p>
+            <p>The ‘CountWinOrLose’ class will be longer than ‘ColorChange’.</p>
             
-            <p>Now there are two ways we can do this next part. Path 1 is
-            the path that we will be using a lot more in the future,
-            especially when we don’t have something that is pre-made for
-            us. We cannot use Path 1 to add on prefabs (more on this in 
-            a second). Path 2 is used more when we have something that
-            has already been created for us to use. </p>
+            <p>First off, before we add anything inside ‘CountWinOrLose’,
+            we are going to make a new call to a different libaray above
+            ‘public class CountWinOrLose’. We are going to do this by
+            first typing in ‘using’ and then calling on a new library
+            call ‘UnityEngine.UI’. </p>
             
-            <p>Below are both paths that you can choose to use right now.
-            It doesn’t matter which one at the moment and in future
-            chapters, the tutorial will state which path you will need to use.</p> 
+            <p>The line should look like this:</p>
+            <p>using UnityEngine.UI;</p>
             
-            <p>Path 1:
-            Click on ‘Main Camera’. Look at our Inspector and it should
-            have all of the current information and values for our camera.
-            At the bottom of the information, there should be a button that
-            says ‘Add Component’. Click on it. A bunch of different items
-            will appear, but for the moment, in the search bar, type in:
-            *GvrPointerPhysicsRaycaster*. When it comes up, make sure it
-            is highlighted and click on it. After that, the Gvr Pointer
-            Physics Raycaster Script should appear and become a part of
-            the information for our ‘Main Camera’. </p>
+            <p>But we already have ‘UnityEngine’, why do we need to call on
+            it twice and add ‘.UI’. The reason for this is ‘UnityEngine’
+            calls on everything inside Unity, and while we want to be able
+            to use it (and we will), we also want to call on a specific
+            area in addition. ‘UI’ stands for ‘User Interface’ and this
+            usually has objects that the player can see, but don’t usually
+            directly interact with other objects. Items inside the
+            ‘User Interface’ include buttons, text, etc.</p>
             
-            <p>Path 2:
-            Go down and look at our ‘Project Window’ below. You will see
-            a search bar. Type in: *GvrPointerPhysicsRaycaster*. Make
-            sure to double check your spelling. You should see a piece
-            of paper with the label C# on it. Click and drag it onto our
-            ‘Main Camera’. Look at your ‘Inspector Window’ and double
-            check that Gvr Pointer Physics Raycaster Script appears there. </p>
+            <p>Now, let us begin to add code into our ‘CountWinOrLose’ class. </p>
             
-            <p>What is a raycaster?</p>
+            <p>We are going to add objects that we will use throughout our code.</p>
             
-            <p>A raycaster gets all of the information from one specific
-            location and checks whether or not the player or the object
-            can do something. This something is usually an event, an event
-            for example being an object disappearing or changing colors.
-            The raycaster tells us whether or not if we click on a specific
-            object whether an event can happen or not. Think of it being
-            like the moon. You can see the moon, but you can’t really touch
-            it, so by the raycaster’s understanding no event can take place
-            between you and the moon. On the other hand, you can see your
-            phone and you can pick it up. To the raycaster, it sees a phone
-            and tell us that multiple events can happen, like picking it up,
-            dropping it, turning it on. </p>
+            <p>Type in:</p>
             
-            <p>The specific raycaster we are using (physics raycaster) exists
-            for the purpose of looking for 3D objects that we can touch. </p>
+            <p>public int numOfBalls;
+            int actualBallsNum = 10;
+            public Text countText;
             
-            <p>In future chapters, we will be going over in detail what a script
-            is, as we will be creating our own and adding it to our game.
-            For the moment, understand it as the code or instructions needed
-            for our objects to do specific tasks. Also, the C# is pronounced
-            as “C Sharp” and is the language that Unity understands to
-            perform our tasks. </p>
+            public float timeLeft = 10f;
+            public Text timeText;</p>
+            
+            <p>If you noticed first, some of these objects have public infront
+            of them, while other don’t. The objects that do have public in
+            front them are the objects that we want to be able to see and
+            have be intractable with not only our ‘Ball’ but with our
+            ‘Player’ object later on.</p>
+            
+            <p>Also an int is a full number while a float is a fraction of a
+            number. So an int can be the number 1, while a float can be 1
+            or 1.5. We are using ints to count how many balls have changed
+            color (numOfBalls) and then later on we will compare that to
+            the amount of balls we have in our game (actualBallsNum). While
+            right now we only one ‘Ball’ object, in the next chapter we
+            will learn how to add more to our ‘Scene View’.</p>
+            
+            <p>For time, we are using a float to count how much time we have
+            left in our game (timeLeft) because time is barely ever a full
+            exact number and it changes quickly. For ‘timeLeft’ we are
+            starting at 10f. By adding f to the end of 10, we are telling
+            our code that we specifically want this to be a float, just in case.</p>
+            
+            <p>Lastly, we want to show our ‘Player’ how much time they have
+            left and how many objects they have changed the color of. To
+            do that, we are creating text to show them (timeText, countText). </p>
+            
+            <p>Again we are not using the ‘Start()’ method. </p>
+            
+            <p>We are though using the ‘Update()’ method. The reason why we
+            are is because we want time to be updated with each frame and
+            we want to constantly be checking to see if our player has
+            changed the color of all of the balls.</p> 
+            
+            <p>Inside the ‘Update()’ method, type in this:</p>
+                    <p>timeLeft -= Time.deltaTime;
+                    numOfBalls = 0;
+            
+                    startText.text = (timeLeft).ToString("0");
+            
+                    numOfBalls = CountingUp(numOfBalls);
+            
+                    if (timeLeft < 1)
+                    {
+                        WonOrLost(timeLeft, numOfBalls);
+            
+                    }</p>
+            
+            <p>We are first telling </p>
             
             
-            <p>Now we are going to go to our ‘Project Window’ and, like with
-            our Path 2, we are going to type in and search for:
-            *GvrEditorEmulator*. When it come up, you should see a blue
-            box. Click and drag that to our ‘Hierarchy’. It should not
-            be a child of any of our current objects. This Emulator is
-            going to help our project act as a human head and move as a
-            person’s head would, like moving up and down or side to side. </p>
             
-            <p>Also, whenever you see a blue box like this, it means that
-            this object is a prefab, or a basic copy of its original
-            self that we can add into our project and make changes to as
-            we see fit. Think of it as a coloring book. You can draw and
-            color all of the art in the pages however you want, but the
-            original artwork and drawings haven’t been changed. </p> 
             
-            <p>Now we are going to look for another prefab. Go to our
-            ‘Project Window’ and type in and search for: *GvrEventSystem*.
-            When it come up, click and drag that to our ‘Hierarchy’. This
-            prefab will allow for us to see where we are going to click in
-            our game. </p>
             
-            <p>Next we are look for the: *GvrReticlePointer*. Go to our
-            ‘Project Window’ and type in and search for: *GvrReticlePointer*.
-            Unlike the last two prefabs, we are actually going to drag and
-            drop this object onto our ‘Main Camera’, The reason why we are
-            doing this is because we want our ‘GvrReticlePointer’ to be a
-            child of our ‘Main Camera’*(link to help)*. </p>
             
-            <p>What the GvrReticlePointer is going to do is let us interact
-            with the objects and items in the world we are creating for our
-            game. By attaching this to our camera, whenever our player moves
-            to look at something, we can look and click on whatever we are
-            looking at. Remember, in virtual reality, our camera is like
-            our eyes and everything is in first person. </p>
+            <p>At the end here is how your code should look like:</p>
+            <img src="bootstrap2/images/CountWinOrLose1.png" alt="" height="500" width="500">
+            <img src="bootstrap2/images/CountWinOrLose2.png" alt="" height="500" width="500">
+            <img src="bootstrap2/images/CountWinOrLose3.png" alt="" height="500" width="500">
+            <img src="bootstrap2/images/CountWinOrLose4.png" alt="" height="500" width="500">
+            <p>
+            using System.Collections;</p>
+            <p>using System.Collections.Generic;</p>
+            <p>using UnityEngine;</p>
+            <p>using UnityEngine.UI;</p>
             
-           <p>Wohoo! We have added all of the things we needed to do to our
-            ‘Player’ so we can do things in virtual reality. Now we can
-            actually test and double check that everything works. </p>
+            <p>public class CountWinOrLose : MonoBehaviour
+            {</p>
             
-            <p>Click on the ‘Play’ button in our ‘Tool Bar’. The ‘Game View’
-            should appear and we can look around our screen. </p>
+               <p> //For Counting</p>
+               <p> public int numOfBalls;</p>
+                <p>int actualBallsNum = 10;</p>
+                <p>public Text countText;</p>
             
-            <p>In PC, hold down your ‘Alt’ button to look around everywhere.
-            Hold down your ‘Ctrl’ button to replicate tilting. While you
-            are doing this, you should see a small dot in the center of
-            your screen. This is our GvrReticlePointer. Since there is
-            nothing for us to interact with at the moment, the dot shouldn’t
-            change. When you are done, press on the space button and you
-            should see mouse again. Click again on the ‘Play’ button to stop.</p>
-          
+                <p>//For Time</p>
+               <p> public float timeLeft = 10f;</p>
+                <p>public Text timeText;</p>
+            
+               <p> // Use this for initialization</p>
+                <p>void Start()
+                {</p>
+            
+                <p>}</p>
+            
+               <p> // Update is called once per frame</p>
+                <p>void Update()
+                {</p>
+                   <p> timeLeft -= Time.deltaTime;</p>
+                    <p>numOfBalls = 0;</p>
+            
+                    <p>startText.text = (timeLeft).ToString("0");</p>
+            
+                   <p> //For Counting</p>
+                   <p> numOfBalls = CountingUp(numOfBalls);</p>
+            
+                    <p>//For Time</p>
+                    <p>if (timeLeft < 1)
+                    {</p>
+                      <p>  WonOrLost(timeLeft, numOfBalls);</p>
+            
+                   <p> }</p>
+            
+                <p>}</p>
+            
+            
+               <p> private int CountingUp(int countCurr)
+                {</p>
+                   <p> GameObject gameCurr;</p>
+                   <p> GameObject[] gameItems = GameObject.FindGameObjectsWithTag("SphereBalls");</p>
+            
+                   <p> for (int i = 0; i < actualBallsNum; i++)
+                    {</p>
+            
+                       <p> gameCurr = gameItems[i];</p>
+            
+                       <p> if (gameCurr.GetComponent<Renderer>().material.color == Color.green)
+                        {</p>
+                          <p>  countCurr++;</p>
+                          <p>  countText.text = countCurr + "";</p>
+                          
+                      <p>  }</p>
+            
+                   <p> }</p>
+                   <p> return countCurr;</p>
+               <p> }</p>
+            
+            
+                <p>private bool WonOrLost(float timeEnd, int countEnd)
+                {</p>
+                  <p>  if (timeEnd < 1 && countEnd == actualBallsNum)
+                    {</p>
+                   <p>     timeLeft = 0;</p>
+                    <p>    startText.text = (timeEnd).ToString("WINNER");</p>
+                    <p>    startText.color = Color.green;</p>
+                    <p>    countText.text = "You won";</p>
+                    <p>    return true;</p>
+            
+                   <p> }
+                    else if (timeEnd < 1 && countEnd != actualBallsNum)
+                    {</p>
+                  <p>      timeLeft = 0;</p>
+                 <p>       startText.text = (timeEnd).ToString("FAIL");</p>
+                 <p>       startText.color = Color.red;</p>
+                 <p>       countText.text = " You lost";</p>
+                 <p>       return false;</p>
+                 <p>   }</p>
+                <p>    return false;</p>
+               <p>}</p>
+            
+            <p>}</p>
+            
+            
+            
+            
+            
+            
+            
+            
+           <p> One last time, this is how your code for should look like:</p>
+           
+           <img src="bootstrap2/images/CountWinOrLose1.png" alt="" height="500" width="500">
+            <img src="bootstrap2/images/CountWinOrLose2.png" alt="" height="500" width="500">
+            <img src="bootstrap2/images/CountWinOrLose3.png" alt="" height="500" width="500">
+            <img src="bootstrap2/images/CountWinOrLose4.png" alt="" height="500" width="500">
+                      <p>
+            using System.Collections;</p>
+            <p>using System.Collections.Generic;</p>
+            <p>using UnityEngine;</p>
+            <p>using UnityEngine.UI;</p>
+            
+            <p>public class CountWinOrLose : MonoBehaviour
+            {</p>
+            
+               <p> //For Counting</p>
+               <p> public int numOfBalls;</p>
+                <p>int actualBallsNum = 10;</p>
+                <p>public Text countText;</p>
+            
+                <p>//For Time</p>
+               <p> public float timeLeft = 10f;</p>
+                <p>public Text timeText;</p>
+            
+               <p> // Use this for initialization</p>
+                <p>void Start()
+                {</p>
+            
+                <p>}</p>
+            
+               <p> // Update is called once per frame</p>
+                <p>void Update()
+                {</p>
+                   <p> timeLeft -= Time.deltaTime;</p>
+                    <p>numOfBalls = 0;</p>
+            
+                    <p>startText.text = (timeLeft).ToString("0");</p>
+            
+                   <p> //For Counting</p>
+                   <p> numOfBalls = CountingUp(numOfBalls);</p>
+            
+                    <p>//For Time</p>
+                    <p>if (timeLeft < 1)
+                    {</p>
+                      <p>  WonOrLost(timeLeft, numOfBalls);</p>
+            
+                   <p> }</p>
+            
+                <p>}</p>
+            
+            
+               <p> private int CountingUp(int countCurr)
+                {</p>
+                   <p> GameObject gameCurr;</p>
+                   <p> GameObject[] gameItems = GameObject.FindGameObjectsWithTag("SphereBalls");</p>
+            
+                   <p> for (int i = 0; i < actualBallsNum; i++)
+                    {</p>
+            
+                       <p> gameCurr = gameItems[i];</p>
+            
+                       <p> if (gameCurr.GetComponent<Renderer>().material.color == Color.green)
+                        {</p>
+                          <p>  countCurr++;</p>
+                          <p>  countText.text = countCurr + "";</p>
+                          
+                      <p>  }</p>
+            
+                   <p> }</p>
+                   <p> return countCurr;</p>
+               <p> }</p>
+            
+            
+                <p>private bool WonOrLost(float timeEnd, int countEnd)
+                {</p>
+                  <p>  if (timeEnd < 1 && countEnd == actualBallsNum)
+                    {</p>
+                   <p>     timeLeft = 0;</p>
+                    <p>    startText.text = (timeEnd).ToString("WINNER");</p>
+                    <p>    startText.color = Color.green;</p>
+                    <p>    countText.text = "You won";</p>
+                    <p>    return true;</p>
+            
+                   <p> }
+                    else if (timeEnd < 1 && countEnd != actualBallsNum)
+                    {</p>
+                  <p>      timeLeft = 0;</p>
+                 <p>       startText.text = (timeEnd).ToString("FAIL");</p>
+                 <p>       startText.color = Color.red;</p>
+                 <p>       countText.text = " You lost";</p>
+                 <p>       return false;</p>
+                 <p>   }</p>
+                <p>    return false;</p>
+               <p>}</p>
+            
+            <p>}</p>
+            
           
      <div class="wrapper">
         <div class="inner">
            <p>Click on the Previous button if you think you missed something in the 
             last part or click the Next button to .</p>
           <div id="container">
-            <button id="prevBtn" title="prev"><a href="tutorials3section3">Previous</a></button>
-            <button id="nextBtn" title="next"><a href="tutorials3section5">Next</a></button>
+            <button id="prevBtn" title="prev"><a href="tutorials3section6">Previous</a></button>
+            <button id="nextBtn" title="next"><a href="tutorials3section8">Next</a></button>
           </div>
     
         </div>

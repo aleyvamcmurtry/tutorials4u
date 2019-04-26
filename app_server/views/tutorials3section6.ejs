@@ -41,12 +41,8 @@
           
           <h2>Let's Change the Color with a Script!</h2>
           
-             <p>Let's add the Virtual Reality components to our Player.</p>
-             
-          <h2>Items</h2>
-          
-             <p>Let's create some items to collect!</p>
-             
+             <p>We are going to be adding our first script to our game.</p>
+
              <iframe width="420" height="315"
           src="">
           </iframe>
@@ -58,15 +54,279 @@
         <div class="inner">
       
           <p>Welcome back! </p>
-           
+           <p>
+             We have our ‘Player’, our ‘Floor’, and our ‘Ball’, but they don’t do anything.
+             When our ‘Player’ object tries to interact with our ‘Ball’, nothing happens.
+             That’s because we haven’t told it what to do yet. And in this chapter, we are
+             going to. </p>
+
+            <p>Please follow along as best as you can. This chapter may be a little longer
+            than most of the others. </p>
+            
+            <p>First make sure Unity and your project is open. Once it is open, click your
+            ‘Ball’ object and look at your ‘Inspector Window’. </p>
+            
+            <p>Now go all of the way down in the ‘Inspector Window’ and you will see a button
+            called ‘Add Component’. Click on it and then you should see a bunch of different
+            items that we can add to our ‘Ball’. Instead of looking through all of these items,
+            click on the search bar above the items and type in ‘New Script’. You should see
+            an item called ‘New Script’ appear. Click on it and it will then ask you for the
+            name of your new script. </p>
+            
+           <p> Type in ‘ColorChange’ and then click on the button ‘Create and Add’ at the bottom.
+            The script ‘ColorChange (Script)’ should be added to the ‘Ball’ object. </p>
+            
+           <p> Now before we go into ‘ColorChange’, let’s make sure we understand what a script is.
+            A script is a set of instructions a person created for a program like Unity to
+            understand and then follow. Think of it as a recipe. In a recipe, you are told how
+            much ingredients you need, how to prepare then, and then how to cook it. </p>
+            
+            <p>It is the same thing here. We are going to tell Unity what want to have done and
+            then Unity should, if we tell the right directions, do what we ask. Essentially
+            what we will be doing is coding.</p>
+            
+            <p>The “language”, “programming language”, or vocabulary we will be using is C#
+            (pronounced C Sharp). C# is a object-oriented programming language that scripts can
+            be written in. In other words, it is a “language” that the computer can understand
+            that can hold and use data and objects. </p>
+            
+            <p>Unity currently uses and understands two of these languages: C# and Javascript. We
+            are using C# because it is a little bit easier for beginners to understand and it
+            seems to be the language most Unity developers use. </p>
+            
+            <p>Now we can go into what we are going to put into ‘ColorChange’. Next to the name of
+            ‘ColorChange (Script)’, you should see a book, two sliding bars, and a gear. Click
+            on the gear. You then will see a list of options, like ‘Reset’, ‘Remove Component’,
+            and ‘Edit Script’. Click on ‘Edit Script’. </p>
+
+            <p>Another program called ‘Microsoft Visual Studio’ should appear and load. This is
+            a program that comes and downloads with Unity. ‘Visual Studio’ allows for us to
+            edit our script, save it, and then have it run in Unity. </p>
+            
+            <p>When it initially appears, you should see the name of our script next to 
+            ‘public class’. All of the information you see is the basic code Unity gives you. </p> 
+            
+            <p>Whenever you see the word ‘using’ next to something, it means that the code is 
+            telling our script  that we want Unity to look in these “libraries” for other
+            code or objects and that we might want to use them. These libraries have all of
+            the up to date information. There are multiple libraries and you can always
+            specifically say which ones or which parts of one you want to use. </p>
+            
+            <p>For understanding purposes, and because we don’t want to accidently delete and
+            lose contact, we are going to keep these libraries and leave them alone. You
+            should never place connections to libraries anywhere else but at the very top
+            of your code. </p>
+            
+           <p> Here is some code lingo. A class, like you see with ‘public class’, is template
+            that holds code that we want to run. Think of it as the recipe. It has
+            information about the objects we are using, it can create new objects, talk
+            to the ones we currently have, and tell them what to do. Classes can be
+            private or public. A private class is a class that can only be accessed or
+            seen by one object. A public class is a class that can be seen and used by
+            not only the object that is using it, but by other objects in the area. </p>
+            
+            <p>‘Monobehaviour’ is an existing class in Unity that our class can use to ask
+            for and get some help. Think of ‘Monobehaviour’ as a plate and ‘ColorChange’
+            as a sandwich. Without ‘Monobehaviour’, we have nowhere to place and hold our
+            ‘ColorChange’ sandwhich. </p>
+            
+           <p> A method is an instruction that tells the object what to do. Think of it as
+            a direction in a recipe, like ‘put the cookies in the oven at 350 degrees’.
+            It says what to specifically an object or the program what to specifically do.</p>
+            
+            <p>So at the top we have our connections to our libraries, we have a announcement
+            saying we are working on a public class called ‘ColorChange’, and inside of
+            our class, we already have the method ‘Start()’ and ‘Update()’. </p>
+            
+            <p>The ‘Start()’ method is a method can Unity calls on first and asks for any
+            specific information that we want to happen at the beginning of our game.
+            For the purpose of ‘ColorChange’ (and our method in the next chapter), we
+            will not being using ’Start()’ because we only want things to happen after
+            the game has already started. </p>
+            
+            <p>The ‘Update()’ method is a method that Unity calls once every frame, or
+            once every unknown amount of milliseconds (or less than a second). The
+            reason why the amount is unknown is because it depends a lot on your
+            computer, and later phone, speed and capability to handle games. So
+            while for one person a frame happens once every 5 milliseconds, for
+            another it can happen once every 10 milliseconds. Every time a frame
+            is ran, Unity will do the things inside here.  </p>
+            
+            <p>For ‘ColorChange’ we will not be using the ‘Update()’ method, but for
+            our second script we will.</p>
+            
+            <p>Last thing before we add anything new, the word ‘void’ in front of
+            ‘Start()’ and ‘Update()’ means that we will not be ‘returning’ or
+            sending back any information. In front of every method we need to
+            say what it is returning, if it is going to be public or private,
+            and if the method needs specific information. ‘Start()’ and ‘Update()’
+            don’t ask for any outside information so that’s why inside the
+            parenthesis () are empty. </p>
+            
+            
+            <p>Let us dig into the code we are adding.</p>
+            
+            <p>Above ‘void Start()’ but below ‘public class’, we are going to type in:</p>
+            
+            <p>‘public Renderer rend;’</p>
+            
+            <p>What we are doing here is stating any objects that we are creating
+            specifically for this class and code. ‘Public’ is of course whether
+            or not other classes and objects can see this new object we are
+            creating. ‘Renderer’ is the type of object, with renderer being an
+            object that helps for us to see or not see our base object. Lastly
+            ‘rend’ is the name of our new object. Our ‘Renderer’ object is
+            named ‘rend’ because we want to follow the standard Unity Naming
+            style that can be seen in Unity’s documentation. This way if other
+            people want see and understand our code, they don’t have to do too
+            much guesswork about what kind of object ‘rend’ is. If you decide
+            not to follow that naming style, choose something that most people
+            can understand. For example, I might use ren for Renderer. </p>
+            
+            <p>Under ‘void Update()’, we are going to create a new method called
+            ‘ChangeBallColor()’. It is going to be a public method and it is
+            not going to take any information in. </p>
+            
+            <p>The way you should this line out is like this:</p>
+            
+            <p>‘public void ChangeBallColor{ }’</p>
+            
+            <p>The brackets { } mean that anything inside of it belongs to the
+            method. The class also uses brackets { } to say that everything
+            inside them belong to the class. Always make sure and double
+            check that for every opened bracket { you have a closed one }.</p> 
+            
+            <p>Inside ‘ChangeBallColor()’, you are going to type:</p>
+            
+            <p>rend = GetComponent<Renderer>();
+            rend.material.SetColor("_Color", Color.green);</p>
+            
+            <p>At the end of every line that doesn’t have a bracket,
+            you want to use a semicolon ; . A semicolon ; is used
+            to say that this is the end of what we want to do for
+            that line. If we don’t include a semicolon, then Unity
+            will assume that we want everything to happen all at
+            once and not one at a time. </p>
+            
+            <p>The line ‘rend = GetComponent<Renderer>();’ is saying
+            that we are going to get the renderer part of our base
+            object and put it into our new ‘rend’ object. In other
+            words, we haven’t told ‘rend’ exactly what it is and it
+            only knows what type of object it is, not what it has
+            inside of it. With this line, we are saying that ‘rend’ is
+            going to get the renderer information that belongs to our
+            ‘Ball’, keep it, and be our connection to our ‘Ball’ just in
+            case. Also the ‘equals =’ is called assign in code lingo,
+            because we are ‘assigning’ something to our object.</p>
+            
+            <p>The next line ‘rend.material.SetColor("_Color", Color.green);’
+            is saying that we are going to get the material that belongs
+            to our base object, using the information we have through our
+            renderer, and change the color of our material to green. </p>
+            
+            <p>So with our code put together, you should have this:</p>
+            
+            <img src="bootstrap2/images/ChangeColor.png" alt="" height="500" width="500">
+          <p>using System.Collections;</p>
+            <p>using System.Collections.Generic;</p>
+            <p>using UnityEngine;</p>
+            
+           <p> public class ColorChange : MonoBehaviour {</p>
+            
+               <p> public Renderer rend; //Following Unity Naming Conventions</p>
+                
+               <p> // Use this for initialization</p>
+                <p>void Start()
+                {</p>
+                 <p>  }</p>
+            
+               <p> // Update is called once per frame</p>
+              <p>  void Update()
+                {</p>
+                  
+                <p>}</p>
+            
+               <p> public void ChangeBallColor()
+                {</p>
+                <p>    rend = GetComponent<Renderer>();</p>
+                <p>    rend.material.SetColor("_Color", Color.green);</p>
+                    
+                   
+              <p>       }</p>
+           <p> }</p>
+
+            
+            
+            <p>Perfect! We are almost done. </p>
+            
+            <p>Minimize ‘Visual Studio’ and click back on your ‘Ball’. Your
+            ‘ColorChange’ script should have our ‘rend’ object visible. 
+            Click on your ‘Ball’ and drag it onto the empty space next to
+            ‘Rend’. If we don’t do this, then our code won’t work because 
+            it won’t know what object we want to change the color of. Just
+            because our script is attached to our ‘Ball’ does not mean that
+            it is fully connected to it.</p> 
+            
+            <p>The last major thing we want to do is click on ‘Add Component’
+            and type in ‘Event Trigger’ into our search bar. Click on it
+            when it appears. Then click on the button inside of it that
+            says ‘Add New Event Type’ and select ‘PointerClick’ when it
+            appears. </p>
+            
+            <p>Click on the plus + symbol. Drag your ‘Ball’ object to the
+            empty space under ‘Runtime Only’ (which means only when the
+            game is on). You should be able to now interact with list
+            that was greyed out that says ‘No Function’. Click on it,
+            go to ‘ColorChange()’, and then click on ‘ChangeBallColor()’.</p>
+            
+            <p>What we just did is tell our ‘Ball’ object that whenever
+            someone clicks on it, it does something. In this case,
+            whenever someone clicks on our ‘Ball’, we want the color
+            to change.</p> 
+            
+            <p>And that’s it for this script. Make sure to save and test
+            your new script. </p>
+            
+            <p>One last time, this is the code you should have in your
+            ‘ColorChange()’ method:</p> 
+            <img src="bootstrap2/images/ChangeColor.png" alt="" height="500" width="500">
+            <p>using System.Collections;</p>
+            <p>using System.Collections.Generic;</p>
+            <p>using UnityEngine;</p>
+            
+           <p> public class ColorChange : MonoBehaviour {</p>
+            
+               <p> public Renderer rend; //Following Unity Naming Conventions</p>
+                
+               <p> // Use this for initialization</p>
+                <p>void Start()
+                {</p>
+                 <p>  }</p>
+            
+               <p> // Update is called once per frame</p>
+              <p>  void Update()
+                {</p>
+                  
+                <p>}</p>
+            
+               <p> public void ChangeBallColor()
+                {</p>
+                <p>    rend = GetComponent<Renderer>();</p>
+                <p>    rend.material.SetColor("_Color", Color.green);</p>
+                    
+                   
+              <p>       }</p>
+           <p> }</p>
+
+          
           
      <div class="wrapper">
         <div class="inner">
            <p>Click on the Previous button if you think you missed something in the 
             last part or click the Next button to .</p>
           <div id="container">
-            <button id="prevBtn" title="prev"><a href="tutorials3section3">Previous</a></button>
-            <button id="nextBtn" title="next"><a href="tutorials3section5">Next</a></button>
+            <button id="prevBtn" title="prev"><a href="tutorials3section5">Previous</a></button>
+            <button id="nextBtn" title="next"><a href="tutorials3section7">Next</a></button>
           </div>
     
         </div>

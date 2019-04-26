@@ -43,10 +43,6 @@
           
              <p>It's time to add in our items.</p>
              
-          <h2>Items</h2>
-          
-             <p>Let's create some items to collect!</p>
-             
              <iframe width="420" height="315"
           src="">
           </iframe>
@@ -59,67 +55,114 @@
       
           <p>Welcome back! </p>
             
-            <p>We have our Player, we have our floor, but now...what is our game supposed to do anyways?
+            <p>We have our Player, we have our floor, but now...what is our game supposed to do anyways?</p>
 
-                Well, now we find out.
+                <p>Well, now we find out.</p>
                 
-                Our game is going to be a very simple, but fun game. Basically we are going to have
+                <p>Our game is going to be a very simple, but fun game. Basically we are going to have
                 a bunch of different balls surround the player and when you click on them, they
                 change color. The end goal will be click on all of the balls before the time runs
-                out. You can then test your time against your friends and see who can do it the fastest. 
+                out. You can then test your time against your friends and see who can do it the fastest.</p> 
                 
-                In this chapter, we will be creating these balls and allow them to change color when
-                we click on them.
+                <p>In this chapter, we will be creating these balls and allow them to change color when
+                we click on them.</p>
+                <p>So, how do we do this?</p>
                 
-                So, how do we do this?
+                <p>First make sure to have Unity and your project open.</p> 
                 
-                First make sure to have Unity and your project open. 
-                
-                Next, in our ‘Menu Bar’, we are going to click on ‘GameObject’. Go down to 3D object,
+                <p>Next, in our ‘Menu Bar’, we are going to click on ‘GameObject’. Go down to 3D object,
                 slide over and click on ‘Sphere’. After clicking on sphere, you should see a ball
-                appear in your ‘Hierarchy’ and in your Scene. 
+                appear in your ‘Hierarchy’ and in your Scene. </p>
                 
-                Click on your ‘Sphere’ in your hierarchy and let us look at our ‘Inspector Window’.
+                <p>Click on your ‘Sphere’ in your hierarchy and let us look at our ‘Inspector Window’.
                 First off we want to see what position our ‘Sphere’ is at. If it is not at position
                 X=0, Y=0, Z=0, please fix this now. After fixing it, go into your ‘Scene View’,
                 click on the green arrow pointing up, and drag it a little bit up. You want our 
                 ‘Sphere’ object to be a little bit above our ‘Floor’ object, but not higher than
                 what our ‘Player’ object can see. If you want the exact number, have your Y
                 position be anywhere between Y=0.1 to Y= 5. We want our ‘Player’ to still see
-                the ‘Sphere’ when we’re playing the game. 
+                the ‘Sphere’ when we’re playing the game. </p>
                 
-                If you don’t see any arrows, then in our ‘Tool Bar’, click on the four arrows
+                <p>If you don’t see any arrows, then in our ‘Tool Bar’, click on the four arrows
                 crossing each other (or the ‘Move Tool’). After you click on this, you should
-                see arrows pointing out from our ‘Sphere’ object.
+                see arrows pointing out from our ‘Sphere’ object.</p>
                 
-                Now so far you have seen one way to rename an object. Here is another way to
+                <p>Now so far you have seen one way to rename an object. Here is another way to
                 rename an object. If you look at our ‘Inspector Window’ (after making sure
                 that we still have our ‘Sphere’ object clicked), you will see the name of the
                 current object that we are working on. If you click on it, you can actually
                 change the name of our object. We are going to click and rename our ‘Sphere’
-                object to become ‘Ball’. 
+                object to become ‘Ball’. </p>
                 
-                Underneath where we changed the name, there is a label called ‘Tag’. A ‘Tag’
+                <p>Underneath where we changed the name, there is a label called ‘Tag’. A ‘Tag’
                 in Unity is a way for us to keep track, label, and be able to identify what
                 our objects are. By default, the ‘Tag’ for our ‘Ball’ is ‘Untagged’. For
                 future chapters (and for reasons that you will understand later on), we
-                are going to give a ‘Tag’, or label, to our ‘Ball’. 
+                are going to give a ‘Tag’, or label, to our ‘Ball’.</p> 
                 
-                Click on where it says ‘Untagged’. The box should open up and you should
+                <p>Click on where it says ‘Untagged’. The box should open up and you should
                 see a lot of different choices. What we are going to do is create a custom
                 tag, so go all of the way to the bottom of this and click on ‘Add Tag...’.
                 The ‘Inspector’ should change to show you some of the custom tags you have
                 already made for this game. Since this is the first one we have made, click
-                on the ‘plus +’ sign. 
+                on the ‘plus +’ sign. </p>
                 
-                A pop up should appear and it should ask you for the new tag name. Type in
+                <p>A pop up should appear and it should ask you for the new tag name. Type in
                 ‘BallObject’ and then click on ‘Save’. You should see ‘BallObject’ appear
                 in your tags. Reclick on our ‘Ball’, reclick on ‘Untagged’, and then click
-                on ‘BallObject’. This will officially give our ‘Ball’ a tag.   
+                on ‘BallObject’. This will officially give our ‘Ball’ a tag. </p>  
                 
-                The next thing we are going to do is give a color to our ‘Ball’. After
+               <p>The next thing we are going to do is give a color to our ‘Ball’. After
                 we give our ‘Ball’ some color, feel free to do the same to our ‘Floor’
-                object. Just make sure that our ‘Floor’ is not the same color as our ‘Ball’. 
+                object. Just make sure that our ‘Floor’ is not the same color as our ‘Ball’. </p>
+                
+                <p>In Unity, to give our ‘Ball’ object a color, we have to change the color of
+                the material of our ‘Ball’. The material is what we physically see of an
+                object, whether it's the color, texture, or things that allow us to
+                physically see the object. Now, every object that isn’t empty has the
+                default material attached to it. That’s why all of our objects (except
+                for our ‘Player’) has the color white attached to them. We can’t directly
+                change the color of our material, but we can make a new one to put on. </p>
+                
+                <p>For the purpose of our game, only use the path we are using to make a
+                material and don’t use any preexisting ones from other ‘Assets’. The
+                reason why is because the way some materials are made use some other
+                textures or have a bunch of different colors on them and for our game
+                we want to make sure all of our ‘Balls’ have a solid color on them.
+                On the other hand, feel free to choose any materials you want to use
+                for your ‘Floor’.</p>
+                
+                <p>So to make a material with a solid color, go to the ‘Project Folder’,
+                click on ‘Create’, and then click on ‘Material’. In your ‘Assets’
+                folder you should see a white sphere with the name ‘New Material’.
+                Right click on this ‘New Material’ and rename it to ‘RosyRed’. Then
+                just normally click on ‘RosyRed’.</p>
+                
+                <p>In the ‘Inspector Window’ you should see information about ‘RosyRed’.
+                Click on the white space next to ‘Albedo’ and the dropper symbol.
+                A pop up should appear with a bunch of colors. In the box inside the
+                circle, move the little circle all of the way to the right. In the
+                big circle, move the circle inside there to a color that looks red.
+                The color that the material should currently look like should be red. </p>
+                
+                <p>If you don’t know if you have the right kind of red or don’t know
+                how to properly move the colors around, look under the colors and
+                you will see text boxes next to RGB A. R stands for the color red.
+                G stands for green. B stands for the color blue. And A stands for
+                alpha, or how strong or clear a color looks. We want R to be 255
+                (the max), G and B to both be 0, and for A to be 255. </p>
+                
+                <p>R= 255, G= 0, B= 0, A= 255</p>
+                
+                <p>This gives a nice and bright red. </p>
+                
+                <p>After you are done, click somewhere outside of the pop up to go back to Unity.</p> 
+                
+                <p>Lastly, click and drag ‘RosyRed’ onto our ‘Ball’. The color for our
+                ‘Ball’ should now change to red and when you click on our ‘Ball’,
+                you should see ‘RosyRed’ in our ‘Inspector Window’. Double check
+                that our ‘Shader’ in ‘RosyRed’ is set to ‘Standard’ and make sure
+                not to touch it. If it is not set to ‘Standard’, click on it and change it.</p>
 
                 </p>
                 
@@ -130,8 +173,8 @@
            <p>Click on the Previous button if you think you missed something in the 
             last part or click the Next button to .</p>
           <div id="container">
-            <button id="prevBtn" title="prev"><a href="tutorials3section3">Previous</a></button>
-            <button id="nextBtn" title="next"><a href="tutorials3section5">Next</a></button>
+            <button id="prevBtn" title="prev"><a href="tutorials3section4">Previous</a></button>
+            <button id="nextBtn" title="next"><a href="tutorials3section6">Next</a></button>
           </div>
     
         </div>
