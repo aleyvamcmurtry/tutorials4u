@@ -20,6 +20,8 @@
 	}
 	
 	
+
+	
 	
 	//trying to get it so that way when a person presses a button, it shows 
 	//them all of the pc or mac info. when they click it again, it closes
