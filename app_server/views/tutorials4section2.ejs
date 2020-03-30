@@ -38,12 +38,12 @@
     <section id="wrapper">
       <header>
         <div class="inner">
-          <h2>Download Unity</h2>
+          <!--- <h2>Download Unity</h2>
           
              <p>Ready to get Started?</p>
              <iframe width="420" height="315"
           src="https://www.youtube.com/embed/BcmhV3ntdW8">
-          </iframe>
+          </iframe> -->
         </div>
       </header>
       
@@ -51,76 +51,57 @@
       <div class="wrapper">
         <div class="inner">
       
+          <p>Welcome Back!</p>
           
+          <p>We are getting closer to running your game. </p>
+      
+          <p>This time please do the following:</p>
+          <p>Click on File.</p>
+           <p>Click on Build Settings (not Build and Run, we are not ready for that just yet).</p>
+           <p>Build Settings should then pop up. You should see on the left hand side
+           an area called Platform.</p>
+           <p>This area is where we decide what we want our game to run on. You should see that 
+           PC, Mac, & Linux Standalone, as well as Android have items on the right hand side. If you click on
+           PS4 or iOS, they should only have a message asking for you to download their module.
+           That is because we have only downloaded the Android version and the PC version is default.</p>
+          <p>Click on Android and at the bottom of the information for Android, click on the button that says
+          Switch Platform. </p>
           
-          <p>First, let’s go to Unity’s <a href= "https://unity3d.com/">website</a>. 
-          You can also click on <a href= "https://unity3d.com/">https://unity3d.com/</a>
-          to take you there. You should make sure that the page opens up in a
-          new tab so that way you can look at this page and at Unity’s page at 
-          the same time. </p>
+          <p>When that is done, click Build and Run. It will now ask you for a file name. Save this file as 
+          MyFirstGameTestComputer.</p>
+          <p>Click on Save.</p>
           
-          <p>You should see (t1s1i1). We are now going to click on Get Unity.</p>
+          <p>Now let's wait for it to run. You should get an error saying there is now Android Device plugged in.</p>
+          <p>As long as that is your only error in this step, then you are good. </p>
           
-          <p>After doing so, Unity will give you four different “plans” to 
-          choose from. All of the plans except for Personal charge money. 
-          The reason why is because they offer other benefits that the Personal 
-          plan does not come with. They also are for more experienced users and 
-          for organizations and companies. For us, the Personal version will work 
-          the best. Click on the green Try Personal button. </p>
+          <p>If not and you get an error saying Android SDK is not working, then click out
+          of Build Settings, click on Edit on the Menu Bar, and then click on Preferences.</p>
           
-          <p>Awesome!</p>
+          <p>Make sure that you are searching in External Tools. </p>
+          <p>Android SDK Tools Installed with Unity should be clicked.</p>
+          <p>Unclick it for the moment and check to see if everything looks correct. 
+          The file path, or the path that the computer knows to take when it is looking for 
+          a specific item, should look like this.</p>
           
-          <p>Now here is where things can get a little bit confusing. 
-          First off, do you have a Mac or a PC? A PC is usually any 
-          computer that is not a Mac. </p>
+          <p>C:\Program Files\Unity\Hub\Editor\2019.3.1f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK</p>
           
-          <p>Now, you will need to make sure that your computer 
-          meets all of the minimum requirements for Unity to work. If you don’t 
-          meet the minimum requirements, then Unity may not install or it may install,
-          but it will run super slowly. </p>
+          <p>If everything looks good, then you should be fine.</p>
+          <p>If it does not, and you see AndroidPlayer/SDK, click on on / and replace it with \. </p>
+          <p>They look very similar, but unfortunately it changes the path the computer looks at. 
+          So instead of the computer looking inside the AndroidPlayer folder, it is looking at AndroidPlayer and stopping.
+          This is causing for the SDK not to be found. </p>
           
-          <button onclick="showAll()">PC</button>
+          <p>If this is the issue you had, change it, exit out of External Tools, and try Build and Run again. </p>
           
-          <p>For PCs, your computer needs to have at least Windows 7. 
-          If you have Windows 8 or 10, then you are fine. </p>
-          <p>You need to also make sure that your Graphics card has 
-          at least DX9 with shader model 3.0 or be at least DX11. </p>
-          <p>Now this is a lot of confusing information. What does DX9 
-          mean? What does shader model mean? You can check out
-         <a href= "resources">Here</a> (link to resources page with more information) to learn more about it. 
-          For now, understand that this information just means how nice and
-          pretty your computer can make things look. </p>
-          
-          <p>To check what type of DX you have, do the following. 
-          (This will differ on whether the person has 7, 8. 8.1, or 10, I 
-          cant do images of 7 or 8 unfortunately)</p>
-          
-          <h4> For Windows 10:</h4>
-          <li>Click on Cortana.</li>
-          <li>In Type To Search, type in Run and hit Enter.</li>
-          <li>Type in dxdiag in the box and then click on OK</li>
-          <li>Look for DirectX Version and It will tell you what version of 
-              DX you have (it will say DirectX 12 for example).</li>
-          <li>When you are done, click on Exit.</li> 
-          <p>And there you go!</p>
+          <p>Great! Everything should be working. Go onto the next tutorial for the next step. </p>
 
-
-          <button onclick="showAll()">MAC</button>
-          <p>WITH THIS</p>
-          <h3>System Requirements for Unity version 5.6.1, released 11 May 2017
-          OS: Windows 7 SP1+, 8, 10; Mac OS X 10.8+. Mac</span>
-          <p>System Requirements for Unity version 5.6.1, released 11 May 2017
-          OS: Windows 7 SP1+, 8, 10; Mac OS X 10.8+.
-          GPU: Graphics card with DX9 (shader model 3.0) or DX11 with feature level 9.3 capabilities.
-          </p>
-          
      <div class="wrapper">
         <div class="inner">
            <p>Click on the Previous button if you think you missed something in the 
             last part or click the Next button to .</p>
           <div id="container">
-            <button id="prevBtn" title="prev"><a href="tutorials1">Previous</a></button>
-            <button id="nextBtn" title="next"><a href="tutorials1section2">Next</a></button>
+            <button id="prevBtn" title="prev"><a href="tutorials4section1">Previous</a></button>
+            <button id="nextBtn" title="next"><a href="tutorials1section3">Next</a></button>
           </div>
     
         </div>
