@@ -43,10 +43,12 @@
           
              <p>It's time to add our second script to our game.</p>
              
+             <p>If you would like to go back to any of the previous tutorials,
+              please click <a href="tutorialshome">here!</a></p>
          
-             <iframe width="420" height="315"
+            <!-- <iframe width="420" height="315"
           src="">
-          </iframe>
+          </iframe> -->
         </div>
       </header>
       
@@ -79,7 +81,7 @@
             call ‘UnityEngine.UI’. </p>
             
             <p>The line should look like this:</p>
-            <p>using UnityEngine.UI;</p>
+            <code>using UnityEngine.UI;</code>
             
             <p>But we already have ‘UnityEngine’, why do we need to call on
             it twice and add ‘.UI’. The reason for this is ‘UnityEngine’
@@ -96,12 +98,13 @@
             
             <p>Type in:</p>
             
-            <p>public int numOfBalls;
-            int actualBallsNum = 10;
-            public Text countText;
+    <pre><code>
+    public int numOfBalls;
+    int actualBallsNum = 10;
+    public Text countText;
             
-            public float timeLeft = 10f;
-            public Text timeText;</p>
+    public float timeLeft = 10f;
+    public Text timeText;</code></pre>
             
             <p>If you noticed first, some of these objects have public infront
             of them, while other don’t. The objects that do have public in
@@ -135,227 +138,103 @@
             changed the color of all of the balls.</p> 
             
             <p>Inside the ‘Update()’ method, type in this:</p>
-                    <p>timeLeft -= Time.deltaTime;
-                    numOfBalls = 0;
+    <pre><code>
+    timeLeft -= Time.deltaTime;
+    numOfBalls = 0;
             
-                    startText.text = (timeLeft).ToString("0");
+    startText.text = (timeLeft).ToString("0");
             
-                    numOfBalls = CountingUp(numOfBalls);
+    numOfBalls = CountingUp(numOfBalls);
             
-                    if (timeLeft < 1)
-                    {
-                        WonOrLost(timeLeft, numOfBalls);
-            
-                    }</p>
+    if (timeLeft < 1)
+    {
+        WonOrLost(timeLeft, numOfBalls);
+    }</code></pre>
             
             <p>We are first telling </p>
             
             
-            
-            
-            
-            
             <p>At the end here is how your code should look like:</p>
-            <img src="bootstrap2/images/CountWinOrLose1.png" alt="" height="500" width="500">
-            <img src="bootstrap2/images/CountWinOrLose2.png" alt="" height="500" width="500">
-            <img src="bootstrap2/images/CountWinOrLose3.png" alt="" height="500" width="500">
-            <img src="bootstrap2/images/CountWinOrLose4.png" alt="" height="500" width="500">
-            <p>
-            using System.Collections;</p>
-            <p>using System.Collections.Generic;</p>
-            <p>using UnityEngine;</p>
-            <p>using UnityEngine.UI;</p>
-            
-            <p>public class CountWinOrLose : MonoBehaviour
-            {</p>
-            
-               <p> //For Counting</p>
-               <p> public int numOfBalls;</p>
-                <p>int actualBallsNum = 10;</p>
-                <p>public Text countText;</p>
-            
-                <p>//For Time</p>
-               <p> public float timeLeft = 10f;</p>
-                <p>public Text timeText;</p>
-            
-               <p> // Use this for initialization</p>
-                <p>void Start()
-                {</p>
-            
-                <p>}</p>
-            
-               <p> // Update is called once per frame</p>
-                <p>void Update()
-                {</p>
-                   <p> timeLeft -= Time.deltaTime;</p>
-                    <p>numOfBalls = 0;</p>
-            
-                    <p>startText.text = (timeLeft).ToString("0");</p>
-            
-                   <p> //For Counting</p>
-                   <p> numOfBalls = CountingUp(numOfBalls);</p>
-            
-                    <p>//For Time</p>
-                    <p>if (timeLeft < 1)
-                    {</p>
-                      <p>  WonOrLost(timeLeft, numOfBalls);</p>
-            
-                   <p> }</p>
-            
-                <p>}</p>
-            
-            
-               <p> private int CountingUp(int countCurr)
-                {</p>
-                   <p> GameObject gameCurr;</p>
-                   <p> GameObject[] gameItems = GameObject.FindGameObjectsWithTag("SphereBalls");</p>
-            
-                   <p> for (int i = 0; i < actualBallsNum; i++)
-                    {</p>
-            
-                       <p> gameCurr = gameItems[i];</p>
-            
-                       <p> if (gameCurr.GetComponent<Renderer>().material.color == Color.green)
-                        {</p>
-                          <p>  countCurr++;</p>
-                          <p>  countText.text = countCurr + "";</p>
-                          
-                      <p>  }</p>
-            
-                   <p> }</p>
-                   <p> return countCurr;</p>
-               <p> }</p>
-            
-            
-                <p>private bool WonOrLost(float timeEnd, int countEnd)
-                {</p>
-                  <p>  if (timeEnd < 1 && countEnd == actualBallsNum)
-                    {</p>
-                   <p>     timeLeft = 0;</p>
-                    <p>    startText.text = (timeEnd).ToString("WINNER");</p>
-                    <p>    startText.color = Color.green;</p>
-                    <p>    countText.text = "You won";</p>
-                    <p>    return true;</p>
-            
-                   <p> }
-                    else if (timeEnd < 1 && countEnd != actualBallsNum)
-                    {</p>
-                  <p>      timeLeft = 0;</p>
-                 <p>       startText.text = (timeEnd).ToString("FAIL");</p>
-                 <p>       startText.color = Color.red;</p>
-                 <p>       countText.text = " You lost";</p>
-                 <p>       return false;</p>
-                 <p>   }</p>
-                <p>    return false;</p>
-               <p>}</p>
-            
-            <p>}</p>
-            
-            
-            
-            
-            
-            
-            
-            
-           <p> One last time, this is how your code for should look like:</p>
            
-           <a href="code" class="image"><img src="bootstrap2/images/CountWinOrLose1.png" alt=""></a>
-           
-           <img src="bootstrap2/images/CountWinOrLose1.png" alt="" height="500" width="500">
-            <img src="bootstrap2/images/CountWinOrLose2.png" alt="" height="500" width="500">
-            <img src="bootstrap2/images/CountWinOrLose3.png" alt="" height="500" width="500">
-            <img src="bootstrap2/images/CountWinOrLose4.png" alt="" height="500" width="500">
-                      <p>
-            using System.Collections;</p>
-            <p>using System.Collections.Generic;</p>
-            <p>using UnityEngine;</p>
-            <p>using UnityEngine.UI;</p>
+    <pre><code>
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI;
             
-            <p>public class CountWinOrLose : MonoBehaviour
-            {</p>
+    public class CountWinOrLose : MonoBehaviour{
             
-               <p> //For Counting</p>
-               <p> public int numOfBalls;</p>
-                <p>int actualBallsNum = 10;</p>
-                <p>public Text countText;</p>
+        //For Counting
+        public int numOfBalls;
+        int actualBallsNum = 10;
+        public Text countText;
             
-                <p>//For Time</p>
-               <p> public float timeLeft = 10f;</p>
-                <p>public Text timeText;</p>
+        //For Time
+        public float timeLeft = 10f;
+        public Text timeText;
             
-               <p> // Use this for initialization</p>
-                <p>void Start()
-                {</p>
+        // Use this for initialization
+        void Start(){ }
             
-                <p>}</p>
+        // Update is called once per frame
+        void Update(){
+            timeLeft -= Time.deltaTime;
+            numOfBalls = 0;
             
-               <p> // Update is called once per frame</p>
-                <p>void Update()
-                {</p>
-                   <p> timeLeft -= Time.deltaTime;</p>
-                    <p>numOfBalls = 0;</p>
+            startText.text = (timeLeft).ToString("0");
             
-                    <p>startText.text = (timeLeft).ToString("0");</p>
+            //For Counting
+            numOfBalls = CountingUp(numOfBalls);
             
-                   <p> //For Counting</p>
-                   <p> numOfBalls = CountingUp(numOfBalls);</p>
+            //For Time<
+            if (timeLeft < 1){
+                WonOrLost(timeLeft, numOfBalls);
+            }
+        }
+         
+        private int CountingUp(int countCurr){
+            GameObject gameCurr;
+            GameObject[] gameItems = GameObject.FindGameObjectsWithTag("SphereBalls");
             
-                    <p>//For Time</p>
-                    <p>if (timeLeft < 1)
-                    {</p>
-                      <p>  WonOrLost(timeLeft, numOfBalls);</p>
+            for (int i = 0; i < actualBallsNum; i++){
+                gameCurr = gameItems[i];
             
-                   <p> }</p>
+                if (gameCurr.GetComponent<Renderer>().material.color == Color.green)
+                    {
+                        countCurr++;
+                        countText.text = countCurr + "";
+                    }
+                 }
+                 return countCurr;
+        }
             
-                <p>}</p>
+        private bool WonOrLost(float timeEnd, int countEnd){
+            if (timeEnd < 1 && countEnd == actualBallsNum){
+                timeLeft = 0;
+                startText.text = (timeEnd).ToString("WINNER");
+                startText.color = Color.green;
+                countText.text = "You won";
+                return true;
+            }
+            else if (timeEnd < 1 && countEnd != actualBallsNum)
+            {
+                 timeLeft = 0;
+                 startText.text = (timeEnd).ToString("FAIL");
+                 startText.color = Color.red;
+                 countText.text = " You lost";
+                 return false;
+            }else if (timeEnd < 1 && countEnd == actualBallsNum)
+            {
+                 timeLeft = 0;
+                 startText.text = (timeEnd).ToString("FAIL");
+                 startText.color = Color.red;
+                 countText.text = " You lost";
+                 return false;
+            }
+            return false;
+        }
             
-            
-               <p> private int CountingUp(int countCurr)
-                {</p>
-                   <p> GameObject gameCurr;</p>
-                   <p> GameObject[] gameItems = GameObject.FindGameObjectsWithTag("SphereBalls");</p>
-            
-                   <p> for (int i = 0; i < actualBallsNum; i++)
-                    {</p>
-            
-                       <p> gameCurr = gameItems[i];</p>
-            
-                       <p> if (gameCurr.GetComponent<Renderer>().material.color == Color.green)
-                        {</p>
-                          <p>  countCurr++;</p>
-                          <p>  countText.text = countCurr + "";</p>
-                          
-                      <p>  }</p>
-            
-                   <p> }</p>
-                   <p> return countCurr;</p>
-               <p> }</p>
-            
-            
-                <p>private bool WonOrLost(float timeEnd, int countEnd)
-                {</p>
-                  <p>  if (timeEnd < 1 && countEnd == actualBallsNum)
-                    {</p>
-                   <p>     timeLeft = 0;</p>
-                    <p>    startText.text = (timeEnd).ToString("WINNER");</p>
-                    <p>    startText.color = Color.green;</p>
-                    <p>    countText.text = "You won";</p>
-                    <p>    return true;</p>
-            
-                   <p> }
-                    else if (timeEnd < 1 && countEnd != actualBallsNum)
-                    {</p>
-                  <p>      timeLeft = 0;</p>
-                 <p>       startText.text = (timeEnd).ToString("FAIL");</p>
-                 <p>       startText.color = Color.red;</p>
-                 <p>       countText.text = " You lost";</p>
-                 <p>       return false;</p>
-                 <p>   }</p>
-                <p>    return false;</p>
-               <p>}</p>
-            
-            <p>}</p>
+    }</code></pre>
             
           
      <div class="wrapper">

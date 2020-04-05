@@ -42,10 +42,11 @@
           <h2>Let's Change the Color with a Script!</h2>
           
              <p>We are going to be adding our first script to our game.</p>
-
-             <iframe width="420" height="315"
+              <p>If you would like to go back to any of the previous tutorials,
+              please click <a href="tutorialshome">here!</a></p>
+             <!-- <iframe width="420" height="315"
           src="">
-          </iframe>
+          </iframe> -->
         </div>
       </header>
       
@@ -168,7 +169,7 @@
             
             <p>Above ‘void Start()’ but below ‘public class’, we are going to type in:</p>
             
-            <p>‘public Renderer rend;’</p>
+            <code>public Renderer rend;</code>
             
             <p>What we are doing here is stating any objects that we are creating
             specifically for this class and code. ‘Public’ is of course whether
@@ -189,7 +190,7 @@
             
             <p>The way you should this line out is like this:</p>
             
-            <p>‘public void ChangeBallColor{ }’</p>
+            <code>public void ChangeBallColor{ }</code>
             
             <p>The brackets { } mean that anything inside of it belongs to the
             method. The class also uses brackets { } to say that everything
@@ -198,8 +199,8 @@
             
             <p>Inside ‘ChangeBallColor()’, you are going to type:</p>
             
-            <p>rend = GetComponent<Renderer>();
-            rend.material.SetColor("_Color", Color.green);</p>
+            <code>rend = GetComponent<Renderer>();</code>
+            <code>rend.material.SetColor("_Color", Color.green);</code>
             
             <p>At the end of every line that doesn’t have a bracket,
             you want to use a semicolon ; . A semicolon ; is used
@@ -226,36 +227,30 @@
             
             <p>So with our code put together, you should have this:</p>
             
-            <img src="bootstrap2/images/ChangeColor.png" alt="" height="500" width="500">
-          <p>using System.Collections;</p>
-            <p>using System.Collections.Generic;</p>
-            <p>using UnityEngine;</p>
+    <pre><code>
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;</p>
             
-           <p> public class ColorChange : MonoBehaviour {</p>
+    public class ColorChange : MonoBehaviour {
             
-               <p> public Renderer rend; //Following Unity Naming Conventions</p>
+      //Following Unity Naming Conventions
+      public Renderer rend; 
                 
-               <p> // Use this for initialization</p>
-                <p>void Start()
-                {</p>
-                 <p>  }</p>
+      //Leave Start() and Update() empty          
+      // Use this for initialization
+      void Start() { }
             
-               <p> // Update is called once per frame</p>
-              <p>  void Update()
-                {</p>
-                  
-                <p>}</p>
-            
-               <p> public void ChangeBallColor()
-                {</p>
-                <p>    rend = GetComponent<Renderer>();</p>
-                <p>    rend.material.SetColor("_Color", Color.green);</p>
-                    
-                   
-              <p>       }</p>
-           <p> }</p>
-
-            
+      // Update is called once per frame
+      void Update(){ }
+                
+      public void ChangeBallColor()
+      {
+          rend = GetComponent<Renderer>();
+          rend.material.SetColor("_Color", Color.green);
+       }
+    } </code></pre>
+          
             
             <p>Perfect! We are almost done. </p>
             
@@ -289,35 +284,32 @@
             
             <p>One last time, this is the code you should have in your
             ‘ColorChange()’ method:</p> 
-            <img src="bootstrap2/images/ChangeColor.png" alt="" height="500" width="500">
-            <p>using System.Collections;</p>
-            <p>using System.Collections.Generic;</p>
-            <p>using UnityEngine;</p>
             
-           <p> public class ColorChange : MonoBehaviour {</p>
+             <pre><code>
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;</p>
             
-               <p> public Renderer rend; //Following Unity Naming Conventions</p>
+    public class ColorChange : MonoBehaviour {
+            
+      //Following Unity Naming Conventions
+      public Renderer rend; 
                 
-               <p> // Use this for initialization</p>
-                <p>void Start()
-                {</p>
-                 <p>  }</p>
+      //Leave Start() and Update() empty          
+      // Use this for initialization
+      void Start() { }
             
-               <p> // Update is called once per frame</p>
-              <p>  void Update()
-                {</p>
-                  
-                <p>}</p>
-            
-               <p> public void ChangeBallColor()
-                {</p>
-                <p>    rend = GetComponent<Renderer>();</p>
-                <p>    rend.material.SetColor("_Color", Color.green);</p>
-                    
-                   
-              <p>       }</p>
-           <p> }</p>
-
+      // Update is called once per frame
+      void Update(){ }
+                
+      public void ChangeBallColor()
+      {
+          rend = GetComponent<Renderer>();
+          rend.material.SetColor("_Color", Color.green);
+       }
+    } </code></pre>
+          
+           
           
           
      <div class="wrapper">

@@ -1626,7 +1626,7 @@
 	}
 
 	body {
-		background-color: #000066;
+		background-color: #2e3141;
 		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
 		background-size: auto, cover;
 		background-attachment: fixed, fixed;
@@ -1966,7 +1966,7 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #8c8cf2;
+			border-color: #5b6ba6;
 		}
 
 	.select-wrapper {
@@ -2004,7 +2004,7 @@
 
 	select option {
 		color: #ffffff;
-		background: #4d60cb;
+		background: #2e3141;
 	}
 
 	input[type="text"],
@@ -2079,12 +2079,12 @@
 			background: #ffffff;
 			border-color: #ffffff;
 			content: '\f00c';
-			color: #4d60cb;
+			color: #2e3141;
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #7087db;
+			border-color: #4c5c96;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2565,7 +2565,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #7087db;
+			background-color: #4c5c96;
 			box-shadow: none;
 		}
 
@@ -2582,7 +2582,7 @@
 			input[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
-				background-color: #99a5ff;
+				background-color: #45558d;
 			}
 
 			input[type="submit"].special.icon:before,
@@ -2933,7 +2933,7 @@
 			-ms-transition: opacity 0.35s ease, -ms-transform 0.35s ease;
 			transition: opacity 0.35s ease, transform 0.35s ease;
 			-webkit-overflow-scrolling: touch;
-			background: #7087db;
+			background: #4c5c96;
 			border-radius: 5px;
 			display: block;
 			max-width: 100%;
@@ -2989,7 +2989,7 @@
 				}
 
 					#menu .links li a:hover {
-						background: #99a5ff;
+						background: #45558d;
 					}
 
 		@media screen and (max-width: 736px) {
@@ -3120,7 +3120,7 @@
 
 			#banner {
 				padding: 7em 0 8.25em 0 ;
-				background-color: #4d60cb;
+				background-color: #2e3141;
 				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
 				background-size: auto, cover;
 				background-position: center, center;
@@ -3230,7 +3230,7 @@
 
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
-			background-color: #4d60cb;
+			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
 			background-size: auto, cover;
 			background-position: center, 0% 30%;
@@ -3273,7 +3273,7 @@
 	}
 
 	.wrapper {
-		background-color: #4d60cb;
+		background-color: #2e3141;
 		margin: 6.5em 0;
 		position: relative; 	
 	}
@@ -3327,7 +3327,7 @@
 		}
 
 		.wrapper.style2 {
-			background-color: #b3b8e6;
+			background-color: #353849;
 		}
 
 			.wrapper.style2:before, .wrapper.style2:after {
@@ -3335,7 +3335,7 @@
 			}
 
 		.wrapper.style3 {
-			background-color: #9ca8e2;
+			background-color: #3d4051;
 		}
 
 			.wrapper.style3:before, .wrapper.style3:after {
@@ -3343,7 +3343,7 @@
 			}
 
 		.wrapper.style4 {
-			background-color: #c4c6d4;
+			background-color: #454858;
 		}
 
 			.wrapper.style4:before, .wrapper.style4:after {
@@ -3351,7 +3351,7 @@
 			}
 
 		.wrapper.style5 {
-			background-color: #b5bae3;
+			background-color: #4d5060;
 		}
 
 			.wrapper.style5:before, .wrapper.style5:after {
@@ -3359,7 +3359,7 @@
 			}
 
 		.wrapper.style6 {
-			background-color: #babede;
+			background-color: #555867;
 		}
 
 			.wrapper.style6:before, .wrapper.style6:after {
@@ -3367,7 +3367,7 @@
 			}
 
 		.wrapper.spotlight {
-			background-color: #7087db;
+			background-color: #4c5c96;
 		}
 
 			.wrapper.spotlight:before, .wrapper.spotlight:after {
@@ -3420,7 +3420,7 @@
 			}
 
 			.wrapper.spotlight.style2 {
-				background-color: #99a5ff;
+				background-color: #45558d;
 			}
 
 				.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
@@ -3622,7 +3622,7 @@
 	@media screen and (max-width: 1280px) {
 
 		#footer {
-			background-color: #4d60cb;
+			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
 			background-size: auto, cover;
 			background-position: center, center;
