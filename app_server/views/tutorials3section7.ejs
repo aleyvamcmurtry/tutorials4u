@@ -29,6 +29,7 @@
           <li><a href="resources">Resources</a></li>
           <li><a href="about">About</a></li>
           <li><a href="help">Help</a></li>
+           <li><a href="codehome">Code</a></li>
            <!--<li><a href="login">Log In</a></li>-->
           <!--<li><a href="signup">Sign Up</a></li>-->
         </ul><a href="#" class="close">Close</a>
@@ -232,10 +233,99 @@
                  return false;
             }
             return false;
-        }
+        }//WonOrLost
             
-    }</code></pre>
+    }//SpereCount
+    </code></pre>
             
+            
+    <pre><code>
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI;
+    
+    public class SphereCount : MonoBehaviour{
+    
+        //For Counting
+        public int numOfSphere3;
+        int actualSphere = 8;
+        public Text countText;
+    
+        //For Time
+        public float timeYY = 30f;
+        public Text startText; // used for showing countdown from 3, 2, 1 
+    
+        // Use this for initialization
+        void Start(){   }
+    
+        // Update is called once per frame
+        void Update()
+        {
+            timeYY -= Time.deltaTime;
+            numOfSphere3 = 0;
+    
+            //For Time
+            if (timeYY > -1)
+            {
+                //For Counting
+                numOfSphere3 = CountingUp(numOfSphere3);
+    
+                if (numOfSphere3 != actualSphere)
+                {
+                    startText.text = (timeYY).ToString("0");
+                }
+                    WonOrLost(timeYY, numOfSphere3);
+            }
+        }//Update()
+    
+        private int CountingUp(int countB){
+            GameObject gameY;
+            GameObject[] gameSpheres = GameObject.FindGameObjectsWithTag("SphereBalls");
+    
+            for (int i = 0; i < actualSphere; i++)
+            {
+                //had at <9, forgot 0 is an part in the index,
+                //so was giving me IndexOutOfRangeException
+                //cause there was nothing at index spot 8
+                gameY = gameSpheres[i];
+    
+                if (gameY.GetComponent<Renderer>().material.color == Color.green)
+                {
+                    countB++;
+                    countText.text = countB + "";
+                }
+            }
+            return countB;
+        }//CountingUp
+    
+        private bool WonOrLost(float timeX, int countA)
+        {
+            if (timeX >= 0 && countA == actualSphere)
+            {
+                startText.text = (timeYY).ToString("WINNER");
+                startText.color = Color.green;
+                countText.text = " You won";
+                return true;
+            } else if ((timeX < 0 && countA != actualSphere))
+            {
+                timeYY = 0;
+                startText.text = (timeYY).ToString("FAIL");
+                startText.color = Color.red;
+                countText.text = " You lost";
+                return false;
+            }else if (timeX < -1 && countA == actualSphere){
+                timeYY = 0;
+                startText.text = (timeYY).ToString("FAIL");
+                startText.color = Color.red;
+                countText.text = " You lost";
+                return false;
+            }
+            return false;
+        }//WonOrLost
+    
+    }SphereCount
+    </code></pre>
           
      <div class="wrapper">
         <div class="inner">
