@@ -61,27 +61,25 @@
           sdk into your project. In this chapter we will be finishing incoporating
           all of the Google VR stuff into our project. </p>
 
-              <p>First, let’s open up Unity and open up our project (see the last*
-              section for how to do this). </p>
+              <p>First, let’s open up Unity and open up our project, if you haven't
+              done this already. </p>
               
-              <p>Next, go to ‘File’ in the ‘Menu Bar’, go down, and click on 
-              ‘Build Settings’. A pop up should appear. </p>
+              <p>Next, go to <b>File</b> in the <b>Menu Bar</b>, go down, and click on 
+              <b>Build Settings</b>. A pop up should appear. </p>
               
-              <p>In Build Settings, we are going to tell Unity what platform, or 
+              <p>In <b>Build Settings</b>, we are going to tell Unity what platform, or 
               hardware, we are going to make this game for. Since we are going to
-              use Google Cardboard and Google Cardboard can only be used on Android
-              products, we are going to look under ‘Platform’, click on Android, 
-              and then click on ‘Switch Platform’ on the bottom of the ‘Build Settings’
+              use Google Cardboard and Google Cardboard can only be created using Android
+              products, we are going to look under <b>Platform</b>, click on <b>Android</b>, 
+              and then click on <b>Switch Platform</b> on the bottom of the <b>Build Settings</b>
               pop up. </p>
               
               <p>Give Unity a moment to change things around. You should see on the 
               right side of Build Settings, the block of text and information 
               should have changed from PC, Mac, & Linux Standalone to say Android. </p>
               
-              <p>Now click on ‘Player Settings...’. It is located right next to 
-               ‘Switch Platform’.</p>
               
-              <p>Now it may look like nothing has happened. Nothing popped up, there
+               <p>Now it may look like nothing has happened. Nothing popped up, there
               are no changes and everything looks the same on your screen. But if
               we click out of ‘Build Settings’, you should see a bunch of new
               information inside your ‘Inspector’. </p>
@@ -90,31 +88,33 @@
               what we plan to do, what kind of software it expects from us, and
               what we need for Unity to prepare. </p>
               
-              <p>Now ‘Player Settings’ should look very similar for everyone, but 
+              <p>Now click on <b>Player Settings...</b>. It is located right next to 
+               <b>Switch Platform</b>.</p>
+              
+              <p>Now <b>Player Settings</b> should look very similar for everyone, but 
               sometimes when Unity has a new update, the placement or where things
               are change. If you don’t immediately see something that this 
               tutorial is asking for you to find, take an extra minute to double 
               check. </p>
               
-              <p>We are going to click on ‘Other Settings’. Scroll down and under 
-              ‘Idenfitication’ you should see the following. 
+              <p>We are going to click on <b>Other Settings</b>. Scroll down and under 
+              <b>Idenfitication</b> you should see the following. 
               
               <li>Package Name</li>
               <li>Minimum API Level</li></p>
               
-              <p>For Package Name, change ‘Company’ to a nickname or a shortened
-              version of you name and change ‘ProductName’ to the name of this 
-              project. The reason why we need to change this is so that way this
+              <p>For Package Name, change <b>Company</b> to a nickname or a shortened
+              version of you name. The reason why we need to change this is so that way this
               project is unique to us and Unity knows that we created this game.</p> 
               
               <p>For the mimimum api level, we are going to choose API level 21,
-              or Android 5.0 ‘Lollipop’. </p>
+              or Android 5.0 <b>Lollipop</b>. </p>
               
               <p>The best thing to do is to actually go on whatever Android device 
-              you will be using to show off your game,  click on ‘Settings’ or 
-              the gear icon, click on ‘About Phone’, click on ‘Software Information’,
-              and look for ‘Android Version’. If your version number is less than
-              Android 5.0 (‘Lollipop’), but is at or above Android 4.4 (‘Kitkat’),
+              you will be using to show off your game,  click on <b>Settings</b> or 
+              the gear icon, click on <b>About Phone</b>, click on <b>Software Information</b>,
+              and look for <b>Android Version</b>. If your version number is less than
+              Android 5.0 (<b>Lollipop</b>), but is at or above Android 4.4 (<b>Kitkat</b>),
               please choose that version. If it is bigger than Android 5.0, you 
               don’t have to do anything. If it is less than 4.4, you may need 
               find a different Android device to use. The reason why is because
@@ -124,12 +124,17 @@
               
               
               <p>Once you are done changing this information, we are going to go 
-              down all of the way ‘XR Settings’. Click on that and click on the
-              checkbox next to ‘Virtual Reality Supported’. Under 
-              ‘Virtual Reality SDKs’, click on the + plus sign. We are then 
-              going to click on ‘Cardboard’ to add that to the Virtual Reality
+              down all of the way <b>XR Settings</b>. Click on that and click on the
+              checkbox next to <b>Virtual Reality Supported</b>. Under 
+              <b>Virtual Reality SDKs</b>, click on the + plus sign. We are then 
+              going to click on <b>Cardboard</b> to add that to the Virtual Reality
               SDKs that we are going to use. Basically, we are just telling 
               Unity that we are making this game to be used with Google Cardboard.</p> 
+              
+              <p>Unity is planning on eliminating XR Settings sometime in the future. This is shown
+              by Unity placing Deprecated in front of XR Settings. For the moment, as long as
+              XR Settings are availble, please continue following that way and do not use
+              XR Plugin Management,</p>
               
               <p>Great! We are almost there. </p>
         

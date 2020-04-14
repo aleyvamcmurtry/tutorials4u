@@ -70,79 +70,77 @@
                 <p>In this chapter, we will be creating these balls and allow them to change color when
                 we click on them.</p>
                 <p>So, how do we do this?</p>
+            
+                <p>In our <b>Menu Bar</b>, we are going to click on <b>GameObject</b>. Go down to 3D object,
+                slide over and click on <b>Sphere</b>. After clicking on <b>Sphere</b>, you should see a globe like shape
+                appear in your <b>Hierarchy</b> and in your <b>Scene</b>. </p>
                 
-                <p>First make sure to have Unity and your project open.</p> 
-                
-                <p>Next, in our ‘Menu Bar’, we are going to click on ‘GameObject’. Go down to 3D object,
-                slide over and click on ‘Sphere’. After clicking on sphere, you should see a ball
-                appear in your ‘Hierarchy’ and in your Scene. </p>
-                
-                <p>Click on your ‘Sphere’ in your hierarchy and let us look at our ‘Inspector Window’.
-                First off we want to see what position our ‘Sphere’ is at. If it is not at position
-                X=0, Y=0, Z=0, please fix this now. After fixing it, go into your ‘Scene View’,
+                <p>Click on your <b>Sphere</b> in your hierarchy and let us look at our <b>Inspector Window</b>.
+                First off we want to see what position our <b>Sphere</b> is at. If it is not at position
+                X=0, Y=0, Z=0, please fix this now. After fixing it, go into your <b>Scene View</b>,
                 click on the green arrow pointing up, and drag it a little bit up. You want our 
-                ‘Sphere’ object to be a little bit above our ‘Floor’ object, but not higher than
-                what our ‘Player’ object can see. If you want the exact number, have your Y
-                position be anywhere between Y=0.1 to Y= 5. We want our ‘Player’ to still see
-                the ‘Sphere’ when we’re playing the game. </p>
+                <b>Sphere</b> object to be a little bit above our <b>Floor</b> object, but not higher than
+                what our <b>Player</b> object can see. If you want the exact number, change you X coordinate
+                to 0.5 (so X= 0.5) and change your Y coordinate to 0.5 ( so Y= 0.5). We want our <b>Player</b> to still see
+                the <b>Sphere</b> when we’re playing the game. </p>
                 
-                <p>If you don’t see any arrows, then in our ‘Tool Bar’, click on the four arrows
-                crossing each other (or the ‘Move Tool’). After you click on this, you should
-                see arrows pointing out from our ‘Sphere’ object.</p>
+                <p>If you don’t see any arrows, then in our <b>Tool Bar</b>, click on the four arrows
+                crossing each other (or the <b>Move Tool</b>). After you click on this, you should
+                see arrows pointing out from our <b>Sphere</b> object.</p>
                 
                 <p>Now so far you have seen one way to rename an object. Here is another way to
-                rename an object. If you look at our ‘Inspector Window’ (after making sure
-                that we still have our ‘Sphere’ object clicked), you will see the name of the
+                rename an object. If you look at our <b>Inspector Window</b> (after making sure
+                that we still have our <b>Sphere</b> object clicked), you will see the name of the
                 current object that we are working on. If you click on it, you can actually
-                change the name of our object. We are going to click and rename our ‘Sphere’
-                object to become ‘Ball’. </p>
+                change the name of our object. We are going to click and rename our <b>Sphere</b>
+                object to become <b>Globe</b>. </p>
                 
-                <p>Underneath where we changed the name, there is a label called ‘Tag’. A ‘Tag’
+                <p>Underneath where we changed the name, there is a label called <b>Tag</b>. A <b>Tag</b>
                 in Unity is a way for us to keep track, label, and be able to identify what
-                our objects are. By default, the ‘Tag’ for our ‘Ball’ is ‘Untagged’. For
+                our objects are. By default, the <b>Tag</b> for our <b>Globe</b> is <b>Untagged</b>. For
                 future chapters (and for reasons that you will understand later on), we
-                are going to give a ‘Tag’, or label, to our ‘Ball’.</p> 
+                are going to give a <b>Tag</b>, or label, to our <b>Globe</b>.</p> 
                 
-                <p>Click on where it says ‘Untagged’. The box should open up and you should
+                <p>Click on where it says <b>Untagged</b>. The box should open up and you should
                 see a lot of different choices. What we are going to do is create a custom
-                tag, so go all of the way to the bottom of this and click on ‘Add Tag...’.
-                The ‘Inspector’ should change to show you some of the custom tags you have
+                tag, so go all of the way to the bottom of this and click on <b>Add Tag...</b>.
+                The <b>Inspector</b> should change to show you some of the custom tags you have
                 already made for this game. Since this is the first one we have made, click
-                on the ‘plus +’ sign. </p>
+                on the <b>plus +</b> sign. </p>
                 
                 <p>A pop up should appear and it should ask you for the new tag name. Type in
-                ‘BallObject’ and then click on ‘Save’. You should see ‘BallObject’ appear
-                in your tags. Reclick on our ‘Ball’, reclick on ‘Untagged’, and then click
-                on ‘BallObject’. This will officially give our ‘Ball’ a tag. </p>  
+                <b>GlobeObject</b> and then click on Save. You should see <b>GlobeObject</b> appear
+                in your tags. Reclick on our <b>Globe</b>, reclick on <b>Untagged</b>, and then click
+                on <b>GlobeObject</b>. This will officially give our <b>Globe</b> a tag. </p>  
                 
-               <p>The next thing we are going to do is give a color to our ‘Ball’. After
-                we give our ‘Ball’ some color, feel free to do the same to our ‘Floor’
-                object. Just make sure that our ‘Floor’ is not the same color as our ‘Ball’. </p>
+               <p>The next thing we are going to do is give a color to our <b>Globe</b>. After
+                we give our <b>Globe</b> some color, feel free to do the same to our <b>Floor</b>
+                object. Just make sure that our <b>Floor</b> is not the same color as our <b>Globe</b>. </p>
                 
-                <p>In Unity, to give our ‘Ball’ object a color, we have to change the color of
-                the material of our ‘Ball’. The material is what we physically see of an
+                <p>In Unity, to give our <b>Globe</b> object a color, we have to change the color of
+                the material of our <b>Globe</b>. The material is what we physically see of an
                 object, whether it's the color, texture, or things that allow us to
                 physically see the object. Now, every object that isn’t empty has the
                 default material attached to it. That’s why all of our objects (except
-                for our ‘Player’) has the color white attached to them. We can’t directly
+                for our <b>Player</b>) has the color white attached to them. We can’t directly
                 change the color of our material, but we can make a new one to put on. </p>
                 
                 <p>For the purpose of our game, only use the path we are using to make a
-                material and don’t use any preexisting ones from other ‘Assets’. The
+                material and don’t use any preexisting ones from other <b>Assets</b>. The
                 reason why is because the way some materials are made use some other
                 textures or have a bunch of different colors on them and for our game
-                we want to make sure all of our ‘Balls’ have a solid color on them.
+                we want to make sure all of our <b>Globe</b> objects have a solid color on them.
                 On the other hand, feel free to choose any materials you want to use
-                for your ‘Floor’.</p>
+                for your <b>Floor</b>.</p>
                 
-                <p>So to make a material with a solid color, go to the ‘Project Folder’,
-                click on ‘Create’, and then click on ‘Material’. In your ‘Assets’
-                folder you should see a white sphere with the name ‘New Material’.
-                Right click on this ‘New Material’ and rename it to ‘RosyRed’. Then
-                just normally click on ‘RosyRed’.</p>
+                <p>So to make a material with a solid color, go to the <b>Project Folder</b>,
+                click on <b>Create</b>, and then click on <b>Material</b>. In your <b>Assets</b>
+                folder you should see a white sphere with the name <b>New Material</b>.
+                Right click on this <b>New Material</b> and rename it to <b>RosyRed</b>. Then
+                just normally click on <b>RosyRed</b>.</p>
                 
-                <p>In the ‘Inspector Window’ you should see information about ‘RosyRed’.
-                Click on the white space next to ‘Albedo’ and the dropper symbol.
+                <p>In the <b>Inspector Window</b> you should see information about <b>RosyRed</b>.
+                Click on the white space next to <b>Albedo</b> and the dropper symbol.
                 A pop up should appear with a bunch of colors. In the box inside the
                 circle, move the little circle all of the way to the right. In the
                 big circle, move the circle inside there to a color that looks red.
@@ -161,11 +159,11 @@
                 
                 <p>After you are done, click somewhere outside of the pop up to go back to Unity.</p> 
                 
-                <p>Lastly, click and drag ‘RosyRed’ onto our ‘Ball’. The color for our
-                ‘Ball’ should now change to red and when you click on our ‘Ball’,
-                you should see ‘RosyRed’ in our ‘Inspector Window’. Double check
-                that our ‘Shader’ in ‘RosyRed’ is set to ‘Standard’ and make sure
-                not to touch it. If it is not set to ‘Standard’, click on it and change it.</p>
+                <p>Lastly, click and drag <b>RosyRed</b> onto our <b>Globe</b>. The color for our
+                <b>Globe</b> should now change to red and when you click on our <b>Globe</b>,
+                you should see <b>RosyRed</b> in our <b>Inspector Window</b>. Double check
+                that our <b>Shader</b> in <b>RosyRed</b> is set to <b>Standard</b> and make sure
+                not to touch it. If it is not set to <b>Standard</b>, click on it and change it.</p>
 
                 </p>
                 

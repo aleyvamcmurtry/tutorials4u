@@ -58,14 +58,14 @@
       
           <p>Welcome back! </p>
             
-            <p>We have our <b>‘Player’</b> object, our <b>‘Main Camera’</b> as a child of it,
-            and a <b>‘Floor'</b> to look at. </p>
+            <p>We have our <b>Player</b> object, our <b>Main Camera</b> as a child of it,
+            and a <b>Floor</b> to look at. </p>
             
             <p>In this chapter we will be adding our Google VR sdk to our 
-            </b>‘Player’</b> object. </p>
+            <b>Player</b> object. </p>
             
             <p>As usual, first open up your project in Unity. Then click on
-            <b>‘Main Camera’</b> that is underneath our <b>‘Player’</b> object. </p>
+            <b>Main Camera</b> that is underneath our <b>Player</b> object. </p>
             
             <p>Now there are two ways we can do this next part. Path 1 is
             the path that we will be using a lot more in the future,
@@ -79,27 +79,30 @@
             chapters, the tutorial will state which path you will need to use.</p> 
             
             <p>Path 1:
-            Click on <b>‘Main Camera’</b>. Look at our Inspector and it should
+            Click on <b>Main Camera</b>. Look at our Inspector and it should
             have all of the current information and values for our camera.
             At the bottom of the information, there should be a button that
-            says <b>‘Add Component’</b>. Click on it. A bunch of different items
+            says <b>Add Component</b>. Click on it. A bunch of different items
             will appear, but for the moment, in the search bar, type in:
             <b>GvrPointerPhysicsRaycaster</b>. When it comes up, make sure it
             is highlighted and click on it. After that, the Gvr Pointer
             Physics Raycaster Script should appear and become a part of
-            the information for our <b>‘Main Camera’</b>. </p>
+            the information for our <b>Main Camera</b>. </p>
             
             <p>Path 2:
-            Go down and look at our <b>‘Project Window’</b> below. You will see
+            Go down and look at our <b>Project Window</b> below. You will see
             a search bar. Type in: <b>GvrPointerPhysicsRaycaster</b>. Make
             sure to double check your spelling. You should see a piece
             of paper with the label C# on it. Click and drag it onto our
-            <b>‘Main Camera’</b>. Look at your <b>‘Inspector Window’</b> and double
+            <b>Main Camera</b>. Look at your <b>Inspector Window</b> and double
             check that Gvr Pointer Physics Raycaster Script appears there. </p>
             
             <p>What is a raycaster?</p>
             
-            <p>A raycaster gets all of the information from one specific
+            <p>In simple terms, it is a ray that is cast by the user
+            that tells them whether or not they can interact with that object.</p>
+            
+            <p>In more detail, a raycaster gets all of the information from one specific
             location and checks whether or not the player or the object
             can do something. This something is usually an event, an event
             for example being an object disappearing or changing colors.
@@ -123,10 +126,10 @@
             perform our tasks. </p>
             
             
-            <p>Now we are going to go to our <b>‘Project Window’</b> and, like with
+            <p>Now we are going to go to our <b>Project Window</b> and, like with
             our Path 2, we are going to type in and search for:
             <b>GvrEditorEmulator.prefab</b>. When it come up, you should see a blue
-            box. Click and drag that to our <b>‘Hierarchy’</b>. It should not
+            box. Click and drag that to our <b>Hierarchy</b>. It should not
             be a child of any of our current objects. This Emulator is
             going to help our project act as a human head and move as a
             person’s head would, like moving up and down or side to side. </p>
@@ -139,17 +142,17 @@
             original artwork and drawings haven’t been changed. </p> 
             
             <p>Now we are going to look for another prefab. Go to our
-            <b>‘Project Window’</b> and type in and search for: <b>GvrEventSystem</b>.
-            When it come up, click and drag that to our <b>‘Hierarchy’</b>. This
+            <b>Project Window</b> and type in and search for: <b>GvrEventSystem</b>.
+            When it come up, click and drag that to our <b>Hierarchy</b>. This
             prefab will allow for us to see where we are going to click in
             our game. </p>
             
             <p>Next we are look for the: <b>GvrReticlePointer</b>. Go to our
-            <b>‘Project Window’</b> and type in and search for: <b>GvrReticlePointer</b>.
+            <b>Project Window</b> and type in and search for: <b>GvrReticlePointer</b>.
             Unlike the last two prefabs, we are actually going to drag and
-            drop this object onto our <b>‘Main Camera’</b>, The reason why we are
-            doing this is because we want our <b>'GvrReticlePointer’</b> to be a
-            child of our <b>‘Main Camera’</b>. </p>
+            drop this object onto our <b>Main Camera</b>, The reason why we are
+            doing this is because we want our <b>GvrReticlePointer</b> to be a
+            child of our <b>Main Camera</b>. </p>
             
             <p>What the GvrReticlePointer is going to do is let us interact
             with the objects and items in the world we are creating for our
@@ -159,19 +162,22 @@
             our eyes and everything is in first person. </p>
             
            <p>Wohoo! We have added all of the things we needed to do to our
-            <b>‘Player’</b> so we can do things in virtual reality. Now we can
+            <b>Player</b> so we can do things in virtual reality. Now we can
             actually test and double check that everything works. </p>
             
-            <p>Click on the <b>‘Play’</b> button in our <b>‘Tool Bar’</b>. The <b>'Game View’</b>
+            <p>Click on the <b>Play</b> button in our <b>Tool Bar</b>. The <b>Game View</b>
             should appear and we can look around our screen. </p>
             
-            <p>In PC, hold down your <b>‘Alt’</b> button to look around everywhere.
-            Hold down your <b>‘Ctrl’</b> button to replicate tilting. While you
-            are doing this, you should see a small dot in the center of
+            <p>On a PC, hold down your <b>Alt</b> button to look around everywhere.
+            Hold down your <b>Ctrl</b> button to replicate tilting. On a Mac, you should
+            be able to use the <b>Command</b> button to look around and <b>Ctrl</b> to replicate
+            tilting. </p>
+            
+            <p>While you are doing this, you should see a small dot in the center of
             your screen. This is our GvrReticlePointer. Since there is
             nothing for us to interact with at the moment, the dot shouldn’t
             change. When you are done, press on the space button and you
-            should see mouse again. Click again on the <b>‘Play’</b> button to stop.</p>
+            should see mouse again. Click again on the <b>Play</b> button to stop.</p>
           
           
      <div class="wrapper">

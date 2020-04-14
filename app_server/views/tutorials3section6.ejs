@@ -57,8 +57,8 @@
       
           <p>Welcome back! </p>
            <p>
-             We have our ‘Player’, our ‘Floor’, and our ‘Ball’, but they don’t do anything.
-             When our ‘Player’ object tries to interact with our ‘Ball’, nothing happens.
+             We have our ‘Player’, our ‘Floor’, and our <b>Globe</b>, but they don’t do anything.
+             When our ‘Player’ object tries to interact with our <b>Globe</b>, nothing happens.
              That’s because we haven’t told it what to do yet. And in this chapter, we are
              going to. </p>
 
@@ -66,17 +66,17 @@
             than most of the others. </p>
             
             <p>First make sure Unity and your project is open. Once it is open, click your
-            ‘Ball’ object and look at your ‘Inspector Window’. </p>
+            <b>Globe</b> object and look at your ‘Inspector Window’. </p>
             
             <p>Now go all of the way down in the ‘Inspector Window’ and you will see a button
             called ‘Add Component’. Click on it and then you should see a bunch of different
-            items that we can add to our ‘Ball’. Instead of looking through all of these items,
+            items that we can add to our <b>Globe</b>. Instead of looking through all of these items,
             click on the search bar above the items and type in ‘New Script’. You should see
             an item called ‘New Script’ appear. Click on it and it will then ask you for the
             name of your new script. </p>
             
            <p> Type in ‘ColorChange’ and then click on the button ‘Create and Add’ at the bottom.
-            The script ‘ColorChange (Script)’ should be added to the ‘Ball’ object. </p>
+            The script ‘ColorChange (Script)’ should be added to the <b>Globe</b> object. </p>
             
            <p> Now before we go into ‘ColorChange’, let’s make sure we understand what a script is.
             A script is a set of instructions a person created for a program like Unity to
@@ -217,7 +217,7 @@
             only knows what type of object it is, not what it has
             inside of it. With this line, we are saying that ‘rend’ is
             going to get the renderer information that belongs to our
-            ‘Ball’, keep it, and be our connection to our ‘Ball’ just in
+            <b>Globe</b>, keep it, and be our connection to our <b>Globe</b> just in
             case. Also the ‘equals =’ is called assign in code lingo,
             because we are ‘assigning’ something to our object.</p>
             
@@ -255,12 +255,12 @@
             
             <p>Perfect! We are almost done. </p>
             
-            <p>Minimize ‘Visual Studio’ and click back on your ‘Ball’. Your
+            <p>Minimize ‘Visual Studio’ and click back on your <b>Globe</b>. Your
             ‘ColorChange’ script should have our ‘rend’ object visible. 
-            Click on your ‘Ball’ and drag it onto the empty space next to
+            Click on your <b>Globe</b> and drag it onto the empty space next to
             ‘Rend’. If we don’t do this, then our code won’t work because 
             it won’t know what object we want to change the color of. Just
-            because our script is attached to our ‘Ball’ does not mean that
+            because our script is attached to our <b>Globe</b> does not mean that
             it is fully connected to it.</p> 
             
             <p>The last major thing we want to do is click on ‘Add Component’
@@ -269,15 +269,15 @@
             says ‘Add New Event Type’ and select ‘PointerClick’ when it
             appears. </p>
             
-            <p>Click on the plus + symbol. Drag your ‘Ball’ object to the
+            <p>Click on the plus + symbol. Drag your <b>Globe</b> object to the
             empty space under ‘Runtime Only’ (which means only when the
             game is on). You should be able to now interact with list
             that was greyed out that says ‘No Function’. Click on it,
             go to ‘ColorChange()’, and then click on ‘ChangeBallColor()’.</p>
             
-            <p>What we just did is tell our ‘Ball’ object that whenever
+            <p>What we just did is tell our <b>Globe</b> object that whenever
             someone clicks on it, it does something. In this case,
-            whenever someone clicks on our ‘Ball’, we want the color
+            whenever someone clicks on our <b>Globe</b>, we want the color
             to change.</p> 
             
             <p>And that’s it for this script. Make sure to save and test
