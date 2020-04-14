@@ -50,6 +50,8 @@ router.get('/help3', ctrlMain.help3);
 router.get('/help4', ctrlMain.help4);
 router.get('/help5', ctrlMain.help5);
 
+router.get('/codehome', ctrlMain.codehome);
+
 
 
 /*For Inprogress pages*/

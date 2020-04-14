@@ -157,6 +157,10 @@ exports.help5 = function(req, res){
   res.render('help5', { title: 'tutorials' });
 };
 
+exports.codehome = function(req, res){
+  res.render('codehome', { title: 'code'});
+}
+
 
 /*In progress*/
 exports.comingsoon = function(req, res){
