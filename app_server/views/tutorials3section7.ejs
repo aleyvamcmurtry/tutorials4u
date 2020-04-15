@@ -58,275 +58,342 @@
         <div class="inner">
       
          <p>
-           Welcome back to our second script! Make sure to have Unity and your
+                   Welcome back to our second script! Make sure to have Unity and your
            project open because we are starting right off.</p>
             
-            <p>Like what we did with ‘ColorChange’, click on your ‘Ball’, look at
-            your ‘Inspector Window’, click on ‘Add Component’, type in
-            ‘New Script’ to the search bar, select it, type in the name
-            of our second script which is ‘CountWinOrLose’, and then
-            click on ‘Create and Add’.</p>
+            <p>Like what we did with <b>ColorChange</b>, click on your <b>Globe</b>, look at
+            your <b>Inspector Window</b>, click on <b>Add Component</b>, type in
+            <b>New Script</b> to the search bar, select it, type in the name
+            of our second script which is <b>CountWinOrLose</b>, and then
+            click on <b>Create and Add</b>.</p>
             
-            <p>Our second script, ‘CountWinOrLose’, should appear in the
-            ‘Inspector’. Like before, click on the gear to the right hand
-            side of ‘CountWinOrLose (Script)’ and click on ‘Edit Script’.
-            ‘Visual Studios’ should then open up (if it is not already opened)
-            and you should see the class for ‘CountWinOrLose’.</p>
+            <p>Our second script, <b>CountWinOrLose</b>, should appear in the
+            <b>Inspector</b>. Like before, click on the gear to the right hand
+            side of <b>CountWinOrLose (Script)</b> and click on <b>Edit Script</b>.
+            <b>Microsoft Visual Studios</b> should then open up (if it is not already opened)
+            and you should see the class for <b>CountWinOrLose</b>.</p>
             
-            <p>The ‘CountWinOrLose’ class will be longer than ‘ColorChange’.</p>
+            <p>The <b>CountWinOrLose</b> class will be longer than <b>ColorChange</b>.</p>
             
-            <p>First off, before we add anything inside ‘CountWinOrLose’,
+            <p>First off, before we add anything inside <b>CountWinOrLose</b>,
             we are going to make a new call to a different libaray above
-            ‘public class CountWinOrLose’. We are going to do this by
-            first typing in ‘using’ and then calling on a new library
-            call ‘UnityEngine.UI’. </p>
+            <b>public class CountWinOrLose</b>. We are going to do this by
+            first typing in <b>using</b> and then calling on a new library
+            call <b>UnityEngine.UI</b>. </p>
             
             <p>The line should look like this:</p>
             <code>using UnityEngine.UI;</code>
             
-            <p>But we already have ‘UnityEngine’, why do we need to call on
-            it twice and add ‘.UI’. The reason for this is ‘UnityEngine’
+            <p>But we already have <b>UnityEngine</b>, why do we need to call on
+            it twice and add <b>.UI</b>. The reason for this is <b>UnityEngine</b>
             calls on everything inside Unity, and while we want to be able
             to use it (and we will), we also want to call on a specific
-            area in addition. ‘UI’ stands for ‘User Interface’ and this
+            area in addition. <b>UI</b> stands for <b>User Interface</b> and this
             usually has objects that the player can see, but don’t usually
             directly interact with other objects. Items inside the
-            ‘User Interface’ include buttons, text, etc.</p>
+            <b>User Interface</b> include buttons, text, etc.</p>
             
-            <p>Now, let us begin to add code into our ‘CountWinOrLose’ class. </p>
+            <p>Now, let us begin to add code into our <b>CountWinOrLose</b> class. </p>
             
             <p>We are going to add objects that we will use throughout our code.</p>
             
             <p>Type in:</p>
             
     <pre><code>
-    public int numOfBalls;
-    int actualBallsNum = 10;
+    public int numOfGlobes;
+    int actualGlobesNum = 10;
     public Text countText;
             
     public float timeLeft = 10f;
     public Text timeText;</code></pre>
             
-            <p>If you noticed first, some of these objects have public infront
-            of them, while other don’t. The objects that do have public in
-            front them are the objects that we want to be able to see and
-            have be intractable with not only our ‘Ball’ but with our
-            ‘Player’ object later on.</p>
+            <p>If you noticed first, some of these objects have public in front
+            of them, while others don’t. The objects that do have public in
+            front of them are the objects that we want to be able to see and
+            have intractable with not only our <b>Globe</b> but with our
+            <b>Player</b> object later on.</p>
             
-            <p>Also an int is a full number while a float is a fraction of a
-            number. So an int can be the number 1, while a float can be 1
-            or 1.5. We are using ints to count how many balls have changed
-            color (numOfBalls) and then later on we will compare that to
-            the amount of balls we have in our game (actualBallsNum). While
-            right now we only one ‘Ball’ object, in the next chapter we
-            will learn how to add more to our ‘Scene View’.</p>
+            <p>An int is a full number while a float is a fraction of a
+            number. So an int can be the number 1, while a float can be 1, 3/2,
+            or 1.5. We are using ints to count how many globes have changed
+            color (numOfGlobes) and then, later on, we will compare that to
+            the number of globes we have in our game (actualGlobesNum). While
+            right now we only one <b>Globe</b> object, in the next chapter we
+            will learn how to add more to our <b>Scene View</b>.</p>
             
             <p>For time, we are using a float to count how much time we have
             left in our game (timeLeft) because time is barely ever a full
-            exact number and it changes quickly. For ‘timeLeft’ we are
+            exact number and it changes quickly. For <b>timeLeft</b> we are
             starting at 10f. By adding f to the end of 10, we are telling
             our code that we specifically want this to be a float, just in case.</p>
             
-            <p>Lastly, we want to show our ‘Player’ how much time they have
+            <p>Lastly, we want to show our <b>Player</b> how much time they have
             left and how many objects they have changed the color of. To
             do that, we are creating text to show them (timeText, countText). </p>
-            
-            <p>Again we are not using the ‘Start()’ method. </p>
-            
-            <p>We are though using the ‘Update()’ method. The reason why we
-            are is because we want time to be updated with each frame and
-            we want to constantly be checking to see if our player has
-            changed the color of all of the balls.</p> 
-            
-            <p>Inside the ‘Update()’ method, type in this:</p>
-    <pre><code>
-    timeLeft -= Time.deltaTime;
-    numOfBalls = 0;
-            
-    startText.text = (timeLeft).ToString("0");
-            
-    numOfBalls = CountingUp(numOfBalls);
-            
-    if (timeLeft < 1)
-    {
-        WonOrLost(timeLeft, numOfBalls);
-    }</code></pre>
-            
-            <p>We are first telling </p>
-            
-            
-            <p>At the end here is how your code should look like:</p>
            
-    <pre><code>
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
-    using UnityEngine.UI;
+            <p>Again we are not using the <b>Start()</b> method. </p>
             
-    public class CountWinOrLose : MonoBehaviour{
+            <p>We are using the <b>Update()</b> method. We want time to be updated with
+            each frame and we want to constantly be checking to see if our player has
+            changed the color of all of the globes. In Unity, there are 24 frames
+            per second, so the  <b>Update()</b> method is going to check to see if anything has changed every 1/24 of a second.</p> 
             
+            <p>Inside the <b>Update()</b> method, type in this:</p>
+            
+   <pre><code>
+    timeLeft -= Time.deltaTime;
+    numOfGlobes = 0;
+
+
+    //For Time
+    if (timeLeft > -1){
         //For Counting
-        public int numOfBalls;
-        int actualBallsNum = 10;
-        public Text countText;
+        numOfGlobes = CountingUp(numOfGlobes);
+
+        if (numOfGlobes != actualGlobesNum){
+            timeText.text = (timeLeft).ToString("0");
+        }//if        
+
+        WonOrLost(timeLeft, numOfGlobes);
+    }//if            
+    
+    
+    </code></pre>
             
-        //For Time
-        public float timeLeft = 10f;
-        public Text timeText;
+            <p>Woah! What is all? What’s deltaTime? What’s this weird if thing?</p>
             
-        // Use this for initialization
-        void Start(){ }
+            <p>Take in a deep breath. Warning: The rest of this section is going
+            to be a lot like this, where there is a lot of code going on. We will do our best to explain it.</p>
             
-        // Update is called once per frame
-        void Update(){
-            timeLeft -= Time.deltaTime;
-            numOfBalls = 0;
+            <p>Let’s start with the first line. </p>
             
-            startText.text = (timeLeft).ToString("0");
+            <pre><code>timeLeft -= Time.deltaTime;</pre></code>
             
-            //For Counting
-            numOfBalls = CountingUp(numOfBalls);
+            <p>Remember timeLeft is the time the player has to play the game. 
+            The - symbol is the minus symbol. When we have it next to the = symbol 
+            (assigning), we are telling Unity that we are going to subtract the
+            stuff on the right side of the = from the information on the left side.
+            So -= means we are subtracting Time.deltaTime from the timeLeft (the time the player has left). </p>
             
-            //For Time<
-            if (timeLeft < 1){
-                WonOrLost(timeLeft, numOfBalls);
-            }
-        }
+            <p>Time.deltaTime just means the time that has happened since the
+            last update. Think of Time.deltaTime as a stopwatch. It won’t stop moving unless we stop the game. </p>
+            
+            <p>So if timeLeft is 10 seconds, and Time.deltaTime starts, then timeLeft will change to 9, 8, 7,.... 1, 0, -1.</p>
+            
+            <p>But wait, do we want to show -1. No, we don’t. If we reach 0, then we want the game to end. In our if thing, we check this. </p>
+            
+            <p>Look at the line: </p>
+            <pre><code>if(timeLeft > -1){</pre></code>
+            
+            <p>First off, this if thing is called an if statement. An if statement is
+            a statement that checks to see if the stuff we put in its parenthesis is
+            true or false. If it is true, we go inside of it, or into the lines in
+            between the brackets { } and do the stuff inside of it. If it is false,
+            we skip the side and go to the line after the closing bracket }.</p>
+            
+           <p>So if(timeLeft > -1) means that we are checking to see if timeLeft
+           is bigger than -1. If timeLeft is bigger than -1, then we do the stuff
+           inside. If timeLeft is -1, -2, or smaller, we skip this. That way the
+           player can’t win if they don’t have time left.</p>
+            
+            <p>Now the inside this if statement. </p>
+            
+            <pre><code>numOfGlobes = CountingUp(numOfGlobes);</pre></code>
+            
+            <p>We are ‘assigning’ our numOfGlobes to... wait what’s CountingUp?
+            We don’t have that. We will be creating this in a moment, so we willl get back to this.</p>
+            
+            <p>Our next line is another if statement! It says: </p>
+            <pre><code>if (numOfGlobes != actualGlobesNum).</pre></code>
+            <p>So if the numOfGlobes (number of globes) that have changed
+            colors does not equal the actualGlobesNum (the actual number of globes we have), then go inside. </p>
+            
+            <p>Inside we have our timeText being ‘assigned’ to the timeLeft.ToString(“0”).</p>
+            <p>Our timeLeft is a float. In programming, you can’t just have a float
+            become a string. They are two different types and many coding languages
+            want you specifically only have types assigned to other types. So with
+            timeLeft and Time.deltaTime, we can have them be assigned to each other
+            easily because they are the same type. </p>
+            
+            <p>Luckily, since timeText is a string, we can use a pre-made method called
+            a ToString. The ToString method allows us to print out the information
+            from another type, like a float, and have it be apart of a string. We
+            just have to have another string be apart of it. That’s why we have the 0 inside the parenthesis. </p>
+            
+            <p>Outside this second if statement, we have another method called WonOrLost that is called. Again, we will get back to this in a moment. </p>
+            
+             <p>Wow that's a lot, but now we have two methods to create. CountingUp() and WonOrLost()</p>
+            <p>Let's create CountingUp first.</p>
+         <p>So unlike our ChangeGlobeColor() method in our ColorChange script, CountingUp is going to be 
+         private (we don't want other scripts touching it), it is going to return (or send back) an int, and 
+         we are going to ask for an int parameter. CountingUp is going to ask to get some information first
+         before it does any work. In this case, we want an int and inside CountingUp we are going to call this int countG. </p>
          
-        private int CountingUp(int countCurr){
-            GameObject gameCurr;
-            GameObject[] gameItems = GameObject.FindGameObjectsWithTag("SphereBalls");
-            
-            for (int i = 0; i < actualBallsNum; i++){
-                gameCurr = gameItems[i];
-            
-                if (gameCurr.GetComponent<Renderer>().material.color == Color.green)
-                    {
-                        countCurr++;
-                        countText.text = countCurr + "";
-                    }
-                 }
-                 return countCurr;
-        }
-            
-        private bool WonOrLost(float timeEnd, int countEnd){
-            if (timeEnd < 1 && countEnd == actualBallsNum){
-                timeLeft = 0;
-                startText.text = (timeEnd).ToString("WINNER");
-                startText.color = Color.green;
-                countText.text = "You won";
-                return true;
-            }
-            else if (timeEnd < 1 && countEnd != actualBallsNum)
-            {
-                 timeLeft = 0;
-                 startText.text = (timeEnd).ToString("FAIL");
-                 startText.color = Color.red;
-                 countText.text = " You lost";
-                 return false;
-            }else if (timeEnd < 1 && countEnd == actualBallsNum)
-            {
-                 timeLeft = 0;
-                 startText.text = (timeEnd).ToString("FAIL");
-                 startText.color = Color.red;
-                 countText.text = " You lost";
-                 return false;
-            }
-            return false;
-        }//WonOrLost
-            
-    }//SpereCount
-    </code></pre>
-            
-            
+         <p>In our Update() method, we have the line <code>CountingUp(numOfGlobes)</code>.
+         CountingUp is taking the numOfGlobes (since its an int), and temporary calling it countG so it can use it.</p>
+         
+         <p>It's like an ice cube tray, where the tray is the method. The tray asks for water,
+         so you put water in the designated spots. Then the tray changes that water into 
+         cube shaped ice after you put it into the fridge. The tray keeps the water from moving and
+         helps it stay in one shape. </p>
+         
+         <p>Our method is going to do a more complicated version of this.</p>
+         
+    
+    
+    
+    
+    
+    
+    
+    
+        <p>You should have this for your CountingUp() method.</p>
+    
     <pre><code>
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
-    using UnityEngine.UI;
-    
-    public class SphereCount : MonoBehaviour{
-    
-        //For Counting
-        public int numOfSphere3;
-        int actualSphere = 8;
-        public Text countText;
-    
-        //For Time
-        public float timeYY = 30f;
-        public Text startText; // used for showing countdown from 3, 2, 1 
-    
-        // Use this for initialization
-        void Start(){   }
-    
-        // Update is called once per frame
-        void Update()
+    private int CountingUp(int countG){
+        GameObject gameObj;
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("GlobeObject");
+
+        for (int i = 0; i < actualGlobesNum; i++)
         {
-            timeYY -= Time.deltaTime;
-            numOfSphere3 = 0;
-    
-            //For Time
-            if (timeYY > -1)
-            {
-                //For Counting
-                numOfSphere3 = CountingUp(numOfSphere3);
-    
-                if (numOfSphere3 != actualSphere)
-                {
-                    startText.text = (timeYY).ToString("0");
-                }
-                    WonOrLost(timeYY, numOfSphere3);
-            }
-        }//Update()
-    
-        private int CountingUp(int countB){
-            GameObject gameY;
-            GameObject[] gameSpheres = GameObject.FindGameObjectsWithTag("SphereBalls");
-    
-            for (int i = 0; i < actualSphere; i++)
-            {
-                //had at <9, forgot 0 is an part in the index,
-                //so was giving me IndexOutOfRangeException
-                //cause there was nothing at index spot 8
-                gameY = gameSpheres[i];
-    
-                if (gameY.GetComponent<Renderer>().material.color == Color.green)
-                {
-                    countB++;
-                    countText.text = countB + "";
-                }
-            }
-            return countB;
-        }//CountingUp
-    
-        private bool WonOrLost(float timeX, int countA)
-        {
-            if (timeX >= 0 && countA == actualSphere)
-            {
-                startText.text = (timeYY).ToString("WINNER");
-                startText.color = Color.green;
-                countText.text = " You won";
-                return true;
-            } else if ((timeX < 0 && countA != actualSphere))
-            {
-                timeYY = 0;
-                startText.text = (timeYY).ToString("FAIL");
-                startText.color = Color.red;
-                countText.text = " You lost";
-                return false;
-            }else if (timeX < -1 && countA == actualSphere){
-                timeYY = 0;
-                startText.text = (timeYY).ToString("FAIL");
-                startText.color = Color.red;
-                countText.text = " You lost";
-                return false;
-            }
-            return false;
-        }//WonOrLost
-    
-    }SphereCount
+            gameObj = gameObjects[i];
+
+            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+                countG++;
+                countGlobesText.text = countG + "";
+            }//if
+
+        }//for
+        return countG;
+    }//CountingUp    
     </code></pre>
-          
+         
+         
+         
+         
+         
+         
+         
+         
+         
+           <p>You should have this for your WonOrLost() method.</p>
+   
+   <pre><code>
+    private bool WonOrLost(float timeL, int countGlobe){
+        if (timeL >= 0 && countGlobe == actualGlobesNum){
+            timeText.text = (timeLeft).ToString("WINNER");
+            timeText.color = Color.green;
+            countGlobesText.text = " You won";
+            return true;
+        }//if
+        else if ((timeL < 0 && countGlobe != actualGlobesNum)){
+            timeLeft = 0;
+            timeText.text = (timeLeft).ToString("FAIL");
+            timeText.color = Color.red;
+            countGlobesText.text = " You lost";
+            return false;
+        }//else if
+        else if (timeL < -1 && countGlobe == actualGlobesNum){
+            timeLeft = 0;
+            timeText.text = (timeLeft).ToString("FAIL");
+            timeText.color = Color.red;
+            countGlobesText.text = " You lost";
+            return false;
+        }//else if
+        return false;
+    }//WonOrLost   
+   </code></pre> 
+         
+         
+    
+    
+    <p>This section was very very long. Well, with all of our hard work, your code should now look like this
+    all together:</p>
+         
+    <pre><code>
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CountWinOrLose : MonoBehaviour{
+
+    public int numOfGlobes;
+    int actualGlobesNum = 1;
+    public Text countGlobesText;
+
+    public float timeLeft = 10f;
+    public Text timeText;
+
+    void Start(){  }
+
+    // Update is called once per frame
+    void Update(){
+        timeLeft -= Time.deltaTime;
+        numOfGlobes = 0;
+
+        if (timeLeft > -1){
+            numOfGlobes = CountingUp(numOfGlobes);
+
+            if (numOfGlobes != actualGlobesNum){
+                timeText.text = (timeLeft).ToString("0");
+            }//if
+            WonOrLost(timeLeft, numOfGlobes);
+        }//if
+    }//Update
+
+    private int CountingUp(int countG){
+        GameObject gameObj;
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("GlobeObject");
+
+        for (int i = 0; i < actualGlobesNum; i++) {
+
+            //had at <9, forgot 0 is an part in the index,
+            //so was giving me IndexOutOfRangeException
+            //cause there was nothing at index spot 8
+            gameObj = gameObjects[i];
+
+            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+                countG++;
+                countGlobesText.text = countG + "";
+            }//if
+        }//for
+        return countG;
+    }//CountingUp
+
+
+    private bool WonOrLost(float timeL, int countGlobe){
+        if (timeL >= 0 && countGlobe == actualGlobesNum){
+
+            timeText.text = (timeLeft).ToString("WINNER");
+            timeText.color = Color.green;
+            countGlobesText.text = " You won";
+            return true;
+        }//if
+        else if ((timeL < 0 && countGlobe != actualGlobesNum)) {
+            timeLeft = 0;
+            timeText.text = (timeLeft).ToString("FAIL");
+            timeText.color = Color.red;
+            countGlobesText.text = " You lost";
+            return false;
+        }//else if
+        else if (timeL < -1 && countGlobe == actualGlobesNum){
+            timeLeft = 0;
+            timeText.text = (timeLeft).ToString("FAIL");
+            timeText.color = Color.red;
+            countGlobesText.text = " You lost";
+            return false;
+        }//else if
+        return false;
+    }//WonOrLost
+}//CountWinOrLose
+    </code></pre>
+    
+    
+    <p>All of our code is done! Yay! Unfortunately we are not done creating our game just yet. 
+    We have a few more things to add. Go to the next section to check them out. </p>
+         
+         
      <div class="wrapper">
         <div class="inner">
            <p>Click on the Previous button if you think you missed something in the 
