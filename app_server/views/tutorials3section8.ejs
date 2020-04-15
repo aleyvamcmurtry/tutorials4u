@@ -61,77 +61,184 @@
             
             <p>We are almost done making our game! We have a couple of last things to do before we can test it out and make sure everything works. 
             </p>
-            <p>Canvas</p>
+            <h3>Canvas</h3>
             
-            <p>We have our Sphere, we can click on it to change its color. We can move our cursor around the screen. But we have a problem now. How do we show how much time the player has left and how many spheres the player has clicked on?
+            <p>We have our Globe, we can click on it to change its color. We can move our cursor around the screen. 
+            But we have a problem now. How do we show how much time the player has left and how many Globes the player has clicked on?
             </p>
-          <p>  If you click on our Sphere, look at the Inspector, and go down to the ______code, you should see two empty spaces next to _______ text and _____ text. In these spaces, we want to out in a text that the user will see.
+          <p>  If you click on our Globe, look at the Inspector, and go down to the CountWinOrLose code,
+          you should see two empty spaces next to CountGlobes text and Time text. In these spaces,
+          we want to out in a text that the user will see.
             </p>
             <p>But we currently don’t have any text anywhere in our game.
             </p>
            <p> Well now we will create these texts. 
             </p>
-            <p>We will be creating text boxes. Before we get to the creating, we need to understand what we are doing first. 
+            <p>We will be creating text boxes. Before we get to the creating,
+            we need to understand what we are doing first. 
             </p>
-            <p>We want our player to see the time that is left in the game and how many spheres they have clicked on. Our player needs to see this information at all times. So if the player looks right, left, up, down, they can still see the information on the screen. 
+            <p>We want our player to see the time that is left in the game
+            and how many Globes they have clicked on. Our player need
+            s to see this information at all times. So if the player
+            looks right, left, up, down, they can still see the information on the screen. 
             </p>
-            <p>We can do this by adding text boxes, boxes that hold text, to the camera since the camera is attached to our player. 
+            <p>We can do this by adding text boxes, boxes that hold text,
+            to the camera since the camera is attached to our player. 
             </p>
-           <p> Text boxes are UI (User Interface) objects though. UI objects are objects the user can view, see, and interact with on a screen. Unlike the spheres we created, where they can permanently change in the game, UI objects cannot be permanently changed by the player. They can reappear and disappear, but the player does not have full control of that. 
+           <p> Text boxes are UI (User Interface) objects though. UI objects
+           are objects the user can view, see, and interact with on a screen.
+           Unlike the Globes we created, where they can permanently change in
+           the game, UI objects cannot be permanently changed by the player.
+           They can reappear and disappear, but the player does not have full control of that. 
             </p>
-           <p> UI objects in Unity can only be added to a canvas, which is just a holder for all of these elements. Think of the canvas as a window. You can put stickers on it, shine light through it, see through it, put blinds to cover it, but it’s always there and you can’t permanently attach food or clothes to it. That’s the same thing here. 
-            So now that you kinda have an idea about what we are doing, let’s get started adding our textboxes to our player.
+           <p> UI objects in Unity can only be added to a canvas, which
+           is just a holder for all of these elements. Think of the
+           canvas as a window. You can put stickers on it, shine light
+           through it, see through it, put blinds to cover it, but it’s
+           always there and you can’t permanently attach food or clothes
+           to it. That’s the same thing here. </p>
+           <p> So now that you kinda have an idea about what we are doing,
+            let’s get started adding our textboxes to our player.
             </p>
-           <p> First, click on the triangle next to our player object. It should reveal our Main Camera. 
-            Now there are three ways you can do this. You can right click on our Main Camera, go down to UI, hover to the right, and click on Text. The Canvas will immediately appear under Main Camera with a Text underneath the Canvas. 
-            The second way is by clicking on the plus button in the Hierachy. There you can go down to UI, hover to the right, and click on Text. The Canvas will immediately appear in our Hierarchy. Drag and drop the Canvas onto our Main Camera. 
+           <p> First, click on the triangle next to our player
+           object. It should reveal our Main Camera. 
+            Now there are three ways you can do this.
+            You can right click on our Main Camera,
+            go down to UI, hover to the right, and
+            click on Text. The Canvas will immediately appear
+            under Main Camera with a Text underneath the Canvas. 
+            The second way is by clicking on the plus button
+            in the Hierachy. There you can go down to UI,
+            hover to the right, and click on Text. The Canvas
+            will immediately appear in our Hierarchy. Drag
+            and drop the Canvas onto our Main Camera. 
             </p>
-            <p>The third way is clicking on our GameObject on our Menu Bar, go down to UI, hover to the right, and click on Text. Like the second way, the Canvas will immediately appear in our Hierarchy. 
+            <p>The third way is clicking on our GameObject
+            on our Menu Bar, go down to UI, hover to the right,
+            and click on Text. Like the second way, the Canvas
+            will immediately appear in our Hierarchy. 
             </p>
             <p>Your Player object now should look like this:</p>
             
             <p>Player
             	Main Camera
             		Canvas
-            			Text</p>
+            			Text
+            		GvrReticlePointer</p>
             
-          <p>  Your Text is a child of Canvas, which is a child of Main Camera which is a child of our Player object. 
+          <p> Your Text is a child of Canvas, which
+          is a child of Main Camera which is a child of our Player object. 
             </p>
-           <p> Now we need to either right-click on our Canvas, click on the plus button in our Hierarchy, or click on GameObject in our Menu Bar and add another Text object to our Canvas since our project needs two texts and not just one. 
+           <p> Now we need to either right-click on
+           our Canvas, click on the plus button in our
+           Hierarchy, or click on GameObject in our Menu
+           Bar and add another Text object to our Canvas
+           since our project needs two texts and not just one. 
             </p>
-          <p>  We are going rename our Texts to countDownText and ballCountText. It does not matter which one, as long as you have one of each. 
+          <p>  We are going rename our Texts to
+          countDownText and globeCountText. It does not matter which one,
+          as long as you have one of each. 
             </p>
-            <p>Sphere:</p>
-            <p>Do you remeber our good friend Sphere that we made in section 5 (link to section 5)? If you do, great! If not, don’t worry, you can always click on THIS to go back and review it. 
+            
+            <p>Now click on your Canvas. You shouldn't be see it yet. </p>
+            <p>Click on your <b>Inspector</b>, click on <b>Canvas</b> (the Canvas
+            inside the Canvas), and change the <b>Render Mode</b> to World Space.</p>
+            
+            <p>Still in the <b>Inspector</b>, under <b>Anchors</b>, change the following information:</p>
+            
+            <li>Min X 0.5 Y 0.5</li>
+            <li>Max X 0.5 Y 0.5</li>
+            <li>Scale X 0.02 Y 0.02 Z 0.01</li>
+            
+            <p>Above it change:</p>
+            <li>Pos X to 0</li>
+            <li>Pos Y to 0</li>
+            <li>Pos Z to 0</li>
+            <li>Width to 100</li>
+            <li>Height to 100</li>
+            
+            <p>What we just did was make the <b>Canvas</b> small enough that we can
+            see it and also able to move around with our camera. So when we fix our textboxes
+            we can see them on the canvas. </p>
+            
+            <p>Next we are going to fix our textboxes. We can't see them on our screen (and you can double check this
+            by looking at our <b>Game View</b>. We are going to fix them so we can see them.</p>
+            
+            <p>Click on <b>globeCountText</b> and use the blue and red arrows to move it around your screen using
+            the <b>Move Tool</b> (the four arrows next to the hand). You can place it anywhere,
+            as long as you can see it when you play your game and it's clear. 
             </p>
-            <p>We are going to right click (if on PC) on the name of our Sphere in our Hierachy. Next, lower your mouse down and click on ‘Duplicate’. Now, in your Hierachy, you should see your original Sphere and Sphere (1). Sphere (1) is an exact clone of your original Sphere. 
+            
+            <p>Do the same with countDownText.</p>
+            
+            <p>In the <b>Inspector</b> for both of these texts, go down to <b>Text</b>
+            and delete the information inside. We don't want our player playing only
+            to see 'New Text' pop up when they begin playing. </p>
+            
+            <p>When done, go to our <b>Globe</b>, look at the <b>Inspector</b>,
+            go down to <b>CountWinOrLose (Script)</b> and you will see two empty
+            spots next to CountGlobes Text and Time Text. Drag and drop globeCountText
+            and countDownText into their respective spots. </p>
+            
+            <p>Now you can test the game and see if you need to do any 
+            adjustments with the text or with the globe.</p>
+            
+            
+            <h3>Globe:</h3>
+            <p>Do you remeber our good friend Globe that we made
+            in <a href="tutorials3section5">section 5</a>)? 
+            If you do, great! If not, don’t worry, you can always click <a href="tutorials3section5">here</a> to go back and review it. 
             </p>
-            <p>On your screen, you may not immediately see where your Sphere (1) is at. That’s because it’s in the exact same position of your Sphere. 
+            <p>We are going to right click (on PC)
+            on the name of our Globe in our Hierachy.
+            Next, lower your mouse down and click on <b>Duplicate</b>.
+            Now, in your Hierachy, you should see your original Globe and Globe (1).
+            Globe (1) is an exact clone of your original Globe. 
             </p>
-            <p>So what we are going to do now is click on Sphere (1) in your Hierarchy, and use the blue and red arrows to move it around your screen. You can place it anywhere, as long as it remains on your plane and you can see it when you play your game. 
+            <p>On your screen, you may not immediately see where your
+            Globe (1) is at. That’s because it’s in the exact same position of your Globe. 
             </p>
-            <p>Next, we are going to repeat this, until we have 10 amount of spheres (including your original Sphere) on the board. Now we have a little group of spheres and we didn’t have to create each one by scratch. So you should have Sphere, Sphere (1), Sphere (2)... Sphere (9). 
+            <p>So what we are going to do now is click on Globe (1)
+            in your <b>Hierarchy</b>, and use the blue and red arrows to move it around your screen using
+            the <b>Move Tool</b> (the four arrows next to the hand). You can place it anywhere,
+            as long as it remains on your plane and you can see it when you play your game. 
             </p>
-            <p>If you want to have more or less spheres to play with, you can always change the amount you need to win in ________.
+            <p>Next, we are going to repeat this, until we have total of 10 amount of Globes
+            (including your original Globe) on the board. Now we have a little
+            group of Globes and we didn’t have to create each one by scratch.
+            So you should have Globe, Globe (1), Globe (2)... Globe (9) (since our first Globe counts as 1 globe). 
+            </p>
+            <p>Open your CountWinOrLose script very quickly, and at the top where we have actualGlobesNum, change
+            the number assigned to from 1 to 10. That way we can make sure we are counting the correct number of globes we have.</p>
+            <p>If you want to have more or less Globes to play with, you can always change the amount you need to win in CountWinOrLose.
             </p>
             <p>It’s time to test! 
             </p>
-            <p>Click on the play button on your ____ bar and your game should immediately begin playing. To move on your computer, on PC press Alt and ____
-            On a Mac, press Ctrl and
+            <p>Click on the play button on your <b>Game bar</b> and your game should immediately begin playing. 
             </p>
-            <p>If everything works great, you’re done with your game. If something acts weird, try to see what is acting weird and go through the past sections here and double-check that you followed all of the steps correctly. Don’t feel bad if you missed or forgot something, everyone makes mistakes. 
+            <p>If everything works great, you’re done with your game. 
+            If something acts weird, try to see what is acting weird
+            and go through the past sections <a href="tutorials3">here</a> and double-check that
+            you followed all of the steps correctly. Don’t feel bad if you missed or forgot something, everyone makes mistakes. 
             </p>
             <p>If you are having a problem with:
             </p>
-            <p>Colors changing- Go to tutorial 6 to double-check.
+            <p>Colors changing- Go to <a href="tutorials3section6">section 6</a> to double-check.
             </p>
-            <p>Cursor not appearing-  Go to tutorial 2 and tutorial 3 to double-check
+            <p>Cursor not appearing-  Go to <a href="tutorials2">tutorial 2</a> or <a href="tutorials3">tutorial 3</a> to double-check.
             </p>
-            <p>Not winning or something off- Go to tutorial 7 to double-check. 
+            <p>Not winning or something off- Go to <a href="tutorials3section7">section 7</a> to double-check. 
             </p>
-           <p> Remember, at the end of the day, this is YOUR game. You can add different colors, change the countdown time, add more or fewer spheres, change the spheres into cubes, add in trees and cars using the assets store. These tutorials are here so you can get a base to start with. 
+           <p> Remember, at the end of the day, this is YOUR game. You can add different colors,
+           change the countdown time, add more or fewer Globes, change the Globes into cubes,
+           add in trees and cars using the assets store. These tutorials are here so you can get a base to start with. 
             </p>
-            <p>If you do choose to add trees, cars, and other elements, try to make sure your Spheres are still in view to the user when testing. If a tree is blocking a Sphere, it can stop you from winning the game. 
+            
+            <p>To change the countdown time, make sure change it from 10 to the time you want to give the player in your
+            <b>CountWinOrLose</b> script and change timeLeft.</p>
+            
+            <p>If you do choose to add trees, cars, and other elements, try to make
+            sure your Globes are still in view to the user when testing. If a tree is blocking a Globe, it can stop you from winning the game. 
             </p>
            <p> Yay! You have a working game! You can go ahead and show your friends.</p>
             
