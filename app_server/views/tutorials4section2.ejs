@@ -39,7 +39,8 @@
     <section id="wrapper">
       <header>
         <div class="inner">
-          
+          <h2>Tutorial 4 Section 2</h2>
+          <h2>Android SDK</h2>
           <p>If you would like to go back to any of the previous tutorials,
               please click <a href="tutorialshome">here!</a></p>
           <!--- <h2>Download Unity</h2>
@@ -68,6 +69,8 @@
            PC, Mac, & Linux Standalone, as well as Android have items on the right hand side. If you click on
            PS4 or iOS, they should only have a message asking for you to download their module.
            That is because we have only downloaded the Android version and the PC version is default.</p>
+           
+           <p>If you do not already have the Build Settings on the Android Platform, please do so now.</p>
           <p>Click on Android and at the bottom of the information for Android, click on the button that says
           Switch Platform. </p>
           
@@ -78,8 +81,11 @@
           <p>Now let's wait for it to run. You should get an error saying there is now Android Device plugged in.</p>
           <p>As long as that is your only error in this step, then you are good. </p>
           
+          
           <p>If not and you get an error saying Android SDK is not working, then click out
           of Build Settings, click on Edit on the Menu Bar, and then click on Preferences.</p>
+          
+          <h5>Fix 1:</h5>
           
           <p>Make sure that you are searching in External Tools. </p>
           <p>Android SDK Tools Installed with Unity should be clicked.</p>
@@ -96,6 +102,22 @@
           This is causing for the SDK not to be found. </p>
           
           <p>If this is the issue you had, change it, exit out of External Tools, and try Build and Run again. </p>
+          
+          <h5>Fix 2:</h5>
+          
+          <p>If, when attempting Fix 1, you continue attempting to replace / with \ and then when you go back, the path is empty,
+          click on the box next to Android SDK Tools, copy the link, and put it in a text document, like Notes or Notepad. </p>
+          <p>Follow the path by searching for <b>This PC</b>, click on <b>Windows (C:)</b>, and then just clicking every folder that is on that path.
+          So in this case, Windows (C:), then Program Files, then Unity, then Hub, Editor, 2019.3.1f1,... until I reach AndroidPlayer and look to see
+          if a folder called SDK is in there.</p>
+          
+          <p>For Mac users, please follow a similar route, but for the Mac interface. </p>
+          
+          <p>If SDK is not in there, then something may have gone wrong when Unity installed Android. </p>
+          
+          <p>If this is the error you have received, please go to the <a href="help4">Help</a> page for further assistance.</p>
+         
+          
           
           <p>Great! Everything should be working. Go onto the next tutorial for the next step. </p>
 

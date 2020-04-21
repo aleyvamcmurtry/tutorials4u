@@ -70,7 +70,7 @@ exports.tutorials2section6 = function(req, res){
 
 
 
-/* Tutorial 3 Section 1-4 */
+/* Tutorial 3 Section 1-10 */
 exports.tutorials3section1 = function(req, res){
   res.render('tutorials3section1', { title: 'Tutorial 3-1' });
 };
@@ -102,6 +102,15 @@ exports.tutorials3section7 = function(req, res){
 exports.tutorials3section8 = function(req, res){
   res.render('tutorials3section8', { title: 'Tutorial 3-8' });
 };
+
+exports.tutorials3section8 = function(req, res){
+  res.render('tutorials3section9', { title: 'Tutorial 3-9' });
+};
+
+exports.tutorials3section8 = function(req, res){
+  res.render('tutorials3section10', { title: 'Tutorial 3-10' });
+};
+
 
 
 /* Tutorial 4 Section 1-4 */

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Tutorials4Unity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap2/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/bootstrap2/css/main.css">
+    <link rel="stylesheet" href="/bootstrap2/css/ie9.css">
+    <link rel="stylesheet" href="/bootstrap2/css/ie8.css">
+    <link rel="stylesheet" href="/bootstrap2/css/font-awesome.min.css">
+    <style></style>
+    </head>
+    <body>
+  <div id="page-wrapper">
+    <!-- Header-->
+    <header id="header">
+      <h1><a href="/">Tutorials4Unity</a></h1>
+      <nav><a href="#menu">Menu</a></nav>
+       <button onclick="topFunction()" id="myBtn" title="Go to top">Go to the Top</button>
+    </header>
+    <!-- Menu-->
+    <nav id="menu">
+      <div class="inner">
+        <h2>Menu</h2>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="tutorialshome">Tutorials</a></li>
+          <li><a href="resources">Resources</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="help">Help</a></li>
+           <li><a href="codehome">Code</a></li>
+           <!--<li><a href="login">Log In</a></li>-->
+          <!--<li><a href="signup">Sign Up</a></li>-->
+        </ul><a href="#" class="close">Close</a>
+      </div>
+    </nav>
+    <!-- Wrapper-->
+    <section id="wrapper">
+      <header>
+        <div class="inner">
+          <h2>Tutorial 3 Section 9</h2>
+          <h2>WonOrLost!</h2>
+          
+             <p> Let's get into the WonOrLost() method.</p>
+             
+             <p>If you would like to go back to any of the previous tutorials,
+              please click <a href="tutorialshome">here!</a></p>
+             <!-- <iframe width="420" height="315"
+          src="">
+          </iframe> -->
+        </div>
+      </header>
+      
+      <!-- Content-->
+      <div class="wrapper">
+        <div class="inner">
+      
+          <p>Welcome back! </p>
+          
+           <p>You should have this for your WonOrLost() method.</p>
+   
+   <pre><code>
+    private bool WonOrLost(float timeL, int countGlobe){
+        if (timeL >= 0 && countGlobe == actualGlobesNum){
+            timeText.text = (timeLeft).ToString("WINNER");
+            timeText.color = Color.green;
+            countGlobesText.text = " You won";
+            return true;
+        }//if
+        else if ((timeL < 0 && countGlobe != actualGlobesNum)){
+            timeLeft = 0;
+            timeText.text = (timeLeft).ToString("FAIL");
+            timeText.color = Color.red;
+            countGlobesText.text = " You lost";
+            return false;
+        }//else if
+        else if (timeL < -1 && countGlobe == actualGlobesNum){
+            timeLeft = 0;
+            timeText.text = (timeLeft).ToString("FAIL");
+            timeText.color = Color.red;
+            countGlobesText.text = " You lost";
+            return false;
+        }//else if
+        return false;
+    }//WonOrLost   
+   </code></pre> 
+         
+         
+    
+    
+    <p>This section was very very long. Well, with all of our hard work, your code should now look like this
+    all together:</p>
+         
+    <pre><code>
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CountWinOrLose : MonoBehaviour{
+
+    public int numOfGlobes;
+    int actualGlobesNum = 1;
+    public Text countGlobesText;
+
+    public float timeLeft = 10f;
+    public Text timeText;
+
+    void Start(){  }
+
+    // Update is called once per frame
+    void Update(){
+        timeLeft -= Time.deltaTime;
+        numOfGlobes = 0;
+
+        if (timeLeft > -1){
+            numOfGlobes = CountingUp(numOfGlobes);
+
+            if (numOfGlobes != actualGlobesNum){
+                timeText.text = (timeLeft).ToString("0");
+            }//if
+            WonOrLost(timeLeft, numOfGlobes);
+        }//if
+    }//Update
+
+    private int CountingUp(int countG){
+        GameObject gameObj;
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("GlobeObject");
+
+        for (int i = 0; i < actualGlobesNum; i++) {
+
+            //had at <9, forgot 0 is an part in the index,
+            //so was giving me IndexOutOfRangeException
+            //cause there was nothing at index spot 8
+            gameObj = gameObjects[i];
+
+            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+                countG++;
+                countGlobesText.text = countG + "";
+            }//if
+        }//for
+        return countG;
+    }//CountingUp
+
+
+    private bool WonOrLost(float timeL, int countGlobe){
+        if (timeL >= 0 && countGlobe == actualGlobesNum){
+
+            timeText.text = (timeLeft).ToString("WINNER");
+            timeText.color = Color.green;
+            countGlobesText.text = " You won";
+            return true;
+        }//if
+        else if ((timeL < 0 && countGlobe != actualGlobesNum)) {
+            timeLeft = 0;
+            timeText.text = (timeLeft).ToString("FAIL");
+            timeText.color = Color.red;
+            countGlobesText.text = " You lost";
+            return false;
+        }//else if
+        else if (timeL < -1 && countGlobe == actualGlobesNum){
+            timeLeft = 0;
+            timeText.text = (timeLeft).ToString("FAIL");
+            timeText.color = Color.red;
+            countGlobesText.text = " You lost";
+            return false;
+        }//else if
+        return false;
+    }//WonOrLost
+}//CountWinOrLose
+    </code></pre>
+    
+    
+    <p>All of our code is done! Yay! Unfortunately we are not done creating our game just yet. 
+    We have a few more things to add. Go to the next section to check them out. </p>
+         
+         
+          
+     <div class="wrapper">
+        <div class="inner">
+           <p>Click on the Previous button if you think you missed something in the 
+            last part or click the Next button to .</p>
+          <div id="container">
+            <button id="prevBtn" title="prev"><a href="tutorials3section8">Previous</a></button>
+            <button id="nextBtn" title="next"><a href="tutorials3section10">Next</a></button>
+          </div>
+    
+        </div>
+      </div>
+    </body>
+    <!-- Footer-->
+    <section id="footer">
+      <div class="inner">
+        <ul class="copyright">
+          <li>© Untitled Inc. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <!-- Scripts-->
+  
+  <script src="bootstrap2/js/skel.min.js"></script>
+  <script src="bootstrap2/js/jquery.min.js"></script>
+  <script src="bootstrap2/js/jquery.scrollex.min.js"></script>
+  <script src="bootstrap2/js/util.js"></script><!--[if lte IE 8]>
+  <script src="bootstrap2/js/ie/respond.min.js"></script><![endif]-->
+  <script src="bootstrap2/js/main.js"></script>
+</body>

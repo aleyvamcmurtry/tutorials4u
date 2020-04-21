@@ -39,7 +39,7 @@
     <section id="wrapper">
       <header>
         <div class="inner">
-          
+          <h2>Tutorial 3 Section 7</h2>
           <h2>Time is on our side to Count Scripts!</h2>
           
              <p>It's time to add our second script to our game.</p>
@@ -58,9 +58,9 @@
         <div class="inner">
       
          <p>
-                   Welcome back to our second script! Make sure to have Unity and your
+            Welcome back to our second script! Make sure to have Unity and your
            project open because we are starting right off.</p>
-            
+           
             <p>Like what we did with <b>ColorChange</b>, click on your <b>Globe</b>, look at
             your <b>Inspector Window</b>, click on <b>Add Component</b>, type in
             <b>New Script</b> to the search bar, select it, type in the name
@@ -73,7 +73,11 @@
             <b>Microsoft Visual Studios</b> should then open up (if it is not already opened)
             and you should see the class for <b>CountWinOrLose</b>.</p>
             
-            <p>The <b>CountWinOrLose</b> class will be longer than <b>ColorChange</b>.</p>
+            <p>The <b>CountWinOrLose</b> class will be longer than <b>ColorChange</b>.
+            Due to this, the <b>CountWinOrLose</b> class will be split into three sections.
+            In this section, we will be talking about the <b>Update()</b> method, as well as
+            some of the set up. </p>
+            </p>
             
             <p>First off, before we add anything inside <b>CountWinOrLose</b>,
             we are going to make a new call to a different libaray above
@@ -201,7 +205,7 @@
             <pre><code>numOfGlobes = CountingUp(numOfGlobes);</pre></code>
             
             <p>We are ‘assigning’ our numOfGlobes to... wait what’s CountingUp?
-            We don’t have that. We will be creating this in a moment, so we willl get back to this.</p>
+            We don’t have that. We will be creating this in a moment, so we will get back to this.</p>
             
             <p>Our next line is another if statement! It says: </p>
             <pre><code>if (numOfGlobes != actualGlobesNum).</pre></code>
@@ -220,97 +224,12 @@
             from another type, like a float, and have it be apart of a string. We
             just have to have another string be apart of it. That’s why we have the 0 inside the parenthesis. </p>
             
-            <p>Outside this second if statement, we have another method called WonOrLost that is called. Again, we will get back to this in a moment. </p>
+            <p>Outside this second if statement, we have another method called WonOrLost that is called. 
+            We will get back to this in section 9. </p>
             
-             <p>Wow that's a lot, but now we have two methods to create. CountingUp() and WonOrLost()</p>
-            <p>Let's create CountingUp first.</p>
-         <p>So unlike our ChangeGlobeColor() method in our ColorChange script, CountingUp is going to be 
-         private (we don't want other scripts touching it), it is going to return (or send back) an int, and 
-         we are going to ask for an int parameter. CountingUp is going to ask to get some information first
-         before it does any work. In this case, we want an int and inside CountingUp we are going to call this int countG. </p>
-         
-         <p>In our Update() method, we have the line <code>CountingUp(numOfGlobes)</code>.
-         CountingUp is taking the numOfGlobes (since its an int), and temporary calling it countG so it can use it.</p>
-         
-         <p>It's like an ice cube tray, where the tray is the method. The tray asks for water,
-         so you put water in the designated spots. Then the tray changes that water into 
-         cube shaped ice after you put it into the fridge. The tray keeps the water from moving and
-         helps it stay in one shape. </p>
-         
-         <p>Our method is going to do a more complicated version of this.</p>
-         
-    
-    
-    
-    
-    
-    
-    
-    
-        <p>You should have this for your CountingUp() method.</p>
-    
-    <pre><code>
-    private int CountingUp(int countG){
-        GameObject gameObj;
-        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("GlobeObject");
-
-        for (int i = 0; i < actualGlobesNum; i++)
-        {
-            gameObj = gameObjects[i];
-
-            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
-                countG++;
-                countGlobesText.text = countG + "";
-            }//if
-
-        }//for
-        return countG;
-    }//CountingUp    
-    </code></pre>
-         
-         
-         
-         
-         
-         
-         
-         
-         
-           <p>You should have this for your WonOrLost() method.</p>
-   
-   <pre><code>
-    private bool WonOrLost(float timeL, int countGlobe){
-        if (timeL >= 0 && countGlobe == actualGlobesNum){
-            timeText.text = (timeLeft).ToString("WINNER");
-            timeText.color = Color.green;
-            countGlobesText.text = " You won";
-            return true;
-        }//if
-        else if ((timeL < 0 && countGlobe != actualGlobesNum)){
-            timeLeft = 0;
-            timeText.text = (timeLeft).ToString("FAIL");
-            timeText.color = Color.red;
-            countGlobesText.text = " You lost";
-            return false;
-        }//else if
-        else if (timeL < -1 && countGlobe == actualGlobesNum){
-            timeLeft = 0;
-            timeText.text = (timeLeft).ToString("FAIL");
-            timeText.color = Color.red;
-            countGlobesText.text = " You lost";
-            return false;
-        }//else if
-        return false;
-    }//WonOrLost   
-   </code></pre> 
-         
-         
-    
-    
-    <p>This section was very very long. Well, with all of our hard work, your code should now look like this
-    all together:</p>
-         
-    <pre><code>
+            
+                  <p>So far, your entire script should currently look like this:</p>
+          <pre><code>
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -341,58 +260,15 @@ public class CountWinOrLose : MonoBehaviour{
             WonOrLost(timeLeft, numOfGlobes);
         }//if
     }//Update
-
-    private int CountingUp(int countG){
-        GameObject gameObj;
-        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("GlobeObject");
-
-        for (int i = 0; i < actualGlobesNum; i++) {
-
-            //had at <9, forgot 0 is an part in the index,
-            //so was giving me IndexOutOfRangeException
-            //cause there was nothing at index spot 8
-            gameObj = gameObjects[i];
-
-            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
-                countG++;
-                countGlobesText.text = countG + "";
-            }//if
-        }//for
-        return countG;
-    }//CountingUp
-
-
-    private bool WonOrLost(float timeL, int countGlobe){
-        if (timeL >= 0 && countGlobe == actualGlobesNum){
-
-            timeText.text = (timeLeft).ToString("WINNER");
-            timeText.color = Color.green;
-            countGlobesText.text = " You won";
-            return true;
-        }//if
-        else if ((timeL < 0 && countGlobe != actualGlobesNum)) {
-            timeLeft = 0;
-            timeText.text = (timeLeft).ToString("FAIL");
-            timeText.color = Color.red;
-            countGlobesText.text = " You lost";
-            return false;
-        }//else if
-        else if (timeL < -1 && countGlobe == actualGlobesNum){
-            timeLeft = 0;
-            timeText.text = (timeLeft).ToString("FAIL");
-            timeText.color = Color.red;
-            countGlobesText.text = " You lost";
-            return false;
-        }//else if
-        return false;
-    }//WonOrLost
 }//CountWinOrLose
     </code></pre>
-    
-    
-    <p>All of our code is done! Yay! Unfortunately we are not done creating our game just yet. 
-    We have a few more things to add. Go to the next section to check them out. </p>
-         
+            
+            <p>With all this code, make sure to double check you have opening and closing brackets
+            (everyone of these { must have one of these } ) and that every line that does
+            not end in a bracket must end in a semicolon (;).</p>
+            
+             <p>Wow that's a lot, but now we have two new methods to create. <b>CountingUp()</b> and <b>WonOrLost()</b>.</p>
+           <p>We will be getting into these two methods in the next two sections.</p>
          
      <div class="wrapper">
         <div class="inner">
