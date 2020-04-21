@@ -39,7 +39,7 @@
     <section id="wrapper">
       <header>
         <div class="inner">
-          
+          <h2>Tutorial 3 Section 6</h2>
           <h2>Let's Change the Color with a Script!</h2>
           
              <p>We are going to be adding our first script to our game.</p>
@@ -78,6 +78,7 @@
            <p> Type in <b>ColorChange</b> and then click on the button <b>Create and Add</b> at the bottom.
             The script <b>ColorChange (Script)</b> should be added to the <b>Globe</b> object. </p>
             
+            
            <p> Now before we go into <b>ColorChange</b>, let’s make sure we understand what a script is.
             A script is a set of instructions a person created for a program like Unity to
             understand and then follow. Think of it as a recipe. In a recipe, you are told how
@@ -104,6 +105,12 @@
             <p>Another program called <b>Microsoft Visual Studio</b> should appear and load. This is
             a program that comes and downloads with Unity. <b>Visual Studio</b> allows for us to
             edit our script, save it, and then have it run in Unity. </p>
+            
+            <p><b>Microsoft Visual Studio</b> may ask you sign up or login. If you have a Microsoft
+            account (like a hotmail), you can use this to login. If you do not, use the same 
+            email you used to sign up for Unity (<a href="tutorials1section3">Tutorial 1 Section 3)</a>.
+            Unfortunately, if you do not login or sign up, you cannot use <b>Microsoft Visual Studio</b>
+            to edit your code. </p>
             
             <p>When it initially appears, you should see the name of our script next to 
             <b>public class</b>. All of the information you see is the basic code Unity gives you. </p> 
@@ -175,7 +182,7 @@
             <p>What we are doing here is stating any objects that we are creating
             specifically for this class and code. <b>Public</b> is of course whether
             or not other classes and objects can see this new object we are
-            creating. <b>Renderer</b> is the type of object, with renderer being an
+            creating. <b>Renderer</b> is the class of the type of object, with renderer being an
             object that helps for us to see or not see our base object. Lastly
             <b>rend</b> is the name of our new object. Our <b>Renderer</b> object is
             named <b>rend</b> because we want to follow the standard Unity Naming
@@ -186,19 +193,19 @@
             can understand. For example, I might use ren for Renderer. </p>
             
             <p>Under <b>void Update()</b>, we are going to create a new method called
-            <b>ChangeBallColor()</b>. It is going to be a public method and it is
+            <b>ChangeGlobeColor()</b>. It is going to be a public method and it is
             not going to take any information in. </p>
             
             <p>The way you should this line out is like this:</p>
             
-            <code>public void ChangeBallColor{ }</code>
+            <code>public void ChangeGlobeColor{ }</code>
             
             <p>The brackets { } mean that anything inside of it belongs to the
             method. The class also uses brackets { } to say that everything
             inside them belong to the class. Always make sure and double
             check that for every opened bracket { you have a closed one }.</p> 
             
-            <p>Inside <b>ChangeBallColor()</b>, you are going to type:</p>
+            <p>Inside <b>ChangeGlobeColor()</b>, you are going to type:</p>
             
             <code>rend = GetComponent< Renderer>();</code>
             <code>rend.material.SetColor("_Color", Color.green);</code>
@@ -245,7 +252,7 @@
       // Update is called once per frame
       void Update(){ }
                 
-      public void ChangeBallColor()
+      public void ChangeGlobeColor()
       {
           rend = GetComponent< Renderer >();
           rend.material.SetColor("_Color", Color.green);
@@ -273,7 +280,7 @@
             empty space under <b>Runtime Only</b> (which means only when the
             game is on). You should be able to now interact with list
             that was greyed out that says <b>No Function</b>. Click on it,
-            go to <b>ColorChange()</b>, and then click on <b>ChangeBallColor()</b>.</p>
+            go to <b>ColorChange()</b>, and then click on <b>ChangeGlobeColor()</b>.</p>
             
             <p>What we just did is tell our <b>Globe</b> object that whenever
             someone clicks on it, it does something. In this case,
@@ -303,7 +310,7 @@
       // Update is called once per frame
       void Update(){ }
                 
-      public void ChangeBallColor()
+      public void ChangeGlobeColor()
       {
           rend = GetComponent< Renderer>();
           rend.material.SetColor("_Color", Color.green);

@@ -39,10 +39,10 @@
     <section id="wrapper">
       <header>
         <div class="inner">
+          <h2>Tutorial 3 Section 8</h2>
+          <h2>CountingUp!</h2>
           
-          <h2>Final Touches</h2>
-          
-             <p>Let's finish up our game.</p>
+             <p>Let's get into the CountingUp() method.</p>
              
              <p>If you would like to go back to any of the previous tutorials,
               please click <a href="tutorialshome">here!</a></p>
@@ -55,203 +55,251 @@
       <!-- Content-->
       <div class="wrapper">
         <div class="inner">
-      
-          <p>Welcome back! </p>
-            
-            
-            <p>We are almost done making our game! We have a couple of last things to do before we can test it out and make sure everything works. 
-            </p>
-            <h3>Canvas</h3>
-            
-            <p>We have our Globe, we can click on it to change its color. We can move our cursor around the screen. 
-            But we have a problem now. How do we show how much time the player has left and how many Globes the player has clicked on?
-            </p>
-          <p>  If you click on our Globe, look at the Inspector, and go down to the CountWinOrLose code,
-          you should see two empty spaces next to CountGlobes text and Time text. In these spaces,
-          we want to out in a text that the user will see.
-            </p>
-            <p>But we currently don’t have any text anywhere in our game.
-            </p>
-           <p> Well now we will create these texts. 
-            </p>
-            <p>We will be creating text boxes. Before we get to the creating,
-            we need to understand what we are doing first. 
-            </p>
-            <p>We want our player to see the time that is left in the game
-            and how many Globes they have clicked on. Our player need
-            s to see this information at all times. So if the player
-            looks right, left, up, down, they can still see the information on the screen. 
-            </p>
-            <p>We can do this by adding text boxes, boxes that hold text,
-            to the camera since the camera is attached to our player. 
-            </p>
-           <p> Text boxes are UI (User Interface) objects though. UI objects
-           are objects the user can view, see, and interact with on a screen.
-           Unlike the Globes we created, where they can permanently change in
-           the game, UI objects cannot be permanently changed by the player.
-           They can reappear and disappear, but the player does not have full control of that. 
-            </p>
-           <p> UI objects in Unity can only be added to a canvas, which
-           is just a holder for all of these elements. Think of the
-           canvas as a window. You can put stickers on it, shine light
-           through it, see through it, put blinds to cover it, but it’s
-           always there and you can’t permanently attach food or clothes
-           to it. That’s the same thing here. </p>
-           <p> So now that you kinda have an idea about what we are doing,
-            let’s get started adding our textboxes to our player.
-            </p>
-           <p> First, click on the triangle next to our player
-           object. It should reveal our Main Camera. 
-            Now there are three ways you can do this.
-            You can right click on our Main Camera,
-            go down to UI, hover to the right, and
-            click on Text. The Canvas will immediately appear
-            under Main Camera with a Text underneath the Canvas. 
-            The second way is by clicking on the plus button
-            in the Hierachy. There you can go down to UI,
-            hover to the right, and click on Text. The Canvas
-            will immediately appear in our Hierarchy. Drag
-            and drop the Canvas onto our Main Camera. 
-            </p>
-            <p>The third way is clicking on our GameObject
-            on our Menu Bar, go down to UI, hover to the right,
-            and click on Text. Like the second way, the Canvas
-            will immediately appear in our Hierarchy. 
-            </p>
-            <p>Your Player object now should look like this:</p>
-            
-            <p>Player
-            	Main Camera
-            		Canvas
-            			Text
-            		GvrReticlePointer</p>
-            
-          <p> Your Text is a child of Canvas, which
-          is a child of Main Camera which is a child of our Player object. 
-            </p>
-           <p> Now we need to either right-click on
-           our Canvas, click on the plus button in our
-           Hierarchy, or click on GameObject in our Menu
-           Bar and add another Text object to our Canvas
-           since our project needs two texts and not just one. 
-            </p>
-          <p>  We are going rename our Texts to
-          countDownText and globeCountText. It does not matter which one,
-          as long as you have one of each. 
-            </p>
-            
-            <p>Now click on your Canvas. You shouldn't be see it yet. </p>
-            <p>Click on your <b>Inspector</b>, click on <b>Canvas</b> (the Canvas
-            inside the Canvas), and change the <b>Render Mode</b> to World Space.</p>
-            
-            <p>Still in the <b>Inspector</b>, under <b>Anchors</b>, change the following information:</p>
-            
-            <li>Min X 0.5 Y 0.5</li>
-            <li>Max X 0.5 Y 0.5</li>
-            <li>Scale X 0.02 Y 0.02 Z 0.01</li>
-            
-            <p>Above it change:</p>
-            <li>Pos X to 0</li>
-            <li>Pos Y to 0</li>
-            <li>Pos Z to 0</li>
-            <li>Width to 100</li>
-            <li>Height to 100</li>
-            
-            <p>What we just did was make the <b>Canvas</b> small enough that we can
-            see it and also able to move around with our camera. So when we fix our textboxes
-            we can see them on the canvas. </p>
-            
-            <p>Next we are going to fix our textboxes. We can't see them on our screen (and you can double check this
-            by looking at our <b>Game View</b>. We are going to fix them so we can see them.</p>
-            
-            <p>Click on <b>globeCountText</b> and use the blue and red arrows to move it around your screen using
-            the <b>Move Tool</b> (the four arrows next to the hand). You can place it anywhere,
-            as long as you can see it when you play your game and it's clear. 
-            </p>
-            
-            <p>Do the same with countDownText.</p>
-            
-            <p>In the <b>Inspector</b> for both of these texts, go down to <b>Text</b>
-            and delete the information inside. We don't want our player playing only
-            to see 'New Text' pop up when they begin playing. </p>
-            
-            <p>When done, go to our <b>Globe</b>, look at the <b>Inspector</b>,
-            go down to <b>CountWinOrLose (Script)</b> and you will see two empty
-            spots next to CountGlobes Text and Time Text. Drag and drop globeCountText
-            and countDownText into their respective spots. </p>
-            
-            <p>Now you can test the game and see if you need to do any 
-            adjustments with the text or with the globe.</p>
-            
-            
-            <h3>Globe:</h3>
-            <p>Do you remeber our good friend Globe that we made
-            in <a href="tutorials3section5">section 5</a>)? 
-            If you do, great! If not, don’t worry, you can always click <a href="tutorials3section5">here</a> to go back and review it. 
-            </p>
-            <p>We are going to right click (on PC)
-            on the name of our Globe in our Hierachy.
-            Next, lower your mouse down and click on <b>Duplicate</b>.
-            Now, in your Hierachy, you should see your original Globe and Globe (1).
-            Globe (1) is an exact clone of your original Globe. 
-            </p>
-            <p>On your screen, you may not immediately see where your
-            Globe (1) is at. That’s because it’s in the exact same position of your Globe. 
-            </p>
-            <p>So what we are going to do now is click on Globe (1)
-            in your <b>Hierarchy</b>, and use the blue and red arrows to move it around your screen using
-            the <b>Move Tool</b> (the four arrows next to the hand). You can place it anywhere,
-            as long as it remains on your plane and you can see it when you play your game. 
-            </p>
-            <p>Next, we are going to repeat this, until we have total of 10 amount of Globes
-            (including your original Globe) on the board. Now we have a little
-            group of Globes and we didn’t have to create each one by scratch.
-            So you should have Globe, Globe (1), Globe (2)... Globe (9) (since our first Globe counts as 1 globe). 
-            </p>
-            <p>Open your CountWinOrLose script very quickly, and at the top where we have actualGlobesNum, change
-            the number assigned to from 1 to 10. That way we can make sure we are counting the correct number of globes we have.</p>
-            <p>If you want to have more or less Globes to play with, you can always change the amount you need to win in CountWinOrLose.
-            </p>
-            <p>It’s time to test! 
-            </p>
-            <p>Click on the play button on your <b>Game bar</b> and your game should immediately begin playing. 
-            </p>
-            <p>If everything works great, you’re done with your game. 
-            If something acts weird, try to see what is acting weird
-            and go through the past sections <a href="tutorials3">here</a> and double-check that
-            you followed all of the steps correctly. Don’t feel bad if you missed or forgot something, everyone makes mistakes. 
-            </p>
-            <p>If you are having a problem with:
-            </p>
-            <p>Colors changing- Go to <a href="tutorials3section6">section 6</a> to double-check.
-            </p>
-            <p>Cursor not appearing-  Go to <a href="tutorials2">tutorial 2</a> or <a href="tutorials3">tutorial 3</a> to double-check.
-            </p>
-            <p>Not winning or something off- Go to <a href="tutorials3section7">section 7</a> to double-check. 
-            </p>
-           <p> Remember, at the end of the day, this is YOUR game. You can add different colors,
-           change the countdown time, add more or fewer Globes, change the Globes into cubes,
-           add in trees and cars using the assets store. These tutorials are here so you can get a base to start with. 
-            </p>
-            
-            <p>To change the countdown time, make sure change it from 10 to the time you want to give the player in your
-            <b>CountWinOrLose</b> script and change timeLeft.</p>
-            
-            <p>If you do choose to add trees, cars, and other elements, try to make
-            sure your Globes are still in view to the user when testing. If a tree is blocking a Globe, it can stop you from winning the game. 
-            </p>
-           <p> Yay! You have a working game! You can go ahead and show your friends.</p>
-            
-            <p>But we are not done yet! We have one more tutorial to go through before we can truly call this a virtual reality game. </p>
-            
-            <p>Click next so we can finish!</p>
+     
+        <p>We are now going to create our <b>CountingUp</b> method that is a part of our
+        <b>CountWinOrLose()</b> script. </p>
+        
+        <p>Here is what the method <b>CountingUp()</b> is going to do. </p>
+        
+        <p>Whenever our <b>Update()</b> calls on our <b>CountingUp()</b> method,
+        our <b>CountingUp()</b> method is going to check to see if </p>
+     
+         <p>So unlike our <b>ChangeGlobeColor()</b> method in our <b>ColorChange</b> script, <b>CountingUp</b> is going to be 
+         private (we don't want other scripts touching it), it is going to return (or send back) an int (a number), and 
+         we are going to ask for an int parameter. CountingUp is going to ask to get some information first
+         before it does any work. In this case, we want an int and inside <b>CountingUp</b> we are going to call this int countG. </p>
+         
+         <p>In our <b>Update()</b> method, we have the line <code>CountingUp(numOfGlobes)</code>.
+         <b>CountingUp</b> is taking the numOfGlobes (since its an int), and temporary calling it countG so it can use it.</p>
+         
+         <p>It's like an ice cube tray, where the tray is the method. The tray asks for water,
+         so you put water in the designated spots. Then the tray changes that water into 
+         cube shaped ice after you put it into the fridge. The tray keeps the water from moving and
+         helps it stay in one shape. </p>
+         
+         <p>Our method is going to do a more complicated version of this.</p>
+         
+         <p>Let's add the first part of this method. Type in:</p>
+    
+    <pre><code>
+    private int CountingUp(int countG){
+        GameObject gameObj;
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("GlobeObject");
 
+    </code></pre>
+    
+            <p><code>private int CountingUp(int countG){</code> is the information we were just describing. 
+            Our method is private, we are going to return an int, we state the name of our method (CountingUp),
+            and we ask for the int we need to use and give it a nickname of countG.</p>
+            
+            <p>On the next line, <code>GameObject gameObj;</code>, we are creating a new object
+            that from the GameObject class called gameObj. A GameObject is an object that exists in the game that we can use to
+            find information about that specific object and what it has. For example, we can find out if the object
+            is red or green, which is what we will be doing in a moment. We are going to use GameObject to hold a copy of a single <b>Globe</b>. </p>
+            
+            <p>The line right after this, <code>GameObject[] gameObjects</code> 
+            is an array of GameObjects[], which is why we put these two brackets here [ ], it tells the script 
+            that we are creating an array, which we are calling gameObjects. An array is a list that holds the information of objects 
+            and we are going to create and use it to keep track of how many globes we have. </p>
+            
+            <p>The next part of this line, <code>GameObject.FindGameObjectsWithTag("GlobeObject");</code> 
+            is saying that we are going to use a method from the GameObject class called 
+            <b>FindGameObjectsWithTag</b> and use it to look for any objects in our game that have the tag 
+            <b>GlobeObject</b>. When it finds the objects, it will immediately put it into our array and create our list. 
+            That is why earlier, we put a created a put a tag on our Globe, so when we have more of them,
+            we can find them very easily.</p>
+            
+            <p>If we type the name of a class, like GameObject, we can use any methods that class has, as long as it 
+            is a public class. For example, if we type in <b>ChangeColor()</b> and then put a period right after it, we 
+            should be able to see and use <b>ChangeGlobeColor()</b> like this: <code>ChangeColor.ChangeGlobeColor()</code>.</p>
+            
+            <p>These lines can be kind of confusing. A simple way to understand it is like this. </p>
+            
+            <p>We are creating a bookcase and we are telling our friend to look throughout our house looking for books. When 
+            they find books, they are going to put them in the order they found them straight into our bookcase, one at a time.</p>
+            
+            
+            <p>Now that we have a GameObject and an array of GameObjects, but how do we see if any of the globes have changed color.</p>
+    
+            <p>Type in this line:</p>
+            
+            <code> for (int i = 0; i < actualGlobesNum; i++){ </code>
+            
+            <p>This is a for loop. A for loop goes through a range of items, doing different things to them that 
+            the user decides, until the end of the range or there are no more items to look at.</p>
+            
+            <p>Now the for loop has 3 parts. The first part is where we state where we are going to start at.
+            We do this by creating an int called i and setting it to 0.</p>
+            <p>The second part tells the range and where we want to stop at. Since we are going to start at i, or 0,
+            we are going to put i on there. Now, we don't want to go past the number of globes we have in our game,
+            so we are going to compare i to the actual number of globes we have by using <b>actualGlobesNum</b>. 
+            So while our i is less than actualGlobesNum, we go through the for loop. If at any point, i changes to be more
+            than the amount of globes we have, the for loop breaks and we leave it. </p>
+            
+            <p>In the last part, we usually state how much we want i to increase everytime we go through the loop. 
+            We want i to increase by 1 everytime, so we type in i++, which is the short version of i = i + 1 (the other way to do this).</p>
+            
+            <p>All together, our loop is going to start at 0 and stop when we have reached the number of globes in our game.
+            Everytime it comes back from going inside our loop, we are going to increase the number of i by 1. </p>
+            
+            <p>We are going to type in the stuff that goes into our loop. Type:</p>
+    
+            <code>gameObj = gameObjects[i];</code>
+            
+            <p>Our gameObj that we created before the for loop, is going to be assigned to whatever object that is 
+            currently in our array at position i. </p>
+            
+            <p>Now in programming, we rarely start at 1. Most things start at 0, with 0 being the initial number.
+            So when we are counting the objects in the array, we are going to go 0, 1, 2, 3, 4, ..... 10 for example.</p>
+            
+            <p>The bracket around i here ([i]) is just saying that we want to be at that position and gather the information
+            for the object that is at that position. </p>
+            
+            <p>Now type this if statement:</p>
+            
+            <pre><code>
 
+            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+                countG++;
+                countGlobesText.text = countG + "";
+            }//if
+            </code></pre>
+            
+            <p>On the first line, we are going to take this object we just got information for, get the renderer component from it, 
+            and find the color. Then we are going to check to see if the color if green. If it is, we go inside the if statement. 
+            If it isn't then we skip the if statement.</p>
+            
+            <p>We are going to gameObj, using the GetComponent() method from the Game Object class, finding the renderer for it 
+            (see <a href="tutorials3section6">Tutorial 3 Section 6)</a>, using the material() method from it, and finding the color.
+            Then we are comparing the color to the color green. </p>
+            
+            <p>If the color is green, we add 1 to the int countG (<code>countG++;</code>) and changing the text for our globe count
+            to countG. </p>
+            
+            <p>Our for loop should look like this:</p>
+    <pre><code>
+    for (int i = 0; i < actualGlobesNum; i++){
+        gameObj = gameObjects[i];
 
-          <p>Canvas</p>  
-          <p>Duplicates</p>
-          
-          <p>Now you are ready to test and make sure everything works!</p>
+        if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+            countG++;
+            countGlobesText.text = countG + "";
+        }//if
+    }//for
+    </code></pre>
+            
+            <p>When we are done with our if statement, whether we went into or not, our code will go back to our for loop and 
+            go onto the next object. </p>
+            
+            <p>The last thing we need to do, besides making sure everything is "closed up" (making sure every bracket
+            has a closing one), is returning an int, which was part of our method line. Because countG has the number
+            of globes that have changed color, we are going to return this. Type:</p>
+            
+            <code>return countG;</code>
+            
+        <p>You should have this for your CountingUp() method.</p>
+    
+    <pre><code>
+    private int CountingUp(int countG){
+        GameObject gameObj;
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("GlobeObject");
+
+        for (int i = 0; i < actualGlobesNum; i++)
+        {
+            gameObj = gameObjects[i];
+
+            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+                countG++;
+                countGlobesText.text = countG + "";
+            }//if
+
+        }//for
+        
+    }//CountingUp    
+    </code></pre>
+         
+         
+         <p>So now the line:
+         <pre><code>numOfGlobes = CountingUp(numOfGlobes);</pre></code> in our <b>Update()</b> method 
+         means that every frame (since our Update() method gets called on every frame),
+            our script is going to check to see if any of the globes have changed to green. If they did, 
+            our numOfGlobes will change to the number of globes that have changed.</p>
+            
+         <p>The code below is checking to see if the numOfGlobes is not equal to the actual 
+         number of globes that we have. If the numOfGlobes is not equal to the actualGlobesNum, then
+         we go inside the if statement and set our timeText to the current time that the player has left.</p>
+         
+         <pre><code>
+        if (numOfGlobes != actualGlobesNum){
+            timeText.text = (timeLeft).ToString("0");
+        }//if 
+         </code></pre>
+         
+         <p>If the numOfGlobes does equal actualGlobesNum, then we skip this and go to the next method 
+         called <b>WonOrLost()</b>.</p>
+         
+         
+         <p>So far, your entire script should currently look like this:</p>
+          <pre><code>
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CountWinOrLose : MonoBehaviour{
+
+    public int numOfGlobes;
+    int actualGlobesNum = 1;
+    public Text countGlobesText;
+
+    public float timeLeft = 10f;
+    public Text timeText;
+
+    void Start(){  }
+
+    // Update is called once per frame
+    void Update(){
+        timeLeft -= Time.deltaTime;
+        numOfGlobes = 0;
+
+        if (timeLeft > -1){
+            numOfGlobes = CountingUp(numOfGlobes);
+
+            if (numOfGlobes != actualGlobesNum){
+                timeText.text = (timeLeft).ToString("0");
+            }//if
+            WonOrLost(timeLeft, numOfGlobes);
+        }//if
+    }//Update
+
+    private int CountingUp(int countG){
+        GameObject gameObj;
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("GlobeObject");
+
+        for (int i = 0; i < actualGlobesNum; i++) {
+
+            //had at <9, forgot 0 is an part in the index,
+            //so was giving me IndexOutOfRangeException
+            //cause there was nothing at index spot 8
+            gameObj = gameObjects[i];
+
+            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+                countG++;
+                countGlobesText.text = countG + "";
+            }//if
+        }//for
+        return countG;
+    }//CountingUp
+}//CountWinOrLose
+    </code></pre>
+    
+    <p>With all this code, make sure to double check you have opening and closing brackets
+            (everyone of these { must have one of these } ) and that every line that does
+            not end in a bracket must end in a semicolon (;).</p>
+            
+    
+        <p>Awesome. We have one more method left. </p>
+         
           
      <div class="wrapper">
         <div class="inner">
@@ -259,7 +307,7 @@
             last part or click the Next button to .</p>
           <div id="container">
             <button id="prevBtn" title="prev"><a href="tutorials3section7">Previous</a></button>
-            <button id="nextBtn" title="next"><a href="tutorials4">Next</a></button>
+            <button id="nextBtn" title="next"><a href="tutorials3section9">Next</a></button>
           </div>
     
         </div>
