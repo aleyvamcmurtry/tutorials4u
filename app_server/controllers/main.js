@@ -103,11 +103,11 @@ exports.tutorials3section8 = function(req, res){
   res.render('tutorials3section8', { title: 'Tutorial 3-8' });
 };
 
-exports.tutorials3section8 = function(req, res){
+exports.tutorials3section9 = function(req, res){
   res.render('tutorials3section9', { title: 'Tutorial 3-9' });
 };
 
-exports.tutorials3section8 = function(req, res){
+exports.tutorials3section10 = function(req, res){
   res.render('tutorials3section10', { title: 'Tutorial 3-10' });
 };
 
