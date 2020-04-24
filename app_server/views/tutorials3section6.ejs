@@ -39,7 +39,7 @@
     <section id="wrapper">
       <header>
         <div class="inner">
-          <h2>Tutorial 3 Section 6</h2>
+          <h1>Tutorial 3 Section 6</h1>
           <h2>Let's Change the Color with a Script!</h2>
           
              <p>We are going to be adding our first script to our game.</p>
@@ -207,7 +207,7 @@
             
             <p>Inside <b>ChangeGlobeColor()</b>, you are going to type:</p>
             
-            <code>rend = GetComponent< Renderer>();</code>
+            <code>rend = GetComponent< Renderer  >();</code>
             <code>rend.material.SetColor("_Color", Color.green);</code>
             
             <p>At the end of every line that doesn’t have a bracket,
@@ -312,7 +312,7 @@
                 
       public void ChangeGlobeColor()
       {
-          rend = GetComponent< Renderer>();
+          rend = GetComponent< Renderer  >();
           rend.material.SetColor("_Color", Color.green);
        }
     } </code></pre>
