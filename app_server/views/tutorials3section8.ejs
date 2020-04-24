@@ -39,7 +39,7 @@
     <section id="wrapper">
       <header>
         <div class="inner">
-          <h2>Tutorial 3 Section 8</h2>
+          <h1>Tutorial 3 Section 8</h1>
           <h2>CountingUp!</h2>
           
              <p>Let's get into the CountingUp() method.</p>
@@ -159,7 +159,7 @@
             
             <pre><code>
 
-            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+            if (gameObj.GetComponent<    Renderer     >().material.color == Color.green){
                 countG++;
                 countGlobesText.text = countG + "";
             }//if
@@ -208,7 +208,7 @@
         {
             gameObj = gameObjects[i];
 
-            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+            if (gameObj.GetComponent<    Renderer    >().material.color == Color.green){
                 countG++;
                 countGlobesText.text = countG + "";
             }//if
@@ -283,7 +283,7 @@ public class CountWinOrLose : MonoBehaviour{
             //cause there was nothing at index spot 8
             gameObj = gameObjects[i];
 
-            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+            if (gameObj.GetComponent<  Renderer  >().material.color == Color.green){
                 countG++;
                 countGlobesText.text = countG + "";
             }//if
