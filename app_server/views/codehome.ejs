@@ -43,6 +43,8 @@
           <p>Here is the place where all of the code we have used for our first virtual reality game exists.  </p>
           
           <p>The code that we have already created are called: ColorChange and CountWinOrLose.</p>
+          
+          <p>Click <a href="tutorials3section10">here</a> to go back to Tutorial 3 Section 10.</p>
         </div>
       </header>
       <!-- Content-->
@@ -76,15 +78,17 @@
                 
       public void ChangeBallColor()
       {
-          rend = GetComponent< Renderer >();
+          rend = GetComponent<   Renderer   >();
           rend.material.SetColor("_Color", Color.green);
        }
     } </code></pre>
       
 
           <h3 class="major">SphereCount</h3>
-                  <h4>Tutorial 3 Section 7</h4>
+                  <h4>Tutorial 3 Section 7, Tutorial 3 Section 8, Tutorial 3 Section 9</h4>
                   <h4><li><a href="tutorials3section7">Tutorial 3 Section 7</a></li></h4>
+                   <h4><li><a href="tutorials3section8">Tutorial 3 Section 8</a></li></h4>
+                    <h4><li><a href="tutorials3section9">Tutorial 3 Section 9</a></li></h4>
                  
     <pre><code>
     <pre><code>
@@ -130,7 +134,7 @@ public class CountWinOrLose : MonoBehaviour{
             //cause there was nothing at index spot 8
             gameObj = gameObjects[i];
 
-            if (gameObj.GetComponent<Renderer>().material.color == Color.green){
+            if (gameObj.GetComponent<    Renderer    >().material.color == Color.green){
                 countG++;
                 countGlobesText.text = countG + "";
             }//if

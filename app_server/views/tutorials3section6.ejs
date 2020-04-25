@@ -56,6 +56,12 @@
         <div class="inner">
       
           <p>Welcome back! </p>
+          
+         <h4>Please remember to save after we have made any changes and especially before you try to test out your game. 
+          If you try to play before you save, the new changes will not take effect and you will have to redo your changes.
+          You can do this by going up to <b>File</b> and click on <b>Save</b>. You can also do this by pressing and holding <b>ctrl + S</b> (for PC)
+          or <b>Command + S</b> (for Mac).</h4>
+           
            <p>
              We have our <b>Player</b>, our <b>Floor</b>, and our <b>Globe</b>, but they don’t do anything.
              When our <b>Player</b> object tries to interact with our <b>Globe</b>, nothing happens.
@@ -97,11 +103,17 @@
             are using C# because it is a little bit easier for beginners to understand and it
             seems to be the language most Unity developers use. </p>
             
+            
+          
+            
             <p>Now we can go into what we are going to put into <b>ColorChange</b>. Next to the name of
-            <b>ColorChange (Script)</b>, you should see a book, two sliding bars, and a gear. Click
-            on the gear. You then will see a list of options, like <b>Reset</b>, <b>Remove Component</b>,
+            <b>ColorChange (Script)</b>, you should see a book, two sliding bars, and either a gear or three vertical dots (like ... but going 
+            up and down). Click on either the gear or the three dots. You then will see a list of options, like <b>Reset</b>, <b>Remove Component</b>,
             and <b>Edit Script</b>. Click on <b>Edit Script</b>. </p>
-
+    
+           <h4>Microsoft Visual Studio</h4>
+            
+            <p>For PC Users:</p>
             <p>Another program called <b>Microsoft Visual Studio</b> should appear and load. This is
             a program that comes and downloads with Unity. <b>Visual Studio</b> allows for us to
             edit our script, save it, and then have it run in Unity. </p>
@@ -111,6 +123,23 @@
             email you used to sign up for Unity (<a href="tutorials1section3">Tutorial 1 Section 3)</a>.
             Unfortunately, if you do not login or sign up, you cannot use <b>Microsoft Visual Studio</b>
             to edit your code. </p>
+            
+            <p>For Mac Users:</p>
+            
+            <p>In case <b>Microsoft Visual Studio</b> does not install, here is what you can do.</p>
+            
+            <p>Click <a href="https://visualstudio.microsoft.com/vs/mac/">HERE</a> or copy and paste this link: https://visualstudio.microsoft.com/vs/mac/
+            to have you go to the <b>Microsoft Visual Studio</b> page for Macs. </p>
+            
+            <p>Install it onto your Mac, making sure to click on Android, .Net, and Xamarin. Make sure that at least one of the items you are installing
+            has <b>C#</b> in it.</p>
+            
+            <p>After it is done installing, it should pop up asking if you would to login and if you like to download the CLI tools. For the moment
+            click on Maybe Later. Then click on the Mac keys and click Continue.</p>
+            
+            <p>Finally, go back to <b>Unity</b>, go to your <b>Globe</b>, and click on the three dots or gear next to your <b>ColorChange()</b> script.</p>
+            
+            <h4>Back to the tutorial:</h4>
             
             <p>When it initially appears, you should see the name of our script next to 
             <b>public class</b>. All of the information you see is the basic code Unity gives you. </p> 
@@ -175,10 +204,11 @@
             
             <p>Let us dig into the code we are adding.</p>
             
-            <p>Above <b>void Start()</b> but below <b>public class</b>, we are going to type in:</p>
+            <p>Above <b>void Start()</b> but below <b>public class</b>, we are going to click on enter (have it go onto a new line) and we are going to type in:</p>
             
             <code>public Renderer rend;</code>
             
+            <p>Whenever we add in new code, </p>
             <p>What we are doing here is stating any objects that we are creating
             specifically for this class and code. <b>Public</b> is of course whether
             or not other classes and objects can see this new object we are
@@ -198,7 +228,7 @@
             
             <p>The way you should this line out is like this:</p>
             
-            <code>public void ChangeGlobeColor{ }</code>
+            <code>public void ChangeGlobeColor(){ }</code>
             
             <p>The brackets { } mean that anything inside of it belongs to the
             method. The class also uses brackets { } to say that everything
@@ -264,8 +294,11 @@
             
             <p>Minimize <b>Microsoft Visual Studio</b> and click back on your <b>Globe</b>. Your
             <b>ColorChange</b> script should have our <b>rend</b> object visible. 
-            Click on your <b>Globe</b> and drag it onto the empty space next to
-            <b>Rend</b>. If we don’t do this, then our code won’t work because 
+            Click on your <b>Globe</b> in your <b>Hierarchy</b> and drag it onto the empty space next to
+            <b>Rend</b> that says <code>None (Renderer)</code> under our <b>ColorChange()</b> script.</p>
+            
+            
+            <p>If we don’t do this, then our code won’t work because 
             it won’t know what object we want to change the color of. Just
             because our script is attached to our <b>Globe</b> does not mean that
             it is fully connected to it.</p> 
@@ -276,11 +309,14 @@
             says <b>Add New Event Type</b> and select <b>PointerClick</b> when it
             appears. </p>
             
-            <p>Click on the plus + symbol. Drag your <b>Globe</b> object to the
+            <p>Click on the plus + symbol. Drag your <b>Globe</b> object in the <b>Hierarchy</b>to the
             empty space under <b>Runtime Only</b> (which means only when the
             game is on). You should be able to now interact with list
             that was greyed out that says <b>No Function</b>. Click on it,
             go to <b>ColorChange()</b>, and then click on <b>ChangeGlobeColor()</b>.</p>
+            
+            <p>Save your changes.</p>
+            
             
             <p>What we just did is tell our <b>Globe</b> object that whenever
             someone clicks on it, it does something. In this case,

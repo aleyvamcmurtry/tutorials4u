@@ -58,7 +58,109 @@
       
           <p>Welcome back! </p>
           
-           <p>You should have this for your WonOrLost() method.</p>
+          
+          <h4>Please remember to save after we have made any changes and especially before you try to test out your game. 
+          If you try to play before you save, the new changes will not take effect and you will have to redo your changes.
+          You can do this by going up to <b>File</b> and click on <b>Save</b>. You can also do this by pressing and holding <b>ctrl + S</b> (for PC)
+          or <b>Command + S</b> (for Mac).</h4>
+           
+           
+           
+           <p>We are now going to create our <b>WonOrLost()</b> method that is a part of our
+        <b>CountWinOrLose()</b> script. </p>
+        
+        <p>Here is what the method <b>WonOrLost()</b> is going to do. </p>
+        
+        
+        <p>If our player has time left in the game, the WonOrLost() method is going to check to see
+        if they player has won or not. If they won (that means that they have clicked on all of the globes and turned
+        them green), they our game will tell them that they won. If the player lost (they didn't click on all the globes in
+        time), then our game will tell they have lost. </p>
+        
+        <p>Like <b>ChangeGlobeColor()</b> method, our method is going to be <b>private</b>.</p>
+        <p>It is going to return a bool, short for boolean, which is a shorter way of saying true or false. So 
+        we are going to return a true or false answer.</p>
+        
+        <p>We are going take in two parameters: a float called timeL (so we can know the current time) and an int (so we can know how many Globes
+        the player has clicked on).</p>
+        
+        <p>Your line should look like this:</p>
+        
+        <code>private bool WonOrLost(float timeL, int countGlobe){ }</code>
+        
+        <p>With our <b>WonOrLost()</b> method, we are going to do a lot of "If this is true, do this. If this isn't true, do this next thing."</p>
+        
+        <p>Inside the two brackets, let type the first group of code. </p>
+        
+        <pre><code>
+        if (timeL >= 0 && countGlobe == actualGlobesNum){
+            timeText.text = (timeLeft).ToString("WINNER");
+            timeText.color = Color.green;
+            countGlobesText.text = " You won";
+            return true;
+        }//if
+          
+        </code></pre>
+        
+        <p>Remember if statements? Well, we will be using if statements to help check to see if our player has won or lost.</p>
+        
+        <p>So this first line reads like this: If our timeL is bigger or equal to 0 and if our countGlobe is equal to our actualGlobesNum, then go inside.
+        If not, skip this section.</p>
+        
+        <p>Inside our if statement, we are going to set our timeText to read "WINNER", change the color of the text to green, set our 
+        countGlobesText to say that our player "Won", and we are returning true, since our method wants us to return a value of true or false. </p>
+        
+        <p>We then close up our if statement.</p>
+        
+        <p>Now type in the next group of code:</p>
+        
+        <pre><code>
+        else if ((timeL < 0 && countGlobe != actualGlobesNum)){
+            timeLeft = 0;
+            timeText.text = (timeLeft).ToString("FAIL");
+            timeText.color = Color.red;
+            countGlobesText.text = " You lost";
+            return false;
+        }//else if
+       </code></pre>
+        
+        
+         <p>So this first line reads like this: If our timeL is less than our 0 and if our countGlobe is not equal to our actualGlobesNum, then go inside.
+        If not, skip this section.</p>
+        
+        <p>If you have an if statement, but you want to double check something else, you can type else if after the closing bracket } of our first if statement.
+        You can make some of these so you can test for different things. </p>
+        
+        <p>Inside our else if statement, we are going to set our timeText to read "Fail", change the color of the text to red, set our 
+        countGlobesText to say that our player "Lost", and we are returning false, since our method wants us to return a value of true or false. </p>
+        
+        
+        
+        <pre><code>
+         else if (timeL < -1 && countGlobe == actualGlobesNum){
+            timeLeft = 0;
+            timeText.text = (timeLeft).ToString("FAIL");
+            timeText.color = Color.red;
+            countGlobesText.text = " You lost";
+            return false;
+        }//else if
+         return false;
+        </code></pre>
+        
+        
+       <p>So this first line reads like this: If our timeL is less than our -1 and if our countGlobe is equal to our actualGlobesNum, then go inside.
+        If not, skip this section.</p>
+        
+        <p>Inside our else if statement, we are going to set our timeText to read "Fail", change the color of the text to red, set our 
+        countGlobesText to say that our player "Lost", and we are returning false, since our method wants us to return a value of true or false. </p>
+        
+        <p>Finally, type in return false, so you can return a value of true or false. If you do not do this, your method will not work. </p>
+        
+        
+        
+        
+        
+           <p>Finally you should have this for your WonOrLost() method.</p>
    
    <pre><code>
     private bool WonOrLost(float timeL, int countGlobe){
@@ -89,7 +191,7 @@
          
     
     
-    <p>This section was very very long. Well, with all of our hard work, your code should now look like this
+    <p>This section was very long. With all of our hard work, your code should now look like this
     all together:</p>
          
     <pre><code>
