@@ -63,6 +63,41 @@
             
              <p>If you are here from Tutorial 4 Section 2, then you are here because Unity did not download Android SDK (or JDK or NDK).</p>
              
+          <p>Click out
+          of Build Settings, click on Edit on the Menu Bar, and then click on Preferences.</p>
+        
+          <h5>Fix 1:</h5>
+          
+          <p>Make sure that you are searching in External Tools. </p>
+          <p>Android SDK Tools Installed with Unity should be clicked.</p>
+          <p>Unclick it for the moment and check to see if everything looks correct. 
+          The file path, or the path that the computer knows to take when it is looking for 
+          a specific item, should look like this.</p>
+          
+          <p>C:\Program Files\Unity\Hub\Editor\2019.3.1f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK</p>
+          
+          <p>If everything looks good, then you should be fine.</p>
+          <p>If it does not, and you see AndroidPlayer/SDK, click on on / and replace it with \. </p>
+          <p>They look very similar, but unfortunately it changes the path the computer looks at. 
+          So instead of the computer looking inside the AndroidPlayer folder, it is looking at AndroidPlayer and stopping.
+          This is causing for the SDK not to be found. </p>
+          
+          <p>If this is the issue you had, change it, exit out of External Tools, and try Build and Run again. </p>
+          
+          <h5>Fix 2:</h5>
+          
+          <p>If, when attempting Fix 1, you continue attempting to replace / with \ and then when you go back, the path is empty,
+          click on the box next to Android SDK Tools, copy the link, and put it in a text document, like Notes or Notepad. </p>
+          <p>Follow the path by searching for <b>This PC</b>, click on <b>Windows (C:)</b>, and then just clicking every folder that is on that path.
+          So in this case, Windows (C:), then Program Files, then Unity, then Hub, Editor, 2019.3.1f1,... until I reach AndroidPlayer and look to see
+          if a folder called SDK is in there.</p>
+          
+          <p>For Mac users, please follow a similar route, but for the Mac interface. </p>
+          
+          <p>If SDK is not in there, then something may have gone wrong when Unity installed Android. </p>
+             
+             
+             
           <p>We can either try to have our project use an older version of Unity (as described in the forum below, or we can download the 
           individual Android SDK. </p>
           
