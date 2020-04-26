@@ -2181,7 +2181,8 @@
 		}
 
 			.image.left img, .image.right img {
-				width: 100%;
+				max-width: 100%;
+				height: auto;
 			}
 
 		.image.left {
@@ -2203,7 +2204,8 @@
 		}
 
 			.image.fit img {
-				width: 100%;
+				max-width: 100%;
+				height: auto;
 			}
 
 		.image.main {
@@ -2213,7 +2215,8 @@
 		}
 
 			.image.main img {
-				width: 100%;
+				max-width: 100%;
+				height: auto;
 			}
 
 /* List */
@@ -2681,7 +2684,8 @@
 
 				.features article .image img {
 					border-radius: 5px 5px 0 0;
-					width: 100%;
+					max-width: 100%;
+					height: auto;
 				}
 
 		@media screen and (max-width: 980px) {
@@ -3399,7 +3403,8 @@
 
 				.wrapper.spotlight .image img {
 					border-radius: 100%;
-					width: 100%;
+					max-width: 100%;
+					height: auto;
 				}
 
 			.wrapper.spotlight .content {

@@ -75,11 +75,11 @@
             
             <h3>Canvas</h3>
             
-            <p>We have our Globe, we can click on it to change its color. We can move our cursor around the screen. 
+            <p>We have our </b>Globe</b>, we can click on it to change its color. We can move our cursor around the screen. 
             But we have a problem now. How do we show how much time the player has left and how many Globes the player has clicked on?
             </p>
-          <p>  If you click on our Globe, look at the Inspector, and go down to the CountWinOrLose code,
-          you should see two empty spaces next to CountGlobes text and Time text. In these spaces,
+          <p>  If you click on our <b>Globe</b>, look at the <b>Inspector</b>, and go down to the <b>CountWinOrLose()</b> script,
+          you should see two empty spaces next to <b>CountGlobes</b> text and Time text. In these spaces,
           we want to out in a text that the user will see.
             </p>
             <p>But we currently don’t have any text anywhere in our game.
@@ -90,20 +90,19 @@
             we need to understand what we are doing first. 
             </p>
             <p>We want our player to see the time that is left in the game
-            and how many Globes they have clicked on. Our player need
-            s to see this information at all times. So if the player
+            and how many Globes they have clicked on. Our player needs to see this information at all times. So if the player
             looks right, left, up, down, they can still see the information on the screen. 
             </p>
             <p>We can do this by adding text boxes, boxes that hold text,
             to the camera since the camera is attached to our player. 
             </p>
-           <p> Text boxes are UI (User Interface) objects though. UI objects
+           <p> Text boxes are UI (User Interface) objects though. <b>UI</b> objects
            are objects the user can view, see, and interact with on a screen.
            Unlike the Globes we created, where they can permanently change in
            the game, UI objects cannot be permanently changed by the player.
            They can reappear and disappear, but the player does not have full control of that. 
             </p>
-           <p> UI objects in Unity can only be added to a canvas, which
+           <p> <b>UI</b> objects in Unity can only be added to a canvas, which
            is just a holder for all of these elements. Think of the
            canvas as a window. You can put stickers on it, shine light
            through it, see through it, put blinds to cover it, but it’s
@@ -113,14 +112,14 @@
             let’s get started adding our textboxes to our player.
             </p>
            <p> First, click on the triangle next to our player
-           object. It should reveal our Main Camera. 
+           object. It should reveal our <b>Main Camera</b>. 
             Now there are three ways you can do this.
-            You can right click on our Main Camera,
-            go down to UI, hover to the right, and
-            click on Text. The Canvas will immediately appear
-            under Main Camera with a Text underneath the Canvas. 
-            The second way is by clicking on the plus button
-            in the Hierachy. There you can go down to UI,
+            You can right click on our <b>Main Camera</b>,
+            go down to <b>UI</b>, hover to the right, and
+            click on <b>Text</b>. The <b>Canvas</b> will immediately appear
+            under <b>Main Camera</b> with a <b>Text</b> underneath the <b>Canvas</b>. 
+            The second way is by clicking on the <b>+</b> plus button
+            in the <b>Hierarchy</b>. There you can go down to <b>UI</b>,
             hover to the right, and click on Text. The Canvas
             will immediately appear in our Hierarchy. Drag
             and drop the Canvas onto our Main Camera. 
@@ -132,31 +131,31 @@
             </p>
             <p>Your Player object now should look like this:</p>
             
-            <p>Player
-            	Main Camera
-            		Canvas
-            			Text
-            		GvrReticlePointer</p>
+            <p><li>Player</li>
+            	<li>Main Camera</li>
+            	<li>Canvas</li>
+            			<li>Text</li>
+            		<li>GvrReticlePointer</li></p>
             
           <p> Your Text is a child of Canvas, which
           is a child of Main Camera which is a child of our Player object. 
             </p>
            <p> Now we need to either right-click on
-           our Canvas, click on the plus button in our
-           Hierarchy, or click on GameObject in our Menu
-           Bar and add another Text object to our Canvas
+           our <b>Canvas</b>, click on the plus button in our
+           <b>Hierarchy</b>, or click on <b>GameObject</b> in our <b>Menu
+           Bar</b> and add another <b>Text</b> object to our <b>Canvas</b>
            since our project needs two texts and not just one. 
             </p>
-          <p>  We are going rename our Texts to
-          countDownText and globeCountText. It does not matter which one,
+          <p>  We are going rename our <b>Texts</b> to
+          <b>countDownText</b> and <b>globeCountText</b>. It does not matter which one,
           as long as you have one of each. 
             </p>
             
-            <p>Now click on your Canvas. You shouldn't be see it yet. </p>
+            <p>Now click on your <b>Canvas</b>. You shouldn't be able to see it yet. </p>
             <p>Click on your <b>Inspector</b>, click on <b>Canvas</b> (the Canvas
             inside the Canvas), and change the <b>Render Mode</b> to World Space.</p>
             
-            <p>Still in the <b>Inspector</b>, under <b>Anchors</b>, change the following information:</p>
+            <p>Still in the <b>Inspector</b>, under <b>Rect Transform</b> and under <b>Anchors</b>, change the following information:</p>
             
             <li>Min X 0.5 Y 0.5</li>
             <li>Max X 0.5 Y 0.5</li>
@@ -181,7 +180,10 @@
             as long as you can see it when you play your game and it's clear. 
             </p>
             
-            <p>Do the same with countDownText.</p>
+            <p>If you can't see it after a moment, click on your <b>Canvas</b> and move it back by using the blue arrow just a little bit. 
+            Your value for Pos Z should not be any bigger than 2 and any smaller than 0. </p>
+            
+            <p>Do the same with <b>countDownText</b>.</p>
             
             <p>In the <b>Inspector</b> for both of these texts, go down to <b>Text</b>
             and delete the information inside. We don't want our player playing only
@@ -189,8 +191,9 @@
             
             <p>When done, go to our <b>Globe</b>, look at the <b>Inspector</b>,
             go down to <b>CountWinOrLose (Script)</b> and you will see two empty
-            spots next to CountGlobes Text and Time Text. Drag and drop globeCountText
-            and countDownText into their respective spots. </p>
+            spots next to CountGlobes Text and Time Text. Drag and drop <b>globeCountText</b>
+            and <b>countDownText</b> into their respective spots. </p>
+            
             
             <p>Now you can test the game and see if you need to do any 
             adjustments with the text or with the globe.</p>
@@ -201,10 +204,27 @@
             in <a href="tutorials3section5">section 5</a>)? 
             If you do, great! If not, don’t worry, you can always click <a href="tutorials3section5">here</a> to go back and review it. 
             </p>
-            <p>We are going to right click (on PC)
-            on the name of our Globe in our Hierachy.
+            
+            <p>What we are going to do now is make copies of our <b>Globe</b>. By making copies, we don't have to add all of the scripts and materials
+            to a group of new objects. </p>
+            
+            <p>Now first click on our <b>Globe</b> in the <b>Hierarchy</b> and look over at the <b>Inspector</b>.</p>
+            
+            <p>Go look down at our <b>CountWinOrLose()</b> script. You will see TimeLeft 10. Change that 10 into a 30. </p>
+            
+            <p>Next, click on the three little dots next to the <b>CountWinOrLose()</b> script, click on <b>Edit Script</b>.</p>
+            <p>Now in our script, at the top where we have <code>int actualGlobesNum = 1</code>, change that 1 to a 10. We are telling our 
+            <b>CountWinOrLose()</b> script that we will have 10 objects, not 1, that the player needs to find and change. </p>
+           <p>Go a couple of lines down and look at where we have <code>timeLeft = 10f</code>. Change the 10f to a 30f. We are telling our
+           <b>CountWinOrLose()</b> script that we want to give our player a maximum of 30 seconds to look and change all of the colors of the <b>Globes</b>.</p>
+            
+            
+            
+            
+            <p>Now we are going to right click (on PC)
+            on the name of our Globe in our Hierarchy.
             Next, lower your mouse down and click on <b>Duplicate</b>.
-            Now, in your Hierachy, you should see your original Globe and Globe (1).
+            Now, in your Hierarchy, you should see your original Globe and Globe (1).
             Globe (1) is an exact clone of your original Globe. 
             </p>
             <p>On your screen, you may not immediately see where your
@@ -220,14 +240,26 @@
             group of Globes and we didn’t have to create each one by scratch.
             So you should have Globe, Globe (1), Globe (2)... Globe (9) (since our first Globe counts as 1 globe). 
             </p>
-            <p>Open your CountWinOrLose script very quickly, and at the top where we have actualGlobesNum, change
-            the number assigned to from 1 to 10. That way we can make sure we are counting the correct number of globes we have.</p>
-            <p>If you want to have more or less Globes to play with, you can always change the amount you need to win in CountWinOrLose.
+            
+            <p>Make sure to move them all around your screen, but make sure your <b>Player</b> can see them and don't hide underneath or behind objects.
+            If you do, then you can't win the game.</p>
+            
+            <p>If you want to have more or less Globes to play with or if you want to give the player more or less time,
+            you can always change the amount you need to win in CountWinOrLose. If you do change the time, remember to change it for each Globe.
             </p>
+         
+            
             <p>It’s time to test! 
             </p>
             <p>Click on the play button on your <b>Game bar</b> and your game should immediately begin playing. 
             </p>
+            
+            <p>Your game should currently look like the gif below. </p>
+  
+            <img src="bootstrap2/images/gifs/won.gif" class="img-fluid" width= "75% \9" >
+              
+            
+            
             <p>If everything works great, you’re done with your game. 
             If something acts weird, try to see what is acting weird
             and go through the past sections <a href="tutorials3">here</a> and double-check that
@@ -241,6 +273,7 @@
             </p>
             <p>Not winning or something off- Go to <a href="tutorials3section7">section 7</a> to double-check. 
             </p>
+            
            <p> Remember, at the end of the day, this is YOUR game. You can add different colors,
            change the countdown time, add more or fewer Globes, change the Globes into cubes,
            add in trees and cars using the assets store. These tutorials are here so you can get a base to start with. 
@@ -254,9 +287,9 @@
             </p>
             
             <p>Double check that the information for the <b>Globe</b> in the <b>Inspector</b> looks like below:</p>
-            <img src="bootstrap2/images/colorChangeV1.jpg" class="img-fluid" width= "100% \9"; > 
+            <img src="bootstrap2/images/colorChangeV1.jpg" class="img-fluid" width= "50% \9"; > 
 
-<img src="bootstrap2/images/colorChangeV1.jpg" class="rounded float-right" width= "100% \9"; > 
+
 
 
            <p> Yay! You have a working game! You can go ahead and show your friends.</p>
@@ -265,11 +298,26 @@
             
             <p>Click next so we can finish!</p>
 
-  
 
-          
-          
-          <p>Now you are ready to test and make sure everything works!</p>
+ <div id="container">
+            <button id="prevBtn" title="prev"><a href="tutorials3section8">Previous</a></button>
+            <button id="nextBtn" title="next"><a href="tutorials4">Next</a></button>
+          </div>
+
+  
+          <p>Below, you should see examples on how your game should currently act like when you:</p>
+  
+  <h3>Win</h3>
+   <img src="bootstrap2/images/gifs/lost1.gif" class="img-fluid" width= "75% \9">
+              
+  <h3>Lose</h3>
+  <img src="bootstrap2/images/gifs/lost2.gif" class="img-fluid" width= "75% \9">
+  
+  <h3>Lose and try to win by clicking on the last globe.</h3>
+  <img src="bootstrap2/images/gifs/won.gif" class="img-fluid" width= "75% \9">
+  
+  
+  
           
      <div class="wrapper">
         <div class="inner">

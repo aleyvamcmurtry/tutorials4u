@@ -78,44 +78,28 @@
           MyFirstGameTestComputer.</p>
           <p>Click on Save.</p>
           
-          <p>Now let's wait for it to run. You should get an error saying there is now Android Device plugged in.</p>
-          <p>As long as that is your only error in this step, then you are good. </p>
+          <p>Now let's wait for it to run. You should get an error saying there is no Android Device plugged in.</p>
+          <p>As long as that is your only error in this step, then you are good. We do not want to plug anything in just yet. </p>
           
           
-          <p>If not and you get an error saying Android SDK is not working, then click out
-          of Build Settings, click on Edit on the Menu Bar, and then click on Preferences.</p>
           
-          <h5>Fix 1:</h5>
           
-          <p>Make sure that you are searching in External Tools. </p>
-          <p>Android SDK Tools Installed with Unity should be clicked.</p>
-          <p>Unclick it for the moment and check to see if everything looks correct. 
-          The file path, or the path that the computer knows to take when it is looking for 
-          a specific item, should look like this.</p>
           
-          <p>C:\Program Files\Unity\Hub\Editor\2019.3.1f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK</p>
+          <p>If not and you get an error saying <strong>Android JDk/SDK</strong> is not working, then do the following.</p>
           
-          <p>If everything looks good, then you should be fine.</p>
-          <p>If it does not, and you see AndroidPlayer/SDK, click on on / and replace it with \. </p>
-          <p>They look very similar, but unfortunately it changes the path the computer looks at. 
-          So instead of the computer looking inside the AndroidPlayer folder, it is looking at AndroidPlayer and stopping.
-          This is causing for the SDK not to be found. </p>
           
-          <p>If this is the issue you had, change it, exit out of External Tools, and try Build and Run again. </p>
+          <p>Close your project. Open Unity Hub. Click on Installs. Click on the three dotes next to your version of Unity. 
+          Click on Add Modules. Click on the arrow tab next to Android Build Support and click on:</p>
           
-          <h5>Fix 2:</h5>
+          <li>Android SDK & NDK Tools</li>
+          <li>OpenJDK</li>
           
-          <p>If, when attempting Fix 1, you continue attempting to replace / with \ and then when you go back, the path is empty,
-          click on the box next to Android SDK Tools, copy the link, and put it in a text document, like Notes or Notepad. </p>
-          <p>Follow the path by searching for <b>This PC</b>, click on <b>Windows (C:)</b>, and then just clicking every folder that is on that path.
-          So in this case, Windows (C:), then Program Files, then Unity, then Hub, Editor, 2019.3.1f1,... until I reach AndroidPlayer and look to see
-          if a folder called SDK is in there.</p>
+          <p>When all of this is clicked, click on <b>Done</b>.</p>
+          <p>These items should now be installing. When they are done, open up your project and try to Build and Run again.</p>
           
-          <p>For Mac users, please follow a similar route, but for the Mac interface. </p>
+          <p>If everything works, you should get a 'No Android Device detected'.</p>
           
-          <p>If SDK is not in there, then something may have gone wrong when Unity installed Android. </p>
-          
-          <p>If this is the error you have received, please go to the <a href="help4">Help</a> page for further assistance.</p>
+          <p>If you are still receiving errors, please go to the <a href="help4">Help</a> page for further assistance.</p>
          
           
           
