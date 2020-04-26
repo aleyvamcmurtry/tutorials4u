@@ -75,7 +75,7 @@
             
             <h3>Canvas</h3>
             
-            <p>We have our </b>Globe</b>, we can click on it to change its color. We can move our cursor around the screen. 
+            <p>We have our <b>Globe</b>, we can click on it to change its color. We can move our cursor around the screen. 
             But we have a problem now. How do we show how much time the player has left and how many Globes the player has clicked on?
             </p>
           <p>  If you click on our <b>Globe</b>, look at the <b>Inspector</b>, and go down to the <b>CountWinOrLose()</b> script,
@@ -96,7 +96,7 @@
             <p>We can do this by adding text boxes, boxes that hold text,
             to the camera since the camera is attached to our player. 
             </p>
-           <p> Text boxes are UI (User Interface) objects though. <b>UI</b> objects
+           <p> <b>Text boxes</b> are <b>UI</b> (User Interface) objects though. <b>UI</b> objects
            are objects the user can view, see, and interact with on a screen.
            Unlike the Globes we created, where they can permanently change in
            the game, UI objects cannot be permanently changed by the player.
@@ -120,22 +120,22 @@
             under <b>Main Camera</b> with a <b>Text</b> underneath the <b>Canvas</b>. 
             The second way is by clicking on the <b>+</b> plus button
             in the <b>Hierarchy</b>. There you can go down to <b>UI</b>,
-            hover to the right, and click on Text. The Canvas
-            will immediately appear in our Hierarchy. Drag
-            and drop the Canvas onto our Main Camera. 
+            hover to the right, and click on <b>Text</b>. The <b>Canvas</b>
+            will immediately appear in our /b>Hierarchy</b>. Drag
+            and drop the Canvas onto our <b>Main Camera</b>. 
             </p>
-            <p>The third way is clicking on our GameObject
-            on our Menu Bar, go down to UI, hover to the right,
-            and click on Text. Like the second way, the Canvas
-            will immediately appear in our Hierarchy. 
+            <p>The third way is clicking on our <b>GameObject</b>
+            on our <b>Menu Bar</b>, go down to <b>UI</b>, hover to the right,
+            and click on <b>Text</b>. Like the second way, the <b>Canvas</b>
+            will immediately appear in our <b>Hierarchy</b>. 
             </p>
-            <p>Your Player object now should look like this:</p>
+            <p>Your <b>Player</b> object now should look like this:</p>
             
             <p><li>Player</li>
-            	<li>Main Camera</li>
-            	<li>Canvas</li>
-            			<li>Text</li>
-            		<li>GvrReticlePointer</li></p>
+            	<li>  Main Camera</li>
+            	<li>    Canvas</li>
+            			<li>    Text</li>
+            		<li>  GvrReticlePointer</li></p>
             
           <p> Your Text is a child of Canvas, which
           is a child of Main Camera which is a child of our Player object. 
@@ -175,15 +175,22 @@
             <p>Next we are going to fix our textboxes. We can't see them on our screen (and you can double check this
             by looking at our <b>Game View</b>. We are going to fix them so we can see them.</p>
             
-            <p>Click on <b>globeCountText</b> and use the blue and red arrows to move it around your screen using
-            the <b>Move Tool</b> (the four arrows next to the hand). You can place it anywhere,
-            as long as you can see it when you play your game and it's clear. 
-            </p>
+            <p>Click on <b>globeCountText</b>. Look in the <b>Inspector</b>. Change the values of:</p>
             
-            <p>If you can't see it after a moment, click on your <b>Canvas</b> and move it back by using the blue arrow just a little bit. 
-            Your value for Pos Z should not be any bigger than 2 and any smaller than 0. </p>
+            <li>Pos X: 130</li>
+            <li>Pos Y: 50</li>
+            <li>Pos Z: 50</li>
             
-            <p>Do the same with <b>countDownText</b>.</p>
+            <p>Click on <b>countDownText</b>. Look in the <b>Inspector</b>. Change the values of:</p>
+            
+            <li>Pos X:-40</li>
+            <li>Pos Y: 50</li>
+            <li>Pos Z: 50</li>
+            
+            <p>If you do not do this, you will not be able to click on your <b>Globes</b>, since the <b>Main Camera</b> will
+            only see the text as something it can interact with. We also don't want our text to be right next to each other.</p>
+            
+          
             
             <p>In the <b>Inspector</b> for both of these texts, go down to <b>Text</b>
             and delete the information inside. We don't want our player playing only
@@ -221,23 +228,23 @@
             
             
             
-            <p>Now we are going to right click (on PC)
-            on the name of our Globe in our Hierarchy.
+            <p>Now we are going to right click 
+            on the name of our <b>Globe</b> in our <b>Hierarchy</b>.
             Next, lower your mouse down and click on <b>Duplicate</b>.
-            Now, in your Hierarchy, you should see your original Globe and Globe (1).
-            Globe (1) is an exact clone of your original Globe. 
+            Now, in your <b>Hierarch</b>y, you should see your original <b>Globe</b> and <b>Globe (1)</b>.
+            <b>Globe (1)</b> is an exact clone of your original Globe. 
             </p>
             <p>On your screen, you may not immediately see where your
-            Globe (1) is at. That’s because it’s in the exact same position of your Globe. 
+            <b>Globe (1)</b> is at. That’s because it’s in the exact same position of your <b>Globe</b>. 
             </p>
-            <p>So what we are going to do now is click on Globe (1)
+            <p>So what we are going to do now is click on <b>Globe (1)</b>
             in your <b>Hierarchy</b>, and use the blue and red arrows to move it around your screen using
             the <b>Move Tool</b> (the four arrows next to the hand). You can place it anywhere,
             as long as it remains on your plane and you can see it when you play your game. 
             </p>
-            <p>Next, we are going to repeat this, until we have total of 10 amount of Globes
+            <p>Next, we are going to repeat this, until we have total of 10 amount of <b>Globes</b>
             (including your original Globe) on the board. Now we have a little
-            group of Globes and we didn’t have to create each one by scratch.
+            group of<b> Globes</b> and we didn’t have to create each one by scratch.
             So you should have Globe, Globe (1), Globe (2)... Globe (9) (since our first Globe counts as 1 globe). 
             </p>
             
@@ -274,7 +281,7 @@
             <p>Not winning or something off- Go to <a href="tutorials3section7">section 7</a> to double-check. 
             </p>
             
-           <p> Remember, at the end of the day, this is YOUR game. You can add different colors,
+           <p> Remember, at the end of the day, this is <strong>YOUR</strong> game. You can add different colors,
            change the countdown time, add more or fewer Globes, change the Globes into cubes,
            add in trees and cars using the assets store. These tutorials are here so you can get a base to start with. 
             </p>
